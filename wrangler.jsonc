@@ -1,0 +1,11 @@
+{
+  // Cloudflare Workers static-assets configuration: the whole folder is the site.
+  // "name" must match the project name chosen in the Cloudflare dashboard.
+  "name": "pasteroll",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./",
+    // unknown addresses get 404.html with a real 404 status
+    "not_found_handling": "404-page"
+  }
+}

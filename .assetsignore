@@ -1,0 +1,13 @@
+# Files in this folder that are not part of the website and must not be published.
+# (The same format as .gitignore. _headers is deliberately NOT listed: Cloudflare reads it as rules.)
+.git
+.gitignore
+.assetsignore
+wrangler.jsonc
+README.md
+scripts
+node_modules
+.wrangler
+.DS_Store
+Thumbs.db
+*.log
