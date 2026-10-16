@@ -80,7 +80,7 @@ kbd { font-size: .8em; padding: 1px 7px 2px; border-radius: 5px; background: var
 
 /* demo and feature clips: flat boxes */
 .media { margin: 0; border: 1px solid var(--border); border-radius: 8px; background: var(--mantle); overflow: hidden; }
-.slot { aspect-ratio: 16 / 9; display: grid; place-content: center; text-align: center; padding: 16px; color: var(--muted); }
+.slot { aspect-ratio: 16 / 9; display: grid; place-content: center; text-align: center; padding: 16px; color: var(--faint); font-family: var(--mono); font-size: .85rem; }
 .slot .hint { margin-top: 4px; font-size: .76rem; color: var(--faint); }
 .media video, .media > img.real { display: block; width: 100%; height: auto; background: #000; }
 .media.has-media .slot { display: none; }
@@ -207,23 +207,22 @@ details p { padding: 0 0 16px; color: var(--muted); max-width: 40em; }
 .picker-hint { color: var(--faint); font-size: .74rem; padding: 4px 10px 2px; }
 
 /* changelog page */
-.log-head { padding-block: 48px 26px; }
+.log-head { padding-block: 48px 30px; }
+.log-head .lead { max-width: none; }
 .log { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--border); }
-.day { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 24px; padding-block: 26px; border-bottom: 1px solid var(--border); }
-.day time { font-family: var(--mono); font-size: .85rem; padding-top: 3px; }
-.commit + .commit { margin-top: 30px; }
-.commit h2 { font-size: 1rem; margin: 0 0 8px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; }
-.commit h2 a { color: var(--text); text-decoration: none; }
-.commit h2 a:hover { text-decoration: underline; }
-.commit .hash { font: 400 .74rem var(--mono); color: var(--faint); }
-.commit p { color: var(--muted); margin: 0 0 8px; font-size: .93rem; }
-.commit ul { list-style: none; margin: 0; padding: 0; }
-.commit li a { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding: 5px 0 5px 16px; color: var(--muted); text-decoration: none; font-size: .94rem; position: relative; }
-.commit li a::before { content: ""; position: absolute; left: 3px; top: 1em; width: 3px; height: 3px; border-radius: 50%; background: var(--faint); }
-.commit li a:hover { color: var(--text); }
-.chev { flex: none; fill: none; stroke: var(--faint); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; margin-top: .4em; }
-.commit li a:hover .chev { stroke: var(--accent); }
-@media (max-width: 860px) { .day { grid-template-columns: 1fr; gap: 10px; } }
+.day { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 24px; padding-block: 30px; border-bottom: 1px solid var(--border); }
+.day:last-child { border-bottom: 0; }
+.day time { position: sticky; top: 20px; align-self: start; font-family: var(--mono); font-size: .85rem; color: var(--text); }
+.commit + .commit { margin-top: 34px; padding-top: 30px; border-top: 1px dashed var(--border); }
+.commit-head { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin-bottom: 10px; }
+.commit h2 { font-size: 1.05rem; margin: 0; }
+.hash { font: 500 .72rem var(--mono); color: var(--muted); text-decoration: none; border: 1px solid var(--border); border-radius: 6px; padding: 1px 8px; background: var(--surface); }
+.hash:hover { color: var(--accent); border-color: var(--accent); }
+.commit p { color: var(--muted); margin: 0 0 12px; font-size: .95rem; max-width: 42em; }
+.commit ul { margin: 0; padding-left: 1.15em; max-width: 42em; list-style: disc; }
+.commit li { margin: 0 0 7px; color: var(--text); font-size: .95rem; line-height: 1.6; }
+.commit li::marker { color: var(--accent); }
+@media (max-width: 860px) { .day { grid-template-columns: 1fr; gap: 10px; } .day time { position: static; } }
 
 /* 404 page */
 .lost { min-height: 100vh; display: grid; place-content: center; justify-items: center; gap: 14px; text-align: center; }
