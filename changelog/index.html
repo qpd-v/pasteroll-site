@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en" data-theme="cinnamon">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Changelog · Pasteroll</title>
+<meta name="description" content="Every change to Pasteroll, taken from the commits in its GitHub repository.">
+<meta name="theme-color" content="#1f1713">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="og:title" content="Pasteroll changelog">
+<meta property="og:description" content="Every change to Pasteroll, from the commits in its GitHub repository.">
+<meta property="og:url" content="https://pasteroll.com/changelog/">
+<meta property="og:image" content="https://pasteroll.com/assets/og.png">
+<link rel="stylesheet" href="/styles.css">
+<script src="/theme-init.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="/" aria-label="Pasteroll, home">
+      <img src="/assets/favicon-64.png" width="28" height="28" alt="">
+      <span>pasteroll</span>
+    </a>
+    <nav aria-label="Sections">
+      <a href="/#how">How it works</a>
+      <a href="/#features">Features</a>
+      <a href="/#privacy">Privacy</a>
+      <a href="/#download">Download</a>
+      <a href="/#faq">FAQ</a>
+      <a class="keep" href="/changelog/" aria-current="page">Changelog</a>
+      <a class="keep nav-gh" href="https://github.com/qpd-v/pasteroll"><svg class="gh" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg> GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <section class="log-head">
+    <h1>Changelog</h1>
+    <p class="lead">What has changed in Pasteroll. This page is generated from the commits in the <a href="https://github.com/qpd-v/pasteroll">GitHub repository</a>, so it always matches what was actually done.</p>
+  </section>
+
+  <ol class="log">
+    <li class="day">
+      <time datetime="2026-10-16">October 16, 2026</time>
+      <div class="day-body">
+        <article class="commit">
+          <h2><a href="https://github.com/qpd-v/pasteroll/commit/6f7c660c19f96ba1e8fa11832c8a56998a734759">Advanced Image Paste</a> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/6f7c660c19f96ba1e8fa11832c8a56998a734759">6f7c660</a></h2>
+          <p>Ctrl+click on the desktop with an image chosen (the key is a setting: Ctrl, Shift or Alt) opens an image editor instead of saving at once; a plain click still saves immediately.</p>
+          <ul>
+            <li><a href="https://github.com/qpd-v/pasteroll/commit/6f7c660c19f96ba1e8fa11832c8a56998a734759"><span>The card animates into a modal editor window with a live preview: outline, resize, crop (handles, numbers, locked shapes), rounded corners, drop shadow, background remove/fill/replace, padding, any-angle rotate and flips, PNG/JPG/WebP/BMP output with quality</span><svg class="chev" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></a></li>
+            <li><a href="https://github.com/qpd-v/pasteroll/commit/6f7c660c19f96ba1e8fa11832c8a56998a734759"><span>File name and folder choice, undo/redo, reset all, saved presets</span><svg class="chev" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></a></li>
+            <li><a href="https://github.com/qpd-v/pasteroll/commit/6f7c660c19f96ba1e8fa11832c8a56998a734759"><span>The clip is never changed; the preview and the saved file apply the same adjustments to a reduced copy and to the whole picture</span><svg class="chev" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></a></li>
+            <li><a href="https://github.com/qpd-v/pasteroll/commit/6f7c660c19f96ba1e8fa11832c8a56998a734759"><span>Windows and Linux: click modifier capture, modal clicks, folder chooser, presets file, settings entry</span><svg class="chev" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></a></li>
+          </ul>
+        </article>
+        <article class="commit">
+          <h2><a href="https://github.com/qpd-v/pasteroll/commit/c85c05d0c0a7bbede89c1c4689fd9488fe27e73a">Expanded viewer, recycle bin, and text extraction</a> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/c85c05d0c0a7bbede89c1c4689fd9488fe27e73a">c85c05d</a></h2>
+          <ul>
+            <li><a href="https://github.com/qpd-v/pasteroll/commit/c85c05d0c0a7bbede89c1c4689fd9488fe27e73a"><span>Expanded viewer: animated card-to-overlay with back and fullscreen, text/image viewing, zoom and pan, find, word wrap, info panel, save as, prev/next, and a bottom toolbar with a More menu</span><svg class="chev" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></a></li>
+            <li><a href="https://github.com/qpd-v/pasteroll/commit/c85c05d0c0a7bbede89c1c4689fd9488fe27e73a"><span>Recycle bin: delete sends clips to a 30-day bin; restore, undo, and Shift+Delete or Shift+click for permanent deletion with confirmation</span><svg class="chev" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></a></li>
+            <li><a href="https://github.com/qpd-v/pasteroll/commit/c85c05d0c0a7bbede89c1c4689fd9488fe27e73a"><span>Extract text from images with the OS text recognition (Windows.Media.Ocr; tesseract on Linux), entirely local</span><svg class="chev" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></a></li>
+            <li><a href="https://github.com/qpd-v/pasteroll/commit/c85c05d0c0a7bbede89c1c4689fd9488fe27e73a"><span>Sealed copy time and source app on new clips (store schema v5)</span><svg class="chev" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></a></li>
+            <li><a href="https://github.com/qpd-v/pasteroll/commit/c85c05d0c0a7bbede89c1c4689fd9488fe27e73a"><span>Crash notes in pasteroll.log (location only, never clip data)</span><svg class="chev" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></a></li>
+            <li><a href="https://github.com/qpd-v/pasteroll/commit/c85c05d0c0a7bbede89c1c4689fd9488fe27e73a"><span>seed --image option for test histories</span><svg class="chev" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M6 3l5 5-5 5"/></svg></a></li>
+          </ul>
+        </article>
+      </div>
+    </li>
+    <li class="day">
+      <time datetime="2026-10-15">October 15, 2026</time>
+      <div class="day-body">
+        <article class="commit">
+          <h2><a href="https://github.com/qpd-v/pasteroll/commit/4bc0cb02d2f4e518956278365f1a8ef49c74942f">Pasteroll 0.1.0-beta.1</a> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/4bc0cb02d2f4e518956278365f1a8ef49c74942f">4bc0cb0</a></h2>
+          <p>Clipboard history carousel for Windows 10/11 and Linux (X11). Dual-licensed MIT OR Apache-2.0.</p>
+        </article>
+      </div>
+    </li>
+  </ol>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p>3 commits, latest <a href="https://github.com/qpd-v/pasteroll/commit/6f7c660c19f96ba1e8fa11832c8a56998a734759">6f7c660</a>.</p>
+    <nav aria-label="Project links">
+      <a href="https://github.com/qpd-v/pasteroll">GitHub</a>
+      <a href="https://github.com/qpd-v/pasteroll/issues">Report an issue</a>
+      <a href="https://github.com/qpd-v/pasteroll/blob/main/CHANGELOG.md">Release notes</a>
+      <a href="https://github.com/qpd-v/pasteroll/blob/main/PRIVACY.md">Privacy</a>
+      <a href="https://github.com/qpd-v/pasteroll/blob/main/SECURITY.md">Security</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>

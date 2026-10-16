@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en" data-theme="cinnamon" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pasteroll: a clipboard history you scroll with the mouse wheel</title>
+<meta name="description" content="Pasteroll is a clipboard history for Windows and Linux. Press Ctrl+Shift+middle-click, scroll to an earlier clip, click where it goes. Encrypted on your computer. No account, no cloud. Free and open source.">
+<meta name="theme-color" content="#1f1713">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pasteroll: a clipboard history you scroll with the mouse wheel">
+<meta property="og:description" content="Encrypted on your computer, no account, no cloud. For Windows and Linux.">
+<meta property="og:url" content="https://pasteroll.com/">
+<meta property="og:image" content="https://pasteroll.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="styles.css">
+<script src="theme-init.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top" id="top">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Pasteroll, back to the top">
+      <img src="assets/favicon-64.png" width="28" height="28" alt="">
+      <span>pasteroll</span>
+    </a>
+    <nav aria-label="Sections">
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#download">Download</a>
+      <a href="#faq">FAQ</a>
+      <a class="keep" href="changelog/">Changelog</a>
+      <a class="keep nav-gh" href="https://github.com/qpd-v/pasteroll"><svg class="gh" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg> GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+
+<section class="intro">
+  <img class="roll" src="assets/roll.webp" width="640" height="531" alt="">
+  <div class="intro-text">
+    <h1>Pasteroll</h1>
+    <p class="lead">A clipboard history you scroll with the mouse wheel. Press <kbd>Ctrl</kbd> <kbd>Shift</kbd> and middle-click anywhere, scroll to an earlier clip, and click where it should go. It is encrypted on your computer, with no account and no cloud.</p>
+    <p class="cta"><a class="btn btn-primary" href="#download">Download</a> <a class="btn" href="https://github.com/qpd-v/pasteroll">Source on GitHub</a></p>
+    <p class="facts">Windows 10/11 and Linux (X11). Free and open source. Public beta 0.1.0.</p>
+  </div>
+</section>
+
+<!-- MEDIA SLOT "demo": drop assets/media/demo.mp4 (or .gif) and it replaces this placeholder -->
+<figure class="media" data-media="demo" data-label="Opening the carousel and pasting">
+  <div class="slot"><p>Demo clip goes here</p><p class="hint">assets/media/demo.mp4</p></div>
+</figure>
+
+<section class="how" id="how" aria-labelledby="how-h">
+  <h2 id="how-h">How it works</h2>
+  <p class="sub">One gesture opens it. From there you can do three things.</p>
+
+  <div class="tree" id="tree">
+    <div class="tree-root">
+      <div class="combo" data-seq="0:down:0,550:down:1,1150:tap:2:170,2100:up:0,2100:up:1" role="img" aria-label="Hold Control, then Shift, then middle-click once, then let go">
+        <span class="key">Ctrl</span><span class="op">+</span><span class="key">Shift</span><span class="op">+</span>
+        <span class="key key-mouse"><svg viewBox="0 0 28 40" aria-hidden="true"><rect x="2" y="2" width="24" height="36" rx="12"/><path d="M2 15h24"/><rect class="hot" x="11" y="6" width="6" height="12" rx="3"/></svg><small>Middle<br>click</small></span>
+      </div>
+      <p class="say">Opens the carousel at your pointer, over whatever you are working in.</p>
+    </div>
+
+    <div class="stem" aria-hidden="true"></div>
+
+    <div class="branches">
+      <div class="branch">
+        <div class="node head"><h3>Paste</h3></div>
+        <div class="link" aria-hidden="true"></div>
+        <div class="node body">
+          <div class="combo" data-seq="0:tap:0:800,1300:tap:1:170" role="img" aria-label="Scroll the mouse wheel, then left-click in the target window">
+            <span class="key key-mouse"><svg viewBox="0 0 28 40" aria-hidden="true"><rect x="2" y="2" width="24" height="36" rx="12"/><path d="M2 15h24"/><rect class="hot" x="11" y="6" width="6" height="12" rx="3"/></svg><small>Scroll<br>wheel</small></span>
+            <span class="op"><svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></span>
+            <span class="key key-mouse"><svg viewBox="0 0 28 40" aria-hidden="true"><rect x="2" y="2" width="24" height="36" rx="12"/><path d="M2 15h24M14 2v13"/><path class="hot" d="M2 15V14C2 7.400 7.400 2 14 2v13z"/></svg><small>Left<br>click</small></span>
+          </div>
+          <p class="say">Scroll to the clip you want, then simply click into the target window or input box (or press <kbd>Enter</kbd>) to paste. Select part of the text first to paste only that.</p>
+        </div>
+      </div>
+
+      <div class="branch">
+        <div class="node head"><h3>Expanded viewer</h3></div>
+        <div class="link" aria-hidden="true"></div>
+        <div class="node body">
+          <div class="combo" data-seq="0:tap:0:500" role="img" aria-label="Click the Expand button on the active card">
+            <span class="key key-wide"><svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5.800V1.500h4.300M1.500 1.500l4.700 4.700M14.500 5.800V1.500h-4.300M14.500 1.500l-4.700 4.700M1.500 10.200v4.300h4.300M1.500 14.500l4.700-4.700M14.500 10.200v4.300h-4.300M14.500 14.500l-4.700-4.700"/></svg><small>Expand<br>button</small></span>
+          </div>
+          <p class="say">Click Expand on the active card to read long text, zoom into pictures and pull the text out of screenshots.</p>
+        </div>
+      </div>
+
+      <div class="branch">
+        <div class="node head"><h3>Image editor</h3></div>
+        <div class="link" aria-hidden="true"></div>
+        <div class="node body">
+          <div class="combo" data-seq="0:down:0,550:tap:1:170,1500:up:0" role="img" aria-label="Hold Control and left-click the desktop">
+            <span class="key">Ctrl</span><span class="op">+</span>
+            <span class="key key-mouse"><svg viewBox="0 0 28 40" aria-hidden="true"><rect x="2" y="2" width="24" height="36" rx="12"/><path d="M2 15h24M14 2v13"/><path class="hot" d="M2 15V14C2 7.400 7.400 2 14 2v13z"/></svg><small>Click the<br>desktop</small></span>
+          </div>
+          <p class="say">With an image chosen, hold <kbd>Ctrl</kbd> while you click the desktop to crop, resize, add a shadow or outline and more before it is saved. A plain click saves it as it is.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="features" id="features" aria-labelledby="feat-h">
+  <h2 id="feat-h">Features</h2>
+
+  <article class="feature">
+    <div class="feature-copy">
+      <h3>Carousel</h3>
+      <p>Scroll your history where you are working, with nothing to switch to. Type to search (file names too), filter by text, images, documents and more, and pin the clips you want to keep.</p>
+      <ul>
+        <li>Partial paste: double-click a word or drag across text, then paste only that.</li>
+        <li>Filters you define yourself, and pinned clips that are never removed automatically.</li>
+      </ul>
+    </div>
+    <!-- MEDIA SLOT "carousel" -->
+    <figure class="media" data-media="carousel" data-label="The carousel">
+      <div class="slot"><p>Carousel clip</p><p class="hint">assets/media/carousel.mp4</p></div>
+    </figure>
+  </article>
+
+  <article class="feature">
+    <div class="feature-copy">
+      <h3>Expanded viewer</h3>
+      <p>Any clip grows into a large window. Long text scrolls and searches, pictures zoom and pan, and Extract text reads the words in a screenshot. The recognition runs on your computer.</p>
+      <ul>
+        <li>Previous and next without losing your place in the carousel.</li>
+        <li>Save as, Info, copy a selection, fullscreen.</li>
+      </ul>
+    </div>
+    <!-- MEDIA SLOT "viewer" -->
+    <figure class="media" data-media="viewer" data-label="The expanded viewer">
+      <div class="slot"><p>Expanded viewer clip</p><p class="hint">assets/media/viewer.mp4</p></div>
+    </figure>
+  </article>
+
+  <article class="feature">
+    <div class="feature-copy">
+      <h3>Advanced Image Paste</h3>
+      <p>Ctrl+click the desktop with an image chosen and it opens in an editor with a live preview. The original clip is never changed, and you can save your usual settings as presets.</p>
+      <ul>
+        <li>Crop, resize, rotate and flip.</li>
+        <li>Outline, rounded corners, drop shadow and padding.</li>
+        <li>Remove or replace a plain background.</li>
+        <li>Save as PNG, JPG, WebP or BMP, wherever you like.</li>
+      </ul>
+    </div>
+    <!-- MEDIA SLOT "editor" -->
+    <figure class="media" data-media="editor" data-label="Advanced Image Paste">
+      <div class="slot"><p>Image editor clip</p><p class="hint">assets/media/editor.mp4</p></div>
+    </figure>
+  </article>
+
+  <h3 class="also-h">Also</h3>
+  <dl class="also">
+    <div><dt>Encrypted per clip</dt><dd>Every clip is sealed before it is written, including when it was copied and from which program.</dd></div>
+    <div><dt>Recycle bin</dt><dd>Deleted clips come back with Ctrl+Z, or from the bin, for 30 days. Shift+Delete removes for good.</dd></div>
+    <div><dt>Terminal safe</dt><dd>Pasting several lines into a terminal asks for a second Enter first.</dd></div>
+    <div><dt>Skips password managers</dt><dd>Copies marked sensitive are never recorded, and you can exclude any program by name.</dd></div>
+    <div><dt>Images and files</dt><dd>Pictures and file lists are kept alongside text, with fast cached previews.</dd></div>
+    <div><dt>Size and key</dt><dd>Make the carousel 50 to 200 percent, and choose which key opens the image editor.</dd></div>
+  </dl>
+</section>
+
+<section class="privacy" id="privacy" aria-labelledby="priv-h">
+  <h2 id="priv-h">Privacy</h2>
+  <p>A clipboard holds some of the most sensitive things on a computer, so Pasteroll keeps it there. There is no account, no sync and no analytics, and nothing is ever sent anywhere. History lives in a database on your own disk.</p>
+  <dl class="specs">
+    <div><dt>At rest</dt><dd>Each clip encrypted with XChaCha20-Poly1305</dd></div>
+    <div><dt>Network</dt><dd>None. Nothing is sent anywhere</dd></div>
+    <div><dt>Accounts</dt><dd>None</dd></div>
+    <div><dt>Source</dt><dd>Open, MIT or Apache-2.0</dd></div>
+  </dl>
+  <p class="links"><a href="https://github.com/qpd-v/pasteroll/blob/main/PRIVACY.md">Privacy notes</a> <a href="https://github.com/qpd-v/pasteroll/blob/main/SECURITY.md">Security design and its limits</a></p>
+</section>
+
+<section class="download" id="download" aria-labelledby="dl-h">
+  <h2 id="dl-h">Download</h2>
+  <p class="sub">Public beta <b>0.1.0-beta.1</b>. It works and is tested, but it is young. Please report rough edges.</p>
+
+  <div class="dl-list">
+    <div class="dl-row">
+      <div><h3>Windows 10 / 11</h3><p>64-bit. Installs for your account only, with no administrator rights.</p><p class="fine">pasteroll-windows-x64.zip</p></div>
+      <a class="btn btn-primary" href="https://github.com/qpd-v/pasteroll/releases/latest">Download for Windows</a>
+    </div>
+    <div class="dl-row">
+      <div><h3>Linux (X11)</h3><p>Static build for any x86-64 distribution. Needs an X11 session.</p><p class="fine">pasteroll-linux-x86_64.tar.gz</p></div>
+      <a class="btn btn-primary" href="https://github.com/qpd-v/pasteroll/releases/latest">Download for Linux</a>
+    </div>
+  </div>
+
+  <div class="notes">
+    <div class="note">
+      <h3>"Windows protected your PC"</h3>
+      <p>The beta is not code-signed yet, so SmartScreen warns about new programs. Check the checksum below, then choose <b>More info</b>, <b>Run anyway</b>. Some antivirus programs are also wary of anything that watches the clipboard, which a clipboard manager must. The source is there to read and build yourself.</p>
+    </div>
+    <div class="note">
+      <h3>Verify your download</h3>
+      <p>Every release has a <code>SHA256SUMS</code> file. The value must match exactly.</p>
+      <div class="code"><button class="copy" type="button" data-copy="Get-FileHash .\pasteroll-windows-x64.zip -Algorithm SHA256" aria-label="Copy the Windows command">Copy</button><pre><code><span class="c"># Windows</span>
+Get-FileHash .\pasteroll-windows-x64.zip -Algorithm SHA256</code></pre></div>
+      <div class="code"><button class="copy" type="button" data-copy="sha256sum -c SHA256SUMS --ignore-missing" aria-label="Copy the Linux command">Copy</button><pre><code><span class="c"># Linux</span>
+sha256sum -c SHA256SUMS --ignore-missing</code></pre></div>
+    </div>
+    <div class="note">
+      <h3>Install on Linux</h3>
+      <div class="code"><button class="copy" type="button" data-copy="tar xzf pasteroll-linux-x86_64.tar.gz&#10;cd pasteroll-linux-x86_64&#10;./pasteroll install&#10;pasteroll run" aria-label="Copy the install commands">Copy</button><pre><code>tar xzf pasteroll-linux-x86_64.tar.gz
+cd pasteroll-linux-x86_64
+./pasteroll install
+pasteroll run</code></pre></div>
+      <p class="fine">Optional: <code>tesseract-ocr</code> for Extract text, <code>zenity</code> or <code>kdialog</code> for Save as.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq" aria-labelledby="faq-h">
+  <h2 id="faq-h">FAQ</h2>
+  <div class="faq-list">
+    <details><summary>Is it free?</summary><p>Yes. Pasteroll is open source under the MIT or Apache-2.0 licence, your choice.</p></details>
+    <details><summary>Does it send my clipboard anywhere?</summary><p>No. Nothing is ever sent anywhere: no account, no sync, no telemetry. Text recognition (Extract text) runs on your computer too.</p></details>
+    <details><summary>Where is my history stored?</summary><p>In a database on your disk, in <code>%LOCALAPPDATA%\Pasteroll</code> on Windows and <code>~/.local/share/pasteroll</code> on Linux. Every clip is encrypted before it is written.</p></details>
+    <details><summary>Does it record passwords?</summary><p>Copies that password managers mark as sensitive are skipped, and you can exclude any program by name in Settings. Even so, a clipboard history is a risk worth knowing about, which is why Pasteroll encrypts it and lets you set how much is kept and for how long.</p></details>
+    <details><summary>Does it work on Wayland? On macOS?</summary><p>Not yet. Linux needs an X11 session (Ubuntu and Fedora offer one at the login screen). There is no macOS version.</p></details>
+    <details><summary>How do I uninstall it?</summary><p>Run <code>pasteroll uninstall</code>. Add <code>--remove-data --yes</code> to delete the history and its keys as well.</p></details>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <p>Pasteroll is free and open source, MIT or Apache-2.0.</p>
+    <nav aria-label="Project links">
+      <a href="https://github.com/qpd-v/pasteroll">GitHub</a>
+      <a href="https://github.com/qpd-v/pasteroll/issues">Report an issue</a>
+      <a href="https://github.com/qpd-v/pasteroll/blob/main/CHANGELOG.md">Changelog</a>
+      <a href="https://github.com/qpd-v/pasteroll/blob/main/PRIVACY.md">Privacy</a>
+      <a href="https://github.com/qpd-v/pasteroll/blob/main/SECURITY.md">Security</a>
+    </nav>
+  </div>
+</footer>
+
+<!-- THEME PICKER: for choosing a look. Delete this block (and the matching code in script.js) once a theme is chosen. -->
+<div class="picker" id="picker">
+  <button class="picker-toggle" type="button" aria-expanded="false" aria-controls="picker-list" aria-label="Choose a colour theme">
+    <i class="sw sw-now"></i><span class="picker-name">Cinnamon</span>
+  </button>
+  <div class="picker-list" id="picker-list" role="group" aria-label="Colour themes" hidden>
+    <button type="button" data-set="cinnamon"><i class="sw" data-sw="cinnamon"></i>Cinnamon <small>coffee</small></button>
+    <button type="button" data-set="frappe"><i class="sw" data-sw="frappe"></i>Frapp&eacute;</button>
+    <button type="button" data-set="macchiato"><i class="sw" data-sw="macchiato"></i>Macchiato</button>
+    <button type="button" data-set="mocha"><i class="sw" data-sw="mocha"></i>Mocha</button>
+    <button type="button" data-set="latte"><i class="sw" data-sw="latte"></i>Latte <small>light</small></button>
+    <p class="picker-hint">Press <kbd>T</kbd> to cycle</p>
+  </div>
+</div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
