@@ -7,5 +7,10 @@
     "directory": "./",
     // unknown addresses get 404.html with a real 404 status
     "not_found_handling": "404-page"
-  }
+  },
+  // The site's own addresses. Cloudflare creates the DNS records and certificates when this is deployed.
+  "routes": [
+    { "pattern": "pasteroll.com", "custom_domain": true },
+    { "pattern": "www.pasteroll.com", "custom_domain": true }
+  ]
 }
