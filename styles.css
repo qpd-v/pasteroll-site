@@ -157,6 +157,9 @@ section > p { color: var(--muted); max-width: 42em; }
 .dl-row + .dl-row { border-top: 1px solid var(--border); }
 .dl-row h3 { font-size: 1.02rem; }
 .dl-row p { color: var(--muted); font-size: .92rem; }
+.dl-row > div { min-width: 0; }
+.dl-row .fine { overflow-wrap: anywhere; }
+.dl-row .btn { flex-shrink: 0; }
 .fine { font-size: .76rem; color: var(--faint); margin-top: 4px; }
 .notes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 28px; }
 .note { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; align-content: start; }
