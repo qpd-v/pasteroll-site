@@ -25,20 +25,20 @@ python -m http.server 8080
 then open http://localhost:8080. (Opening `index.html` straight from the disk works for the look,
 but the demo clips are only picked up when served.)
 
-## Adding the demo clips
+## Adding the feature clips
 
-Each demo area on the page is a slot with a name. Put a file with that name in `assets/media/` and
-it replaces the placeholder: nothing else to edit.
+Each feature area on the page is a slot with a name. Put a file with that name in `assets/media/` and
+it fills the slot: nothing else to edit.
 
 | Slot | File |
 |---|---|
-| hero | `assets/media/demo.mp4` |
 | carousel | `assets/media/carousel.mp4` |
 | viewer | `assets/media/viewer.mp4` |
 | editor | `assets/media/editor.mp4` |
 
 Use `.mp4` (H.264). A `.gif` with the same name also works but is much bigger. The clips play
-muted and looping; a click pauses them. Keep each under a few MB: about 1280 px wide and 10 to 20
+muted and looping; click one to open it in a larger view. Close the larger view with the Close
+button, Escape, or a click outside it. Keep each under a few MB: about 1280 px wide and 10 to 20
 seconds is plenty.
 
 ## Colour themes

@@ -83,9 +83,23 @@ kbd { font-size: .8em; padding: 1px 7px 2px; border-radius: 5px; background: var
 .slot { aspect-ratio: 16 / 9; display: grid; place-content: center; text-align: center; padding: 16px; color: var(--faint); font-family: var(--mono); font-size: .85rem; }
 .slot .hint { margin-top: 4px; font-size: .76rem; color: var(--faint); }
 .media video, .media > img.real { display: block; width: 100%; height: auto; background: #000; }
+.media video { cursor: zoom-in; }
+.media video:focus-visible { outline: 2px solid var(--accent); outline-offset: -3px; }
 .media.has-media .slot { display: none; }
-/* the hero demo is left out until there is a clip for it (it appears by itself once demo.mp4 exists) */
-.media[data-media="demo"]:not(.has-media) { display: none; }
+body.lightbox-open { overflow: hidden; }
+.lightbox { width: min(1180px, calc(100vw - 28px)); max-width: none; margin: auto; padding: 0; border: 1px solid var(--border); border-radius: 12px; background: var(--mantle); color: var(--text); box-shadow: 0 24px 80px color-mix(in srgb, var(--crust) 60%, transparent); }
+.lightbox::backdrop { background: color-mix(in srgb, var(--crust) 84%, transparent); backdrop-filter: blur(3px); }
+.lightbox-frame { padding: 12px 12px 10px; }
+.lightbox-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 0 2px 10px; }
+.lightbox-title { margin: 0; font-size: .95rem; font-weight: 650; }
+.lightbox-close { flex: none; font: 600 .72rem var(--mono); letter-spacing: .04em; text-transform: uppercase; color: var(--muted); background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 6px 11px; cursor: pointer; }
+.lightbox-close:hover, .lightbox-close:focus-visible { color: var(--text); border-color: var(--accent); }
+.lightbox-video { display: block; width: 100%; height: auto; max-height: calc(100vh - 150px); object-fit: contain; background: #000; border-radius: 7px; }
+.lightbox-hint { margin: 8px 2px 0; font: .7rem var(--mono); color: var(--faint); }
+@media (max-width: 640px) {
+  .lightbox { width: calc(100vw - 18px); }
+  .lightbox-frame { padding: 9px 9px 8px; }
+}
 
 /* sections */
 section { padding-block: 44px; }
