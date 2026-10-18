@@ -47,7 +47,7 @@
     <h1>Pasteroll</h1>
     <p class="lead">A clipboard history you scroll with the mouse wheel. Press <kbd>Ctrl</kbd> <kbd>Shift</kbd> and middle-click anywhere, scroll to an earlier clip, and click where it should go. It is encrypted on your computer, with no account and no cloud.</p>
     <p class="cta"><a class="btn btn-primary" href="#download">Download</a> <a class="btn" href="https://github.com/qpd-v/pasteroll">Source on GitHub</a></p>
-    <p class="facts">Windows 10/11 and Linux (X11). Free and open source. Public beta 0.1.0-beta.2.</p>
+    <p class="facts">Windows 10/11 and Linux (X11; experimental GNOME 46 Wayland). Free and open source. Public beta 0.1.0-beta.3.</p>
   </div>
 </section>
 
@@ -178,28 +178,37 @@
 
 <section class="download" id="download" aria-labelledby="dl-h">
   <h2 id="dl-h">Download</h2>
-  <p class="sub">Public beta <b>0.1.0-beta.2</b>. Choose an installer or a portable download. It is still young; please report rough edges.</p>
+  <p class="sub">Public beta <b>0.1.0-beta.3</b>. Choose an installer or a portable download. It is still young; please report rough edges.</p>
 
   <div class="dl-list">
     <div class="dl-row">
-      <div><h3>Windows 10 / 11 — setup</h3><p>64-bit. Only for me is the default, with no administrator rights. For all users needs UAC.</p><p class="fine">pasteroll-0.1.0-beta.2-windows-x64-setup.exe</p></div>
-      <a class="btn btn-primary" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.2/pasteroll-0.1.0-beta.2-windows-x64-setup.exe">Download setup</a>
+      <div><h3>Windows 10 / 11 — setup</h3><p>64-bit. Only for me is the default, with no administrator rights. For all users needs UAC.</p><p class="fine">pasteroll-0.1.0-beta.3-windows-x64-setup.exe</p></div>
+      <a class="btn btn-primary" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.3/pasteroll-0.1.0-beta.3-windows-x64-setup.exe">Download setup</a>
     </div>
     <div class="dl-row">
-      <div><h3>Windows — portable</h3><p>Extract and run. The included portable.txt keeps history and settings in the adjacent data folder. The history key stays bound to your Windows account.</p><p class="fine">pasteroll-0.1.0-beta.2-windows-x64-portable.zip</p></div>
-      <a class="btn" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.2/pasteroll-0.1.0-beta.2-windows-x64-portable.zip">Download portable ZIP</a>
+      <div><h3>Windows — portable</h3><p>Extract and run. The included portable.txt keeps history and settings in the adjacent data folder. The history key stays bound to your Windows account.</p><p class="fine">pasteroll-0.1.0-beta.3-windows-x64-portable.zip</p></div>
+      <a class="btn" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.3/pasteroll-0.1.0-beta.3-windows-x64-portable.zip">Download portable ZIP</a>
     </div>
     <div class="dl-row">
-      <div><h3>Linux (X11) — archive</h3><p>Static x86-64 build with install.sh for your account or the whole system. Needs an X11 session.</p><p class="fine">pasteroll-0.1.0-beta.2-linux-x86_64.tar.gz</p></div>
-      <a class="btn btn-primary" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.2/pasteroll-0.1.0-beta.2-linux-x86_64.tar.gz">Download Linux archive</a>
+      <div><h3>Linux (X11) — archive</h3><p>Static x86-64 build with install.sh for your account or the whole system. Needs an X11 session.</p><p class="fine">pasteroll-0.1.0-beta.3-linux-x86_64.tar.gz</p></div>
+      <a class="btn btn-primary" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.3/pasteroll-0.1.0-beta.3-linux-x86_64.tar.gz">Download Linux archive</a>
     </div>
     <div class="dl-row">
-      <div><h3>Debian / Ubuntu (X11)</h3><p>amd64 package. Installs through your package manager and keeps history when removed.</p><p class="fine">pasteroll_0.1.0-beta.2_amd64.deb</p></div>
-      <a class="btn" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.2/pasteroll_0.1.0-beta.2_amd64.deb">Download .deb</a>
+      <div><h3>Debian / Ubuntu (X11)</h3><p>amd64 package. Installs through your package manager and keeps history when removed.</p><p class="fine">pasteroll_0.1.0-beta.3_amd64.deb</p></div>
+      <a class="btn" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.3/pasteroll_0.1.0-beta.3_amd64.deb">Download .deb</a>
+    </div>
+    <div class="dl-row">
+      <div><h3>GNOME 46 Wayland — experimental archive</h3><p>x86-64 app, Shell companion and optional administrator-enabled mouse helper. Physical desktop, login/lock and suspend testing has not been performed.</p><p class="fine">pasteroll-0.1.0-beta.3-linux-x86_64-gnome-development.tar.gz</p></div>
+      <a class="btn" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.3/pasteroll-0.1.0-beta.3-linux-x86_64-gnome-development.tar.gz">Download GNOME archive</a>
+    </div>
+    <div class="dl-row">
+      <div><h3>GNOME 46 Wayland — experimental .deb</h3><p>amd64; GNOME 46, glibc 2.34+, libevdev2 and systemd required. Helper is disabled after fresh install. An alternative to the X11 .deb, not a second package to install beside it.</p><p class="fine">pasteroll_0.1.0-beta.3_amd64-gnome-development.deb</p></div>
+      <a class="btn" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.3/pasteroll_0.1.0-beta.3_amd64-gnome-development.deb">Download GNOME .deb</a>
     </div>
   </div>
 
-  <p class="links"><a href="https://github.com/qpd-v/pasteroll/releases/tag/v0.1.0-beta.2">Release notes and testing status</a> <a href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.2/SHA256SUMS">SHA256SUMS</a></p>
+  <p class="fine">GNOME 46 only: Ctrl+Shift+middle-click requires the optional host helper; keyboard mode uses Ctrl+Shift+Space. Follow the <a href="https://github.com/qpd-v/pasteroll/blob/v0.1.0-beta.3/extensions/INPUT_HELPER.md">GNOME setup guide</a>. Other Wayland desktops and GNOME versions are not supported.</p>
+  <p class="links"><a href="https://github.com/qpd-v/pasteroll/releases/tag/v0.1.0-beta.3">Release notes and testing status</a> <a href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.3/SHA256SUMS">SHA256SUMS</a></p>
 
   <div class="notes">
     <div class="note">
@@ -209,18 +218,18 @@
     <div class="note">
       <h3>Verify your download</h3>
       <p>Every release has a <code>SHA256SUMS</code> file. The value must match exactly.</p>
-      <div class="code"><button class="copy" type="button" data-copy="Get-FileHash .\pasteroll-0.1.0-beta.2-windows-x64-setup.exe -Algorithm SHA256" aria-label="Copy the Windows command">Copy</button><pre><code><span class="c"># Windows</span>
-Get-FileHash .\pasteroll-0.1.0-beta.2-windows-x64-setup.exe -Algorithm SHA256</code></pre></div>
+      <div class="code"><button class="copy" type="button" data-copy="Get-FileHash .\pasteroll-0.1.0-beta.3-windows-x64-setup.exe -Algorithm SHA256" aria-label="Copy the Windows command">Copy</button><pre><code><span class="c"># Windows</span>
+Get-FileHash .\pasteroll-0.1.0-beta.3-windows-x64-setup.exe -Algorithm SHA256</code></pre></div>
       <div class="code"><button class="copy" type="button" data-copy="sha256sum -c SHA256SUMS --ignore-missing" aria-label="Copy the Linux command">Copy</button><pre><code><span class="c"># Linux</span>
 sha256sum -c SHA256SUMS --ignore-missing</code></pre></div>
     </div>
     <div class="note">
-      <h3>Install on Linux</h3>
-      <div class="code"><button class="copy" type="button" data-copy="tar xzf pasteroll-0.1.0-beta.2-linux-x86_64.tar.gz&#10;cd pasteroll-0.1.0-beta.2-linux-x86_64&#10;./install.sh&#10;pasteroll run" aria-label="Copy the install commands">Copy</button><pre><code>tar xzf pasteroll-0.1.0-beta.2-linux-x86_64.tar.gz
-cd pasteroll-0.1.0-beta.2-linux-x86_64
+      <h3>Install on Linux (X11)</h3>
+      <div class="code"><button class="copy" type="button" data-copy="tar xzf pasteroll-0.1.0-beta.3-linux-x86_64.tar.gz&#10;cd pasteroll-0.1.0-beta.3-linux-x86_64&#10;./install.sh&#10;pasteroll run" aria-label="Copy the install commands">Copy</button><pre><code>tar xzf pasteroll-0.1.0-beta.3-linux-x86_64.tar.gz
+cd pasteroll-0.1.0-beta.3-linux-x86_64
 ./install.sh
 pasteroll run</code></pre></div>
-      <p>For all users: <code>sudo ./install.sh --system</code>. On Debian/Ubuntu: <code>sudo dpkg -i pasteroll_0.1.0-beta.2_amd64.deb</code>. Autostart stays off unless you enable it.</p>
+      <p>For all users: <code>sudo ./install.sh --system</code>. On Debian/Ubuntu: <code>sudo dpkg -i pasteroll_0.1.0-beta.3_amd64.deb</code>. Autostart stays off unless you enable it.</p>
       <p class="fine">Optional: <code>tesseract-ocr</code> for Extract text, <code>zenity</code> or <code>kdialog</code> for Save as.</p>
     </div>
   </div>
@@ -233,7 +242,7 @@ pasteroll run</code></pre></div>
     <details><summary>Does it send my clipboard anywhere?</summary><p>No. Nothing is ever sent anywhere: no account, no sync, no telemetry. Text recognition (Extract text) runs on your computer too.</p></details>
     <details><summary>Where is my history stored?</summary><p>In a database on your disk, in <code>%LOCALAPPDATA%\Pasteroll</code> on Windows and <code>~/.local/share/pasteroll</code> on Linux. A <code>portable.txt</code> beside the executable keeps data in an adjacent <code>data</code> folder instead. Every clip is encrypted before it is written.</p></details>
     <details><summary>Does it record passwords?</summary><p>Copies that password managers mark as sensitive are skipped, and you can exclude any program by name in Settings. Even so, a clipboard history is a risk worth knowing about, which is why Pasteroll encrypts it and lets you set how much is kept and for how long.</p></details>
-    <details><summary>Does it work on Wayland? On macOS?</summary><p>Not yet. Linux needs an X11 session (Ubuntu and Fedora offer one at the login screen). There is no macOS version.</p></details>
+    <details><summary>Does it work on Wayland? On macOS?</summary><p>Beta.3 offers experimental native Wayland support on GNOME 46 with a Pasteroll Shell companion. Mouse activation needs an optional administrator-enabled host helper; keyboard mode uses Ctrl+Shift+Space. Physical desktop, login/lock and suspend testing has not been performed. Other GNOME versions and Wayland desktops are not supported; use an X11 session for the standard Linux packages. There is no macOS version.</p></details>
     <details><summary>How do I uninstall it?</summary><p>For Windows Setup installs, use Settings &gt; Apps &gt; Pasteroll. History is kept unless you choose to delete it. For a Linux archive install, use <code>./install.sh --uninstall</code>, or <code>sudo ./install.sh --system --uninstall</code> for a system install. Remove the Debian package with <code>sudo dpkg -r pasteroll</code>; its history and settings stay on disk. Quit a portable copy before removing its extracted folder.</p></details>
   </div>
 </section>

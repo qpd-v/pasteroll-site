@@ -96,3 +96,15 @@ itself is deployed.
 Every push to `main` redeploys. The `_headers` file sets a strict Content-Security-Policy, so
 anything new that loads from another site (a font, a script) will be blocked until the policy is
 changed on purpose.
+
+## Current downloads
+
+The site links to the `v0.1.0-beta.3` prerelease: Windows setup/portable, Linux X11
+archive/.deb, two experimental GNOME 46 alternatives, and one SHA256SUMS manifest.
+The GNOME archive and .deb retain `-gnome-development` in their asset names.
+Physical GNOME desktop, login/lock and suspend testing has not been performed.
+Mouse activation requires an optional administrator-enabled helper; keyboard mode
+uses Ctrl+Shift+Space. Keep these limits and the GNOME setup link visible when
+editing the download rows. The two Debian packages are alternatives.
+
+The three approved feature MP4s are unchanged by this release update.
