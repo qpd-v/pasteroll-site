@@ -47,7 +47,7 @@
     <h1>Pasteroll</h1>
     <p class="lead">A clipboard history you scroll with the mouse wheel. Press <kbd>Ctrl</kbd> <kbd>Shift</kbd> and middle-click anywhere, scroll to an earlier clip, and click where it should go. It is encrypted on your computer, with no account and no cloud.</p>
     <p class="cta"><a class="btn btn-primary" href="#download">Download</a> <a class="btn" href="https://github.com/qpd-v/pasteroll">Source on GitHub</a></p>
-    <p class="facts">Windows 10/11 and Linux (X11; experimental GNOME 46 Wayland). Free and open source. Public beta: Windows 0.1.0-beta.6, Linux 0.1.0-beta.4.</p>
+    <p class="facts">Windows 10/11 and Linux (X11; experimental GNOME 46 Wayland). Free and open source. Public beta: Windows 0.1.0-beta.7, Linux 0.1.0-beta.4.</p>
   </div>
 </section>
 
@@ -99,7 +99,7 @@
             <span class="key">Ctrl</span><span class="op">+</span>
             <span class="key key-mouse"><svg viewBox="0 0 28 40" aria-hidden="true"><rect x="2" y="2" width="24" height="36" rx="12"/><path d="M2 15h24M14 2v13"/><path class="hot" d="M2 15V14C2 7.400 7.400 2 14 2v13z"/></svg><small>Click where<br>it goes</small></span>
           </div>
-          <p class="say">With an image chosen, hold <kbd>Ctrl</kbd> while you click the desktop or any window to round the corners and add a shadow before it is saved or pasted.</p>
+          <p class="say">With an image chosen, hold <kbd>Ctrl</kbd> while you click the desktop (on Windows, any window or terminal too) to round the corners and add a shadow before it is saved or pasted.</p>
         </div>
       </div>
     </div>
@@ -135,11 +135,11 @@
   <article class="feature">
     <div class="feature-copy">
       <h3>Advanced Image Paste</h3>
-      <p>Ctrl+click the desktop or any window with an image chosen and it opens in the editor with a live preview. Round the corners, tune the radius, add a shadow, then save a fresh PNG or paste it right there.</p>
+      <p>Ctrl+click the desktop (on Windows, any window too) with an image chosen and it opens in the editor with a live preview. Round the corners, tune the radius, add a shadow, then save a fresh PNG or paste it right there.</p>
       <ul>
         <li>Rounded corners with a live radius control.</li>
         <li>Drop shadow and transparent corners, saved as a fresh PNG on the Desktop.</li>
-        <li>In a window, paste the picture itself, the saved file's path, or just its file name (Windows).</li>
+        <li>In a window (Windows), paste the picture itself, the saved file's path, or just its file name. In a terminal such as Windows Terminal, PowerShell or Claude Code it pastes the path by default.</li>
       </ul>
     </div>
   </article>
@@ -150,6 +150,7 @@
     <div><dt>Two looks</dt><dd>Complete shows everything. No Bloat shows only the current clip, and the search bar and tools appear when you use them. Switch from the tray menu or Settings (Windows).</dd></div>
     <div><dt>Recycle bin</dt><dd>Deleted clips come back with Ctrl+Z, or from the bin, for 30 days. Shift+Delete removes for good.</dd></div>
     <div><dt>Terminal safe</dt><dd>Pasting several lines into a terminal asks for a second Enter first.</dd></div>
+    <div><dt>Optional update check</dt><dd>Off until you say yes (Windows). Once a day it asks GitHub whether a newer version exists and tells you. It never downloads or installs anything.</dd></div>
     <div><dt>Skips password managers</dt><dd>Copies marked sensitive are never recorded, and you can exclude any program by name.</dd></div>
     <div><dt>Images and files</dt><dd>Pictures and file lists are kept alongside text, with fast cached previews.</dd></div>
     <div><dt>Size and key</dt><dd>Make the carousel 50 to 200 percent, and choose which key opens the image editor.</dd></div>
@@ -158,10 +159,10 @@
 
 <section class="privacy" id="privacy" aria-labelledby="priv-h">
   <h2 id="priv-h">Privacy</h2>
-  <p>A clipboard holds some of the most sensitive things on a computer, so Pasteroll keeps it there. There is no account, no sync and no analytics, and nothing is ever sent anywhere. History lives in a database on your own disk.</p>
+  <p>A clipboard holds some of the most sensitive things on a computer, so Pasteroll keeps it there. There is no account, no sync and no analytics, and your clipboard is never sent anywhere. History lives in a database on your own disk. The one thing that can use the internet is an optional update check on Windows, off until you say yes: once a day it asks GitHub whether a newer version exists, and GitHub sees your IP address and the Pasteroll version, nothing else.</p>
   <dl class="specs">
     <div><dt>At rest</dt><dd>Each clip encrypted with XChaCha20-Poly1305</dd></div>
-    <div><dt>Network</dt><dd>None. Nothing is sent anywhere</dd></div>
+    <div><dt>Network</dt><dd>None, except an optional update check (off until you say yes)</dd></div>
     <div><dt>Accounts</dt><dd>None</dd></div>
     <div><dt>Source</dt><dd>Open, MIT or Apache-2.0</dd></div>
   </dl>
@@ -170,16 +171,16 @@
 
 <section class="download" id="download" aria-labelledby="dl-h">
   <h2 id="dl-h">Download</h2>
-  <p class="sub">Public beta: Windows <b>0.1.0-beta.6</b>, Linux <b>0.1.0-beta.4</b> (Linux catches up in a later release). Choose an installer or a portable download. It is still young; please report rough edges.</p>
+  <p class="sub">Public beta: Windows <b>0.1.0-beta.7</b>, Linux <b>0.1.0-beta.4</b> (Linux catches up in a later release). Choose an installer or a portable download. It is still young; please report rough edges.</p>
 
   <div class="dl-list">
     <div class="dl-row">
-      <div><h3>Windows 10 / 11 — setup</h3><p>64-bit. Only for me is the default, with no administrator rights. For all users needs UAC.</p><p class="fine">pasteroll-0.1.0-beta.6-windows-x64-setup.exe</p></div>
-      <a class="btn btn-primary" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.6/pasteroll-0.1.0-beta.6-windows-x64-setup.exe">Download setup</a>
+      <div><h3>Windows 10 / 11 — setup</h3><p>64-bit. Only for me is the default, with no administrator rights. For all users needs UAC.</p><p class="fine">pasteroll-0.1.0-beta.7-windows-x64-setup.exe</p></div>
+      <a class="btn btn-primary" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.7/pasteroll-0.1.0-beta.7-windows-x64-setup.exe">Download setup</a>
     </div>
     <div class="dl-row">
-      <div><h3>Windows — portable</h3><p>Extract and run. The included portable.txt keeps history and settings in the adjacent data folder. The history key stays bound to your Windows account.</p><p class="fine">pasteroll-0.1.0-beta.6-windows-x64-portable.zip</p></div>
-      <a class="btn" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.6/pasteroll-0.1.0-beta.6-windows-x64-portable.zip">Download portable ZIP</a>
+      <div><h3>Windows — portable</h3><p>Extract and run. The included portable.txt keeps history and settings in the adjacent data folder. The history key stays bound to your Windows account.</p><p class="fine">pasteroll-0.1.0-beta.7-windows-x64-portable.zip</p></div>
+      <a class="btn" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.7/pasteroll-0.1.0-beta.7-windows-x64-portable.zip">Download portable ZIP</a>
     </div>
     <div class="dl-row">
       <div><h3>Linux (X11) — archive</h3><p>Static x86-64 build with install.sh for your account or the whole system. Needs an X11 session.</p><p class="fine">pasteroll-0.1.0-beta.4-linux-x86_64.tar.gz</p></div>
@@ -200,8 +201,8 @@
   </div>
 
   <p class="fine">GNOME 46 only: Ctrl+Shift+middle-click requires the optional host helper; keyboard mode uses Ctrl+Shift+Space. Follow the <a href="https://github.com/qpd-v/pasteroll/blob/v0.1.0-beta.4/extensions/INPUT_HELPER.md">GNOME setup guide</a>. Other Wayland desktops and GNOME versions are not supported.</p>
-  <p class="fine">Linux OCR quality can be inconsistent. OCR accuracy improvements, Linux tray/panel/About parity and the two looks and any-window image editing new in Windows beta.5 are deferred to a later Linux version.</p>
-  <p class="links"><a href="https://github.com/qpd-v/pasteroll/releases/tag/v0.1.0-beta.6">Windows release notes and testing status</a> <a href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.6/SHA256SUMS">Windows SHA256SUMS</a> <a href="https://github.com/qpd-v/pasteroll/releases/tag/v0.1.0-beta.4">Linux release notes and testing status</a> <a href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.4/SHA256SUMS">Linux SHA256SUMS</a></p>
+  <p class="fine">Linux OCR quality can be inconsistent. OCR accuracy improvements, Linux tray/panel/About parity, the two looks and any-window image editing new in Windows beta.5, image paste in terminals new in beta.6 and the optional update check new in beta.7 are deferred to a later Linux version.</p>
+  <p class="links"><a href="https://github.com/qpd-v/pasteroll/releases/tag/v0.1.0-beta.7">Windows release notes and testing status</a> <a href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.7/SHA256SUMS">Windows SHA256SUMS</a> <a href="https://github.com/qpd-v/pasteroll/releases/tag/v0.1.0-beta.4">Linux release notes and testing status</a> <a href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.4/SHA256SUMS">Linux SHA256SUMS</a></p>
 
   <div class="notes">
     <div class="note">
@@ -209,10 +210,14 @@
       <p>The beta is not code-signed yet, so SmartScreen warns about new programs. Check the checksum below, then choose <b>More info</b>, <b>Run anyway</b>. Some antivirus programs are also wary of anything that watches the clipboard, which a clipboard manager must. The source is there to read and build yourself.</p>
     </div>
     <div class="note">
+      <h3>Updating Pasteroll</h3>
+      <p>Quit Pasteroll from its tray icon, then run the new Setup (it also asks a running copy to quit). Your history, key and settings are kept. For the portable ZIP, quit it and extract the new one over the old folder, leaving the <code>data</code> folder alone. Pasteroll never downloads or installs anything by itself. From 0.1.0-beta.7 on, Windows can tell you when a new version is out: it asks once whether it may check, and you can change that under <b>Check for updates</b> in Settings.</p>
+    </div>
+    <div class="note">
       <h3>Verify your download</h3>
       <p>Every release has a <code>SHA256SUMS</code> file. The value must match exactly.</p>
-      <div class="code"><button class="copy" type="button" data-copy="Get-FileHash .\pasteroll-0.1.0-beta.6-windows-x64-setup.exe -Algorithm SHA256" aria-label="Copy the Windows command">Copy</button><pre><code><span class="c"># Windows</span>
-Get-FileHash .\pasteroll-0.1.0-beta.6-windows-x64-setup.exe -Algorithm SHA256</code></pre></div>
+      <div class="code"><button class="copy" type="button" data-copy="Get-FileHash .\pasteroll-0.1.0-beta.7-windows-x64-setup.exe -Algorithm SHA256" aria-label="Copy the Windows command">Copy</button><pre><code><span class="c"># Windows</span>
+Get-FileHash .\pasteroll-0.1.0-beta.7-windows-x64-setup.exe -Algorithm SHA256</code></pre></div>
       <div class="code"><button class="copy" type="button" data-copy="sha256sum -c SHA256SUMS --ignore-missing" aria-label="Copy the Linux command">Copy</button><pre><code><span class="c"># Linux</span>
 sha256sum -c SHA256SUMS --ignore-missing</code></pre></div>
     </div>
@@ -232,7 +237,8 @@ pasteroll run</code></pre></div>
   <h2 id="faq-h">FAQ</h2>
   <div class="faq-list">
     <details><summary>Is it free?</summary><p>Yes. Pasteroll is open source under the MIT or Apache-2.0 licence, your choice.</p></details>
-    <details><summary>Does it send my clipboard anywhere?</summary><p>No. Nothing is ever sent anywhere: no account, no sync, no telemetry. Text recognition (Extract text) runs on your computer too.</p></details>
+    <details><summary>Does it send my clipboard anywhere?</summary><p>No. Your clipboard and history never leave your computer: no account, no sync, no telemetry. Text recognition (Extract text) runs on your computer too. The only thing that can use the internet is the optional update check on Windows, which is off until you say yes. Once a day it asks GitHub whether a newer version exists; GitHub sees your IP address and the Pasteroll version, nothing else, and nothing is downloaded.</p></details>
+    <details><summary>How do I update it?</summary><p>There is no automatic updater. Quit Pasteroll from the tray icon and run the new Setup; your history and settings are kept. On Windows from 0.1.0-beta.7, Pasteroll can tell you when a new version is out if you allow it: it asks once, the answer is saved, and you can change it any time in Settings or check by hand from the tray menu. It only tells you; the download is up to you.</p></details>
     <details><summary>Where is my history stored?</summary><p>In a database on your disk, in <code>%LOCALAPPDATA%\Pasteroll</code> on Windows and <code>~/.local/share/pasteroll</code> on Linux. A <code>portable.txt</code> beside the executable keeps data in an adjacent <code>data</code> folder instead. Every clip is encrypted before it is written.</p></details>
     <details><summary>Does it record passwords?</summary><p>Copies that password managers mark as sensitive are skipped, and you can exclude any program by name in Settings. Even so, a clipboard history is a risk worth knowing about, which is why Pasteroll encrypts it and lets you set how much is kept and for how long.</p></details>
     <details><summary>Does it work on Wayland? On macOS?</summary><p>Beta.4 offers experimental native Wayland support on GNOME 46 with a Pasteroll Shell companion. Mouse activation needs an optional administrator-enabled host helper; keyboard mode uses Ctrl+Shift+Space. Mixed-scale display, viewer and editor checks passed on one Pop!_OS setup. Further manual acceptance, including physical mouse-helper, login/lock and suspend checks, is deferred. Other GNOME versions and Wayland desktops are not supported; use an X11 session for the standard Linux packages. There is no macOS version.</p></details>
