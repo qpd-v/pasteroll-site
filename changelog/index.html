@@ -47,6 +47,16 @@
       <time datetime="2026-10-21">October 21, 2026</time>
       <div class="day-body">
         <article class="commit">
+          <div class="commit-head"><h2>Fix Advanced Image Paste in Windows Terminal and PowerShell (Windows beta.6)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/09f5a14022b3f84aa82e6e352fc4ebdf35ceefa6" title="View this commit on GitHub">09f5a14</a></div>
+          <ul>
+            <li>Fix Advanced Image Paste never opening in Windows Terminal, and so in PowerShell, Claude Code and opencode. Windows Terminal reports its whole window as a title bar, so the click was refused as not on a client area. A click is now accepted when it lies inside the window&#x27;s client rectangle; a standard title bar, borders and caption buttons are still refused.</li>
+            <li>A plain click-to-paste into Windows Terminal was refused the same way and works now too.</li>
+            <li>Open the editor even when Ctrl is still held a second after the click. A click that only opens the editor types nothing yet, so it no longer waits for every key to be released.</li>
+            <li>Add real-window self-tests for both cases, including a real Windows Terminal window.</li>
+            <li>Windows-only release: version 0.1.0-beta.6, with Linux staying on beta.4.</li>
+          </ul>
+        </article>
+        <article class="commit">
           <div class="commit-head"><h2>Add the No Bloat look and image editing in any window (Windows beta.5)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/6eabdbe6493d29691d167868c18c6732d0d77a4f" title="View this commit on GitHub">6eabdbe</a></div>
           <ul>
             <li>Add a No Bloat look for the carousel: only the current clip in a smaller window, with no clip list and no card buttons. Every feature still works from the keyboard and its controls appear when used: the search bar while you type, the filter menu on Tab, a star on pinned clips, Ctrl+E for the expanded viewer.</li>
@@ -148,7 +158,7 @@
 
 <footer class="foot">
   <div class="wrap foot-in">
-    <p>11 commits, latest <a href="https://github.com/qpd-v/pasteroll/commit/6eabdbe6493d29691d167868c18c6732d0d77a4f">6eabdbe</a>.</p>
+    <p>12 commits, latest <a href="https://github.com/qpd-v/pasteroll/commit/09f5a14022b3f84aa82e6e352fc4ebdf35ceefa6">09f5a14</a>.</p>
     <nav aria-label="Project links">
       <a href="https://github.com/qpd-v/pasteroll">GitHub</a>
       <a href="https://github.com/qpd-v/pasteroll/issues">Report an issue</a>
