@@ -47,7 +47,7 @@
     <h1>Pasteroll</h1>
     <p class="lead">A clipboard history you scroll with the mouse wheel. Press <kbd>Ctrl</kbd> <kbd>Shift</kbd> and middle-click anywhere, scroll to an earlier clip, and click where it should go. It is encrypted on your computer, with no account and no cloud.</p>
     <p class="cta"><a class="btn btn-primary" href="#download">Download</a> <a class="btn" href="https://github.com/qpd-v/pasteroll">Source on GitHub</a></p>
-    <p class="facts">Windows 10/11 and Linux (X11; experimental GNOME 46 Wayland). Free and open source. Public beta 0.1.0-beta.3.</p>
+    <p class="facts">Windows 10/11 and Linux (X11; experimental GNOME 46 Wayland). Free and open source. Public beta 0.1.0-beta.4.</p>
   </div>
 </section>
 
@@ -76,7 +76,7 @@
             <span class="op"><svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></span>
             <span class="key key-mouse"><svg viewBox="0 0 28 40" aria-hidden="true"><rect x="2" y="2" width="24" height="36" rx="12"/><path d="M2 15h24M14 2v13"/><path class="hot" d="M2 15V14C2 7.400 7.400 2 14 2v13z"/></svg><small>Left<br>click</small></span>
           </div>
-          <p class="say">Scroll to the clip you want, then simply click into the target window or input box (or press <kbd>Enter</kbd>) to paste. Select part of the text first to paste only that.</p>
+          <p class="say">Scroll to the clip you want, then click into the target window or input box to paste.</p>
         </div>
       </div>
 
@@ -87,7 +87,7 @@
           <div class="combo" data-seq="0:tap:0:500" role="img" aria-label="Click the Expand button on the active card">
             <span class="key key-wide"><svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5.800V1.500h4.300M1.500 1.500l4.700 4.700M14.500 5.800V1.500h-4.300M14.500 1.500l-4.700 4.700M1.500 10.200v4.300h4.300M1.500 14.500l4.700-4.700M14.500 10.200v4.300h-4.300M14.500 14.500l-4.700-4.700"/></svg><small>Expand<br>button</small></span>
           </div>
-          <p class="say">Click Expand on the active card to read long text, zoom into pictures and pull the text out of screenshots.</p>
+          <p class="say">Expand the active card with <kbd>Ctrl</kbd>+<kbd>E</kbd> to read long text, and use <kbd>Ctrl</kbd>+<kbd>F</kbd> to find the words you need.</p>
         </div>
       </div>
 
@@ -99,7 +99,7 @@
             <span class="key">Ctrl</span><span class="op">+</span>
             <span class="key key-mouse"><svg viewBox="0 0 28 40" aria-hidden="true"><rect x="2" y="2" width="24" height="36" rx="12"/><path d="M2 15h24M14 2v13"/><path class="hot" d="M2 15V14C2 7.400 7.400 2 14 2v13z"/></svg><small>Click the<br>desktop</small></span>
           </div>
-          <p class="say">With an image chosen, hold <kbd>Ctrl</kbd> while you click the desktop to crop, resize, add a shadow or outline and more before it is saved. A plain click saves it as it is.</p>
+          <p class="say">With an image chosen, hold <kbd>Ctrl</kbd> while you click the desktop to round the corners and add a shadow before it is saved.</p>
         </div>
       </div>
     </div>
@@ -112,45 +112,35 @@
   <article class="feature">
     <div class="feature-copy">
       <h3>Carousel</h3>
-      <p>Scroll your history where you are working, with nothing to switch to. Type to search (file names too), filter by text, images, documents and more, and pin the clips you want to keep.</p>
+      <p>Scroll your clipboard history without leaving what you are doing. One notch moves one clip; click into the note where it should land.</p>
       <ul>
-        <li>Partial paste: double-click a word or drag across text, then paste only that.</li>
-        <li>Filters you define yourself, and pinned clips that are never removed automatically.</li>
+        <li>Every clip stays one gesture away, with no window switching.</li>
+        <li>The carousel closes as soon as you choose where the clip goes.</li>
       </ul>
     </div>
-    <!-- MEDIA SLOT "carousel" -->
-    <figure class="media" data-media="carousel" data-label="The carousel">
-    </figure>
   </article>
 
   <article class="feature">
     <div class="feature-copy">
       <h3>Expanded viewer</h3>
-      <p>Any clip grows into a large window. Long text scrolls and searches, pictures zoom and pan, and Extract text reads the words in a screenshot. The recognition runs on your computer.</p>
+      <p>Expand any clip into a large reader. Long text scrolls smoothly, and the find bar jumps straight to the words you need.</p>
       <ul>
-        <li>Previous and next without losing your place in the carousel.</li>
-        <li>Save as, Info, copy a selection, fullscreen.</li>
+        <li>Ctrl+F finds a word; F3 moves to the next match without losing your place.</li>
+        <li>The match count stays visible while you read.</li>
+        <li>Circle image areas for local OCR; copied text appears in your history.</li>
       </ul>
     </div>
-    <!-- MEDIA SLOT "viewer" -->
-    <figure class="media" data-media="viewer" data-label="The expanded viewer">
-    </figure>
   </article>
 
   <article class="feature">
     <div class="feature-copy">
       <h3>Advanced Image Paste</h3>
-      <p>Ctrl+click the desktop with an image chosen and it opens in an editor with a live preview. The original clip is never changed, and you can save your usual settings as presets.</p>
+      <p>Ctrl+click the desktop with an image chosen and it opens in the editor with a live preview. Round the corners, tune the radius, add a shadow, and paste a fresh PNG.</p>
       <ul>
-        <li>Crop, resize, rotate and flip.</li>
-        <li>Outline, rounded corners, drop shadow and padding.</li>
-        <li>Remove or replace a plain background.</li>
-        <li>Save as PNG, JPG, WebP or BMP, wherever you like.</li>
+        <li>Rounded corners with a live radius control.</li>
+        <li>Drop shadow and transparent corners, saved as a fresh PNG on the Desktop.</li>
       </ul>
     </div>
-    <!-- MEDIA SLOT "editor" -->
-    <figure class="media" data-media="editor" data-label="Advanced Image Paste">
-    </figure>
   </article>
 
   <h3 class="also-h">Also</h3>
@@ -178,37 +168,38 @@
 
 <section class="download" id="download" aria-labelledby="dl-h">
   <h2 id="dl-h">Download</h2>
-  <p class="sub">Public beta <b>0.1.0-beta.3</b>. Choose an installer or a portable download. It is still young; please report rough edges.</p>
+  <p class="sub">Public beta <b>0.1.0-beta.4</b>. Choose an installer or a portable download. It is still young; please report rough edges.</p>
 
   <div class="dl-list">
     <div class="dl-row">
-      <div><h3>Windows 10 / 11 — setup</h3><p>64-bit. Only for me is the default, with no administrator rights. For all users needs UAC.</p><p class="fine">pasteroll-0.1.0-beta.3-windows-x64-setup.exe</p></div>
-      <a class="btn btn-primary" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.3/pasteroll-0.1.0-beta.3-windows-x64-setup.exe">Download setup</a>
+      <div><h3>Windows 10 / 11 — setup</h3><p>64-bit. Only for me is the default, with no administrator rights. For all users needs UAC.</p><p class="fine">pasteroll-0.1.0-beta.4-windows-x64-setup.exe</p></div>
+      <a class="btn btn-primary" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.4/pasteroll-0.1.0-beta.4-windows-x64-setup.exe">Download setup</a>
     </div>
     <div class="dl-row">
-      <div><h3>Windows — portable</h3><p>Extract and run. The included portable.txt keeps history and settings in the adjacent data folder. The history key stays bound to your Windows account.</p><p class="fine">pasteroll-0.1.0-beta.3-windows-x64-portable.zip</p></div>
-      <a class="btn" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.3/pasteroll-0.1.0-beta.3-windows-x64-portable.zip">Download portable ZIP</a>
+      <div><h3>Windows — portable</h3><p>Extract and run. The included portable.txt keeps history and settings in the adjacent data folder. The history key stays bound to your Windows account.</p><p class="fine">pasteroll-0.1.0-beta.4-windows-x64-portable.zip</p></div>
+      <a class="btn" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.4/pasteroll-0.1.0-beta.4-windows-x64-portable.zip">Download portable ZIP</a>
     </div>
     <div class="dl-row">
-      <div><h3>Linux (X11) — archive</h3><p>Static x86-64 build with install.sh for your account or the whole system. Needs an X11 session.</p><p class="fine">pasteroll-0.1.0-beta.3-linux-x86_64.tar.gz</p></div>
-      <a class="btn btn-primary" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.3/pasteroll-0.1.0-beta.3-linux-x86_64.tar.gz">Download Linux archive</a>
+      <div><h3>Linux (X11) — archive</h3><p>Static x86-64 build with install.sh for your account or the whole system. Needs an X11 session.</p><p class="fine">pasteroll-0.1.0-beta.4-linux-x86_64.tar.gz</p></div>
+      <a class="btn btn-primary" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.4/pasteroll-0.1.0-beta.4-linux-x86_64.tar.gz">Download Linux archive</a>
     </div>
     <div class="dl-row">
-      <div><h3>Debian / Ubuntu (X11)</h3><p>amd64 package. Installs through your package manager and keeps history when removed.</p><p class="fine">pasteroll_0.1.0-beta.3_amd64.deb</p></div>
-      <a class="btn" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.3/pasteroll_0.1.0-beta.3_amd64.deb">Download .deb</a>
+      <div><h3>Debian / Ubuntu (X11)</h3><p>amd64 package. Installs through your package manager and keeps history when removed.</p><p class="fine">pasteroll_0.1.0-beta.4_amd64.deb</p></div>
+      <a class="btn" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.4/pasteroll_0.1.0-beta.4_amd64.deb">Download .deb</a>
     </div>
     <div class="dl-row">
-      <div><h3>GNOME 46 Wayland — experimental archive</h3><p>x86-64 app, Shell companion and optional administrator-enabled mouse helper. Physical desktop, login/lock and suspend testing has not been performed.</p><p class="fine">pasteroll-0.1.0-beta.3-linux-x86_64-gnome-development.tar.gz</p></div>
-      <a class="btn" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.3/pasteroll-0.1.0-beta.3-linux-x86_64-gnome-development.tar.gz">Download GNOME archive</a>
+      <div><h3>GNOME 46 Wayland — experimental archive</h3><p>x86-64 app, Shell companion and optional administrator-enabled mouse helper. Mixed-scale display, viewer and editor checks passed on one Pop!_OS setup. Further manual acceptance, including physical mouse-helper, login/lock and suspend checks, is deferred.</p><p class="fine">pasteroll-0.1.0-beta.4-linux-x86_64-gnome-development.tar.gz</p></div>
+      <a class="btn" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.4/pasteroll-0.1.0-beta.4-linux-x86_64-gnome-development.tar.gz">Download GNOME archive</a>
     </div>
     <div class="dl-row">
-      <div><h3>GNOME 46 Wayland — experimental .deb</h3><p>amd64; GNOME 46, glibc 2.34+, libevdev2 and systemd required. Helper is disabled after fresh install. An alternative to the X11 .deb, not a second package to install beside it.</p><p class="fine">pasteroll_0.1.0-beta.3_amd64-gnome-development.deb</p></div>
-      <a class="btn" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.3/pasteroll_0.1.0-beta.3_amd64-gnome-development.deb">Download GNOME .deb</a>
+      <div><h3>GNOME 46 Wayland — experimental .deb</h3><p>amd64; GNOME 46, glibc 2.34+, libevdev2 and systemd required. Helper is disabled after fresh install. An alternative to the X11 .deb, not a second package to install beside it.</p><p class="fine">pasteroll_0.1.0-beta.4_amd64-gnome-development.deb</p></div>
+      <a class="btn" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.4/pasteroll_0.1.0-beta.4_amd64-gnome-development.deb">Download GNOME .deb</a>
     </div>
   </div>
 
-  <p class="fine">GNOME 46 only: Ctrl+Shift+middle-click requires the optional host helper; keyboard mode uses Ctrl+Shift+Space. Follow the <a href="https://github.com/qpd-v/pasteroll/blob/v0.1.0-beta.3/extensions/INPUT_HELPER.md">GNOME setup guide</a>. Other Wayland desktops and GNOME versions are not supported.</p>
-  <p class="links"><a href="https://github.com/qpd-v/pasteroll/releases/tag/v0.1.0-beta.3">Release notes and testing status</a> <a href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.3/SHA256SUMS">SHA256SUMS</a></p>
+  <p class="fine">GNOME 46 only: Ctrl+Shift+middle-click requires the optional host helper; keyboard mode uses Ctrl+Shift+Space. Follow the <a href="https://github.com/qpd-v/pasteroll/blob/v0.1.0-beta.4/extensions/INPUT_HELPER.md">GNOME setup guide</a>. Other Wayland desktops and GNOME versions are not supported.</p>
+  <p class="fine">Linux OCR quality can be inconsistent. OCR accuracy improvements and Linux tray/panel/About parity are deferred to a later version; Windows has the new tray interactions.</p>
+  <p class="links"><a href="https://github.com/qpd-v/pasteroll/releases/tag/v0.1.0-beta.4">Release notes and testing status</a> <a href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.4/SHA256SUMS">SHA256SUMS</a></p>
 
   <div class="notes">
     <div class="note">
@@ -218,18 +209,18 @@
     <div class="note">
       <h3>Verify your download</h3>
       <p>Every release has a <code>SHA256SUMS</code> file. The value must match exactly.</p>
-      <div class="code"><button class="copy" type="button" data-copy="Get-FileHash .\pasteroll-0.1.0-beta.3-windows-x64-setup.exe -Algorithm SHA256" aria-label="Copy the Windows command">Copy</button><pre><code><span class="c"># Windows</span>
-Get-FileHash .\pasteroll-0.1.0-beta.3-windows-x64-setup.exe -Algorithm SHA256</code></pre></div>
+      <div class="code"><button class="copy" type="button" data-copy="Get-FileHash .\pasteroll-0.1.0-beta.4-windows-x64-setup.exe -Algorithm SHA256" aria-label="Copy the Windows command">Copy</button><pre><code><span class="c"># Windows</span>
+Get-FileHash .\pasteroll-0.1.0-beta.4-windows-x64-setup.exe -Algorithm SHA256</code></pre></div>
       <div class="code"><button class="copy" type="button" data-copy="sha256sum -c SHA256SUMS --ignore-missing" aria-label="Copy the Linux command">Copy</button><pre><code><span class="c"># Linux</span>
 sha256sum -c SHA256SUMS --ignore-missing</code></pre></div>
     </div>
     <div class="note">
       <h3>Install on Linux (X11)</h3>
-      <div class="code"><button class="copy" type="button" data-copy="tar xzf pasteroll-0.1.0-beta.3-linux-x86_64.tar.gz&#10;cd pasteroll-0.1.0-beta.3-linux-x86_64&#10;./install.sh&#10;pasteroll run" aria-label="Copy the install commands">Copy</button><pre><code>tar xzf pasteroll-0.1.0-beta.3-linux-x86_64.tar.gz
-cd pasteroll-0.1.0-beta.3-linux-x86_64
+      <div class="code"><button class="copy" type="button" data-copy="tar xzf pasteroll-0.1.0-beta.4-linux-x86_64.tar.gz&#10;cd pasteroll-0.1.0-beta.4-linux-x86_64&#10;./install.sh&#10;pasteroll run" aria-label="Copy the install commands">Copy</button><pre><code>tar xzf pasteroll-0.1.0-beta.4-linux-x86_64.tar.gz
+cd pasteroll-0.1.0-beta.4-linux-x86_64
 ./install.sh
 pasteroll run</code></pre></div>
-      <p>For all users: <code>sudo ./install.sh --system</code>. On Debian/Ubuntu: <code>sudo dpkg -i pasteroll_0.1.0-beta.3_amd64.deb</code>. Autostart stays off unless you enable it.</p>
+      <p>For all users: <code>sudo ./install.sh --system</code>. On Debian/Ubuntu: <code>sudo dpkg -i pasteroll_0.1.0-beta.4_amd64.deb</code>. Autostart stays off unless you enable it.</p>
       <p class="fine">Optional: <code>tesseract-ocr</code> for Extract text, <code>zenity</code> or <code>kdialog</code> for Save as.</p>
     </div>
   </div>
@@ -242,7 +233,7 @@ pasteroll run</code></pre></div>
     <details><summary>Does it send my clipboard anywhere?</summary><p>No. Nothing is ever sent anywhere: no account, no sync, no telemetry. Text recognition (Extract text) runs on your computer too.</p></details>
     <details><summary>Where is my history stored?</summary><p>In a database on your disk, in <code>%LOCALAPPDATA%\Pasteroll</code> on Windows and <code>~/.local/share/pasteroll</code> on Linux. A <code>portable.txt</code> beside the executable keeps data in an adjacent <code>data</code> folder instead. Every clip is encrypted before it is written.</p></details>
     <details><summary>Does it record passwords?</summary><p>Copies that password managers mark as sensitive are skipped, and you can exclude any program by name in Settings. Even so, a clipboard history is a risk worth knowing about, which is why Pasteroll encrypts it and lets you set how much is kept and for how long.</p></details>
-    <details><summary>Does it work on Wayland? On macOS?</summary><p>Beta.3 offers experimental native Wayland support on GNOME 46 with a Pasteroll Shell companion. Mouse activation needs an optional administrator-enabled host helper; keyboard mode uses Ctrl+Shift+Space. Physical desktop, login/lock and suspend testing has not been performed. Other GNOME versions and Wayland desktops are not supported; use an X11 session for the standard Linux packages. There is no macOS version.</p></details>
+    <details><summary>Does it work on Wayland? On macOS?</summary><p>Beta.4 offers experimental native Wayland support on GNOME 46 with a Pasteroll Shell companion. Mouse activation needs an optional administrator-enabled host helper; keyboard mode uses Ctrl+Shift+Space. Mixed-scale display, viewer and editor checks passed on one Pop!_OS setup. Further manual acceptance, including physical mouse-helper, login/lock and suspend checks, is deferred. Other GNOME versions and Wayland desktops are not supported; use an X11 session for the standard Linux packages. There is no macOS version.</p></details>
     <details><summary>How do I uninstall it?</summary><p>For Windows Setup installs, use Settings &gt; Apps &gt; Pasteroll. History is kept unless you choose to delete it. For a Linux archive install, use <code>./install.sh --uninstall</code>, or <code>sudo ./install.sh --system --uninstall</code> for a system install. Remove the Debian package with <code>sudo dpkg -r pasteroll</code>; its history and settings stay on disk. Quit a portable copy before removing its extracted folder.</p></details>
   </div>
 </section>
@@ -276,17 +267,6 @@ pasteroll run</code></pre></div>
     <p class="picker-hint">Press <kbd>T</kbd> to cycle</p>
   </div>
 </div>
-
-<dialog class="lightbox" id="lightbox" aria-labelledby="lightbox-title">
-  <div class="lightbox-frame">
-    <div class="lightbox-head">
-      <h2 class="lightbox-title" id="lightbox-title">Feature clip</h2>
-      <button class="lightbox-close" type="button" aria-label="Close the expanded view">Close</button>
-    </div>
-    <video class="lightbox-video" muted loop playsinline preload="metadata"></video>
-    <p class="lightbox-hint">Press Esc or click outside to close.</p>
-  </div>
-</dialog>
 
 <script src="script.js" defer></script>
 </body>

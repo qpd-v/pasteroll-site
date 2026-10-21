@@ -8,12 +8,12 @@ index.html      the page
 changelog/      the changelog page (generated, see below)
 scripts/        changelog.py, which builds that page from the GitHub commits
 styles.css      layout and the colour themes
-script.js       theme picker, media slots, copy buttons, scroll reveal
+script.js       theme picker, copy buttons, scroll reveal
 theme-init.js   applies the saved theme before first paint
 404.html        the not-found page
 _headers        security headers and caching (Cloudflare Pages reads this file)
 assets/         icon, favicons, the roll cut-out, the social card
-assets/media/   your demo clips (see below)
+assets/media/   retained original clips, excluded from deployment
 ```
 
 ## Preview locally
@@ -23,23 +23,14 @@ python -m http.server 8080
 ```
 
 then open http://localhost:8080. (Opening `index.html` straight from the disk works for the look,
-but the demo clips are only picked up when served.)
+but serving it is recommended for testing.)
 
-## Adding the feature clips
+## Feature media
 
-Each feature area on the page is a slot with a name. Put a file with that name in `assets/media/` and
-it fills the slot: nothing else to edit.
-
-| Slot | File |
-|---|---|
-| carousel | `assets/media/carousel.mp4` |
-| viewer | `assets/media/viewer.mp4` |
-| editor | `assets/media/editor.mp4` |
-
-Use `.mp4` (H.264). A `.gif` with the same name also works but is much bigger. The clips play
-muted and looping; click one to open it in a larger view. Close the larger view with the Close
-button, Escape, or a click outside it. Keep each under a few MB: about 1280 px wide and 10 to 20
-seconds is plenty.
+Videos and their slots/lightbox have been removed from the page. No placeholders
+or empty media columns remain. Original files are retained locally for future
+revision and assets/media is excluded from deployment. Reintroducing media needs
+an explicit page/design change; files are no longer discovered automatically.
 
 ## Colour themes
 

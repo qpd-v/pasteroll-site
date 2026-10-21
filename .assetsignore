@@ -5,9 +5,15 @@
 .assetsignore
 wrangler.jsonc
 README.md
+EXPANDED_VIEWER_VIDEO_PLAN.md
 scripts
 node_modules
 .wrangler
 .DS_Store
 Thumbs.db
 *.log
+
+# Preserve original feature recordings locally without publishing them.
+assets/media
+.codex-remote-attachments
+.checks
