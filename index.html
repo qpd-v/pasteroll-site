@@ -47,7 +47,7 @@
     <h1>Pasteroll</h1>
     <p class="lead">A clipboard history you scroll with the mouse wheel. Press <kbd>Ctrl</kbd> <kbd>Shift</kbd> and middle-click anywhere, scroll to an earlier clip, and click where it should go. It is encrypted on your computer, with no account and no cloud.</p>
     <p class="cta"><a class="btn btn-primary" href="#download">Download</a> <a class="btn" href="https://github.com/qpd-v/pasteroll">Source on GitHub</a></p>
-    <p class="facts">Windows 10/11 and Linux (X11; experimental GNOME 46 Wayland). Free and open source. Public beta 0.1.0-beta.4.</p>
+    <p class="facts">Windows 10/11 and Linux (X11; experimental GNOME 46 Wayland). Free and open source. Public beta: Windows 0.1.0-beta.5, Linux 0.1.0-beta.4.</p>
   </div>
 </section>
 
@@ -95,11 +95,11 @@
         <div class="node head"><h3>Image editor</h3></div>
         <div class="link" aria-hidden="true"></div>
         <div class="node body">
-          <div class="combo" data-seq="0:down:0,550:tap:1:170,1500:up:0" role="img" aria-label="Hold Control and left-click the desktop">
+          <div class="combo" data-seq="0:down:0,550:tap:1:170,1500:up:0" role="img" aria-label="Hold Control and left-click where the picture should go">
             <span class="key">Ctrl</span><span class="op">+</span>
-            <span class="key key-mouse"><svg viewBox="0 0 28 40" aria-hidden="true"><rect x="2" y="2" width="24" height="36" rx="12"/><path d="M2 15h24M14 2v13"/><path class="hot" d="M2 15V14C2 7.400 7.400 2 14 2v13z"/></svg><small>Click the<br>desktop</small></span>
+            <span class="key key-mouse"><svg viewBox="0 0 28 40" aria-hidden="true"><rect x="2" y="2" width="24" height="36" rx="12"/><path d="M2 15h24M14 2v13"/><path class="hot" d="M2 15V14C2 7.400 7.400 2 14 2v13z"/></svg><small>Click where<br>it goes</small></span>
           </div>
-          <p class="say">With an image chosen, hold <kbd>Ctrl</kbd> while you click the desktop to round the corners and add a shadow before it is saved.</p>
+          <p class="say">With an image chosen, hold <kbd>Ctrl</kbd> while you click the desktop or any window to round the corners and add a shadow before it is saved or pasted.</p>
         </div>
       </div>
     </div>
@@ -135,10 +135,11 @@
   <article class="feature">
     <div class="feature-copy">
       <h3>Advanced Image Paste</h3>
-      <p>Ctrl+click the desktop with an image chosen and it opens in the editor with a live preview. Round the corners, tune the radius, add a shadow, and paste a fresh PNG.</p>
+      <p>Ctrl+click the desktop or any window with an image chosen and it opens in the editor with a live preview. Round the corners, tune the radius, add a shadow, then save a fresh PNG or paste it right there.</p>
       <ul>
         <li>Rounded corners with a live radius control.</li>
         <li>Drop shadow and transparent corners, saved as a fresh PNG on the Desktop.</li>
+        <li>In a window, paste the picture itself, the saved file's path, or just its file name (Windows).</li>
       </ul>
     </div>
   </article>
@@ -146,6 +147,7 @@
   <h3 class="also-h">Also</h3>
   <dl class="also">
     <div><dt>Encrypted per clip</dt><dd>Every clip is sealed before it is written, including when it was copied and from which program.</dd></div>
+    <div><dt>Two looks</dt><dd>Complete shows everything. No Bloat shows only the current clip, and the search bar and tools appear when you use them. Switch from the tray menu or Settings (Windows).</dd></div>
     <div><dt>Recycle bin</dt><dd>Deleted clips come back with Ctrl+Z, or from the bin, for 30 days. Shift+Delete removes for good.</dd></div>
     <div><dt>Terminal safe</dt><dd>Pasting several lines into a terminal asks for a second Enter first.</dd></div>
     <div><dt>Skips password managers</dt><dd>Copies marked sensitive are never recorded, and you can exclude any program by name.</dd></div>
@@ -168,16 +170,16 @@
 
 <section class="download" id="download" aria-labelledby="dl-h">
   <h2 id="dl-h">Download</h2>
-  <p class="sub">Public beta <b>0.1.0-beta.4</b>. Choose an installer or a portable download. It is still young; please report rough edges.</p>
+  <p class="sub">Public beta: Windows <b>0.1.0-beta.5</b>, Linux <b>0.1.0-beta.4</b> (Linux catches up in a later release). Choose an installer or a portable download. It is still young; please report rough edges.</p>
 
   <div class="dl-list">
     <div class="dl-row">
-      <div><h3>Windows 10 / 11 — setup</h3><p>64-bit. Only for me is the default, with no administrator rights. For all users needs UAC.</p><p class="fine">pasteroll-0.1.0-beta.4-windows-x64-setup.exe</p></div>
-      <a class="btn btn-primary" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.4/pasteroll-0.1.0-beta.4-windows-x64-setup.exe">Download setup</a>
+      <div><h3>Windows 10 / 11 — setup</h3><p>64-bit. Only for me is the default, with no administrator rights. For all users needs UAC.</p><p class="fine">pasteroll-0.1.0-beta.5-windows-x64-setup.exe</p></div>
+      <a class="btn btn-primary" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.5/pasteroll-0.1.0-beta.5-windows-x64-setup.exe">Download setup</a>
     </div>
     <div class="dl-row">
-      <div><h3>Windows — portable</h3><p>Extract and run. The included portable.txt keeps history and settings in the adjacent data folder. The history key stays bound to your Windows account.</p><p class="fine">pasteroll-0.1.0-beta.4-windows-x64-portable.zip</p></div>
-      <a class="btn" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.4/pasteroll-0.1.0-beta.4-windows-x64-portable.zip">Download portable ZIP</a>
+      <div><h3>Windows — portable</h3><p>Extract and run. The included portable.txt keeps history and settings in the adjacent data folder. The history key stays bound to your Windows account.</p><p class="fine">pasteroll-0.1.0-beta.5-windows-x64-portable.zip</p></div>
+      <a class="btn" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.5/pasteroll-0.1.0-beta.5-windows-x64-portable.zip">Download portable ZIP</a>
     </div>
     <div class="dl-row">
       <div><h3>Linux (X11) — archive</h3><p>Static x86-64 build with install.sh for your account or the whole system. Needs an X11 session.</p><p class="fine">pasteroll-0.1.0-beta.4-linux-x86_64.tar.gz</p></div>
@@ -198,8 +200,8 @@
   </div>
 
   <p class="fine">GNOME 46 only: Ctrl+Shift+middle-click requires the optional host helper; keyboard mode uses Ctrl+Shift+Space. Follow the <a href="https://github.com/qpd-v/pasteroll/blob/v0.1.0-beta.4/extensions/INPUT_HELPER.md">GNOME setup guide</a>. Other Wayland desktops and GNOME versions are not supported.</p>
-  <p class="fine">Linux OCR quality can be inconsistent. OCR accuracy improvements and Linux tray/panel/About parity are deferred to a later version; Windows has the new tray interactions.</p>
-  <p class="links"><a href="https://github.com/qpd-v/pasteroll/releases/tag/v0.1.0-beta.4">Release notes and testing status</a> <a href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.4/SHA256SUMS">SHA256SUMS</a></p>
+  <p class="fine">Linux OCR quality can be inconsistent. OCR accuracy improvements, Linux tray/panel/About parity and the two looks and any-window image editing new in Windows beta.5 are deferred to a later Linux version.</p>
+  <p class="links"><a href="https://github.com/qpd-v/pasteroll/releases/tag/v0.1.0-beta.5">Windows release notes and testing status</a> <a href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.5/SHA256SUMS">Windows SHA256SUMS</a> <a href="https://github.com/qpd-v/pasteroll/releases/tag/v0.1.0-beta.4">Linux release notes and testing status</a> <a href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.4/SHA256SUMS">Linux SHA256SUMS</a></p>
 
   <div class="notes">
     <div class="note">
@@ -209,8 +211,8 @@
     <div class="note">
       <h3>Verify your download</h3>
       <p>Every release has a <code>SHA256SUMS</code> file. The value must match exactly.</p>
-      <div class="code"><button class="copy" type="button" data-copy="Get-FileHash .\pasteroll-0.1.0-beta.4-windows-x64-setup.exe -Algorithm SHA256" aria-label="Copy the Windows command">Copy</button><pre><code><span class="c"># Windows</span>
-Get-FileHash .\pasteroll-0.1.0-beta.4-windows-x64-setup.exe -Algorithm SHA256</code></pre></div>
+      <div class="code"><button class="copy" type="button" data-copy="Get-FileHash .\pasteroll-0.1.0-beta.5-windows-x64-setup.exe -Algorithm SHA256" aria-label="Copy the Windows command">Copy</button><pre><code><span class="c"># Windows</span>
+Get-FileHash .\pasteroll-0.1.0-beta.5-windows-x64-setup.exe -Algorithm SHA256</code></pre></div>
       <div class="code"><button class="copy" type="button" data-copy="sha256sum -c SHA256SUMS --ignore-missing" aria-label="Copy the Linux command">Copy</button><pre><code><span class="c"># Linux</span>
 sha256sum -c SHA256SUMS --ignore-missing</code></pre></div>
     </div>

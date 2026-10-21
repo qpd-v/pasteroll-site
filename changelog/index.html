@@ -47,6 +47,16 @@
       <time datetime="2026-10-21">October 21, 2026</time>
       <div class="day-body">
         <article class="commit">
+          <div class="commit-head"><h2>Add the No Bloat look and image editing in any window (Windows beta.5)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/6eabdbe6493d29691d167868c18c6732d0d77a4f" title="View this commit on GitHub">6eabdbe</a></div>
+          <ul>
+            <li>Add a No Bloat look for the carousel: only the current clip in a smaller window, with no clip list and no card buttons. Every feature still works from the keyboard and its controls appear when used: the search bar while you type, the filter menu on Tab, a star on pinned clips, Ctrl+E for the expanded viewer.</li>
+            <li>Switch between Complete and No Bloat from the Windows tray menu (no restart) or Settings; saved as [appearance] mode in config.toml.</li>
+            <li>Advanced Image Paste now opens on any window, not only the desktop. A new Paste as choice pastes the edited picture, the saved file&#x27;s path, or its file name; terminals default to the path.</li>
+            <li>Check the destination window, the pasted text and the folder before the editor closes: refuse a window that needs more rights, a window that lost the foreground, relative folders, and path characters a terminal would act on.</li>
+            <li>Windows-only release: version 0.1.0-beta.5, with Linux staying on beta.4.</li>
+          </ul>
+        </article>
+        <article class="commit">
           <div class="commit-head"><h2>Fix GNOME mixed-scale rendering and prepare beta.4 release</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/0fe94d4132b154ab2c945533347bc3da0d2bb960" title="View this commit on GitHub">0fe94d4</a></div>
           <ul>
             <li>Separate display coordinates from UI density and transfer large viewers without resampling.</li>
@@ -138,7 +148,7 @@
 
 <footer class="foot">
   <div class="wrap foot-in">
-    <p>10 commits, latest <a href="https://github.com/qpd-v/pasteroll/commit/0fe94d4132b154ab2c945533347bc3da0d2bb960">0fe94d4</a>.</p>
+    <p>11 commits, latest <a href="https://github.com/qpd-v/pasteroll/commit/6eabdbe6493d29691d167868c18c6732d0d77a4f">6eabdbe</a>.</p>
     <nav aria-label="Project links">
       <a href="https://github.com/qpd-v/pasteroll">GitHub</a>
       <a href="https://github.com/qpd-v/pasteroll/issues">Report an issue</a>
