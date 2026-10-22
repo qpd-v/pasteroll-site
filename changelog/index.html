@@ -44,6 +44,23 @@
 
   <ol class="log">
     <li class="day">
+      <time datetime="2026-10-22">October 22, 2026</time>
+      <div class="day-body">
+        <article class="commit">
+          <div class="commit-head"><h2>Add Download and install for updates, with signed releases (Windows beta.9)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/725d226dd211a6c4d55b05a3f4a4812264700ebb" title="View this commit on GitHub">725d226</a></div>
+          <ul>
+            <li>When the update check finds a newer version, the tray menu and the notification now offer &quot;Download and install&quot;. Nothing is downloaded until you click it and confirm.</li>
+            <li>The update is downloaded from GitHub and checked against the Pasteroll release key&#x27;s signature and its checksum before anything runs; a file that fails is deleted.</li>
+            <li>Copies installed with Setup update silently and start again; portable copies replace their own program file.</li>
+            <li>Copies installed for all users ask Windows for administrator permission and are updated from a folder only administrators can open.</li>
+            <li>Releases now carry a signed update manifest and a bare program file; SECURITY.md and PRIVACY.md describe exactly what is downloaded, how it is trusted and what is not protected.</li>
+            <li>Settings now says the update check asks GitHub and that you choose whether to install.</li>
+            <li>Windows-only release: version 0.1.0-beta.9, with Linux staying on beta.4.</li>
+          </ul>
+        </article>
+      </div>
+    </li>
+    <li class="day">
       <time datetime="2026-10-21">October 21, 2026</time>
       <div class="day-body">
         <article class="commit">
@@ -177,7 +194,7 @@
 
 <footer class="foot">
   <div class="wrap foot-in">
-    <p>14 commits, latest <a href="https://github.com/qpd-v/pasteroll/commit/6cdd9c4e198b16124aeb00c0bb5962947357312a">6cdd9c4</a>.</p>
+    <p>15 commits, latest <a href="https://github.com/qpd-v/pasteroll/commit/725d226dd211a6c4d55b05a3f4a4812264700ebb">725d226</a>.</p>
     <nav aria-label="Project links">
       <a href="https://github.com/qpd-v/pasteroll">GitHub</a>
       <a href="https://github.com/qpd-v/pasteroll/issues">Report an issue</a>
