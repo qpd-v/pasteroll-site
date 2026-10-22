@@ -6,8 +6,10 @@
 <title>Changelog · Pasteroll</title>
 <meta name="description" content="Every change to Pasteroll, taken from the commits in its GitHub repository.">
 <meta name="theme-color" content="#1f1713">
+<link rel="canonical" href="https://pasteroll.com/changelog/">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="og:site_name" content="Pasteroll">
 <meta property="og:title" content="Pasteroll changelog">
 <meta property="og:description" content="Every change to Pasteroll, from the commits in its GitHub repository.">
 <meta property="og:url" content="https://pasteroll.com/changelog/">
@@ -46,6 +48,17 @@
     <li class="day">
       <time datetime="2026-10-22">October 22, 2026</time>
       <div class="day-body">
+        <article class="commit">
+          <div class="commit-head"><h2>Sign which version is newest, add a Check now button and Skip this version (Windows beta.10)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/be5283ebd2daf7e80e66555af4987c8cbeafefc4" title="View this commit on GitHub">be5283e</a></div>
+          <ul>
+            <li>The update check now learns the newest version from a short note that is signed with the Pasteroll release key, instead of trusting GitHub&#x27;s list of releases. An older genuine note served again is ignored.</li>
+            <li>Settings has a &quot;Check for updates now&quot; button and shows how long ago the last check was.</li>
+            <li>The install window shows what is new in the version and has a &quot;Skip this version&quot; button.</li>
+            <li>If an update&#x27;s installer fails or crashes, the previous Pasteroll is started again and says so; after a successful update Pasteroll says which version you now have.</li>
+            <li>More tests of the downloader (slow, endless, partial, sign-in and compressed answers) and some unused code removed.</li>
+            <li>Windows-only release: version 0.1.0-beta.10, with Linux staying on beta.4.</li>
+          </ul>
+        </article>
         <article class="commit">
           <div class="commit-head"><h2>Add Download and install for updates, with signed releases (Windows beta.9)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/725d226dd211a6c4d55b05a3f4a4812264700ebb" title="View this commit on GitHub">725d226</a></div>
           <ul>
@@ -194,7 +207,7 @@
 
 <footer class="foot">
   <div class="wrap foot-in">
-    <p>15 commits, latest <a href="https://github.com/qpd-v/pasteroll/commit/725d226dd211a6c4d55b05a3f4a4812264700ebb">725d226</a>.</p>
+    <p>16 commits, latest <a href="https://github.com/qpd-v/pasteroll/commit/be5283ebd2daf7e80e66555af4987c8cbeafefc4">be5283e</a>.</p>
     <nav aria-label="Project links">
       <a href="https://github.com/qpd-v/pasteroll">GitHub</a>
       <a href="https://github.com/qpd-v/pasteroll/issues">Report an issue</a>

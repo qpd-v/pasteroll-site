@@ -136,8 +136,10 @@ PAGE = """<!doctype html>
 <title>Changelog · Pasteroll</title>
 <meta name="description" content="Every change to Pasteroll, taken from the commits in its GitHub repository.">
 <meta name="theme-color" content="#1f1713">
+<link rel="canonical" href="https://pasteroll.com/changelog/">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="og:site_name" content="Pasteroll">
 <meta property="og:title" content="Pasteroll changelog">
 <meta property="og:description" content="Every change to Pasteroll, from the commits in its GitHub repository.">
 <meta property="og:url" content="https://pasteroll.com/changelog/">
@@ -227,6 +229,10 @@ def render(commits, repo):
     return page
 
 
+# commits whose subject starts like this only publish the signed "newest version" note: not news
+HIDDEN_SUBJECT = "Update pointer"
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--repo", default=REPO)
@@ -236,6 +242,7 @@ def main():
     args = ap.parse_args()
     try:
         commits = from_local(args.local, args.repo) if args.local else from_github(args.repo, os.environ.get("GITHUB_TOKEN"))
+        commits = [c for c in commits if not parse_message(c["message"])[0].startswith(HIDDEN_SUBJECT)]
         if not commits:
             raise RuntimeError("no commits found")
     except (urllib.error.URLError, subprocess.CalledProcessError, RuntimeError, OSError, ValueError, KeyError) as e:
