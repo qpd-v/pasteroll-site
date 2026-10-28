@@ -46,8 +46,63 @@
 
   <ol class="log">
     <li class="day">
+      <time datetime="2026-10-28">October 28, 2026</time>
+      <div class="day-body">
+        <article class="commit">
+          <div class="commit-head"><h2>Multi-paste button, picture folder and choosing several clips (Windows beta.11)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/65938ac40a4fab07fe3ef08469c3dd6f19e4a0ef" title="View this commit on GitHub">65938ac</a></div>
+          <ul>
+            <li>A Multi-paste button beside the filter: press it, click each clip you want (Shift+click for a range), then click where they should go. They are pasted one per line in the order you clicked.</li>
+            <li>Ctrl+click and Ctrl+Shift+click choose clips too; Ctrl+C or right-click Copy puts them on the clipboard without pasting.</li>
+            <li>Settings has a &quot;Save pictures in this folder&quot; choice for Paste Path and the image editor.</li>
+            <li>Windows-only release: version 0.1.0-beta.11, with Linux staying on beta.4.</li>
+          </ul>
+        </article>
+      </div>
+    </li>
+    <li class="day">
+      <time datetime="2026-10-24">October 24, 2026</time>
+      <div class="day-body">
+        <article class="commit">
+          <div class="commit-head"><h2>Do not mention a local-only notes file in the changelog</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/29eaaa9120fed51a28555f31e591efe37804e4aa" title="View this commit on GitHub">29eaaa9</a></div>
+        </article>
+        <article class="commit">
+          <div class="commit-head"><h2>Linux code catches up: picture folder, several clips, Complete and No Bloat</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/64891e42926b8fd13abe49c9a64b7e8db826234d" title="View this commit on GitHub">64891e4</a></div>
+          <ul>
+            <li>Linux Settings has the picture folder row, and Ctrl+click, Ctrl+Shift+click, Ctrl+C and right-click Copy work on X11.</li>
+            <li>Complete and No Bloat can be chosen from the Linux tray menu and with config set mode; the GNOME Wayland window size follows it.</li>
+            <li>The Desktop folder is read from the XDG config folder; a relative or home-folder value is ignored.</li>
+            <li>Adds an isolated X11 test for these (a private screen, run under WSL).</li>
+            <li>Not released: Linux stays on beta.4, and none of this has run on a real desktop or GNOME Wayland yet.</li>
+          </ul>
+        </article>
+        <article class="commit">
+          <div class="commit-head"><h2>Ask again when the chosen clips change, copy what is highlighted, keep new picture folders private</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/33a17d80ba3784cdcd259ee8244a9efb8054529a" title="View this commit on GitHub">33a17d8</a></div>
+          <ul>
+            <li>Choosing or un-choosing a clip, or clearing the choice, now withdraws the &quot;several lines into a terminal&quot; warning, so Enter asks again instead of pasting what was not warned about.</li>
+            <li>Ctrl+C with nothing chosen copies just the highlighted part of the clip when there is one.</li>
+            <li>Clips that cannot be read are counted apart from pictures when several are joined.</li>
+            <li>A picture folder the program creates from Settings is private to the user on Linux.</li>
+          </ul>
+        </article>
+        <article class="commit">
+          <div class="commit-head"><h2>Choose a folder for saved pictures, and paste several clips at once</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/7eafebf9954dca16439ee6283f520d359664cb9b" title="View this commit on GitHub">7eafebf</a></div>
+          <ul>
+            <li>New Settings option for the folder where Paste Path and the image editor save pictures (the Desktop is still the default).</li>
+            <li>In the Complete carousel, Ctrl+click chooses clips and Ctrl+Shift+click chooses a range. Clicking the target window pastes them one per line.</li>
+            <li>Ctrl+C, or right-click then Copy, puts the chosen clips on the clipboard without pasting.</li>
+          </ul>
+        </article>
+      </div>
+    </li>
+    <li class="day">
       <time datetime="2026-10-22">October 22, 2026</time>
       <div class="day-body">
+        <article class="commit">
+          <div class="commit-head"><h2>Record a real beta.9 to beta.10 update in the release notes</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/41817e2000d78047980729db6e0d2fee00755e19" title="View this commit on GitHub">41817e2</a></div>
+          <ul>
+            <li>The release notes now say that a real beta.9 copy was updated to beta.10 from GitHub, and that this did not use the signed note.</li>
+          </ul>
+        </article>
         <article class="commit">
           <div class="commit-head"><h2>Sign which version is newest, add a Check now button and Skip this version (Windows beta.10)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/be5283ebd2daf7e80e66555af4987c8cbeafefc4" title="View this commit on GitHub">be5283e</a></div>
           <ul>
@@ -207,7 +262,7 @@
 
 <footer class="foot">
   <div class="wrap foot-in">
-    <p>16 commits, latest <a href="https://github.com/qpd-v/pasteroll/commit/be5283ebd2daf7e80e66555af4987c8cbeafefc4">be5283e</a>.</p>
+    <p>22 commits, latest <a href="https://github.com/qpd-v/pasteroll/commit/65938ac40a4fab07fe3ef08469c3dd6f19e4a0ef">65938ac</a>.</p>
     <nav aria-label="Project links">
       <a href="https://github.com/qpd-v/pasteroll">GitHub</a>
       <a href="https://github.com/qpd-v/pasteroll/issues">Report an issue</a>
