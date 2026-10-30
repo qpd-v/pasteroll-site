@@ -49,6 +49,17 @@
       <time datetime="2026-10-30">October 30, 2026</time>
       <div class="day-body">
         <article class="commit">
+          <div class="commit-head"><h2>Rolls, pin-open, drag and favorites (Windows beta.18)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/c67304607a9024a41b9e5176d0d20a2a6ccfd2a6" title="View this commit on GitHub">c673046</a></div>
+          <ul>
+            <li>Rolls: separate collections of clips you roll through left and right, with LEFT and RIGHT built in on either side of Main. Make your own rolls, place each on the side of Main you want and order them in Settings; move clips with Move to roll, or name a new roll from the menu.</li>
+            <li>Drag the carousel by its empty margins; it follows the pointer across the screen and stays inside the usable area.</li>
+            <li>Pin the carousel open with the bar&#x27;s button or Ctrl+K; it stays above other windows, pastes into the window in front, and works with Multi-paste and the tilt wheel. Clicking elsewhere no longer closes it.</li>
+            <li>Pins are now Favorites, and Ctrl+F makes a favorite; Ctrl+P no longer does anything. Inside the expanded viewer Ctrl+F still finds text.</li>
+            <li>The footer shows the current roll, centered, and flashes a black arrow only while it rolls.</li>
+            <li>Windows-only release: version 0.1.0-beta.18, with Linux staying on beta.4.</li>
+          </ul>
+        </article>
+        <article class="commit">
           <div class="commit-head"><h2>Fix Download and install refusing to update (Windows beta.17)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/f219d5d7df4a6231dcb953808ab247851d41c171" title="View this commit on GitHub">f219d5d</a></div>
           <ul>
             <li>Fixed: &quot;Download and install&quot; could stop with &quot;pasteroll-update exists and is not Pasteroll&#x27;s update folder&quot; after an earlier update. The leftover folder is now cleared and reused, and the clean-up no longer loses the mark that says the folder is Pasteroll&#x27;s own.</li>
@@ -332,7 +343,7 @@
 
 <footer class="foot">
   <div class="wrap foot-in">
-    <p>29 commits, latest <a href="https://github.com/qpd-v/pasteroll/commit/f219d5d7df4a6231dcb953808ab247851d41c171">f219d5d</a>.</p>
+    <p>30 commits, latest <a href="https://github.com/qpd-v/pasteroll/commit/c67304607a9024a41b9e5176d0d20a2a6ccfd2a6">c673046</a>.</p>
     <nav aria-label="Project links">
       <a href="https://github.com/qpd-v/pasteroll">GitHub</a>
       <a href="https://github.com/qpd-v/pasteroll/issues">Report an issue</a>
