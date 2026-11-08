@@ -41,40 +41,6 @@
     }
   }
 
-  var THEMES = ['light', 'dark', 'system'];
-  var themeButtons = Array.prototype.slice.call(document.querySelectorAll('[data-theme-choice]'));
-  var systemLight = window.matchMedia ? window.matchMedia('(prefers-color-scheme: light)') : null;
-
-  function savedChoice() {
-    try {
-      var value = localStorage.getItem('pasteroll-theme');
-      return THEMES.indexOf(value) >= 0 ? value : 'system';
-    } catch (error) { return 'system'; }
-  }
-
-  function applyTheme(choice, persist) {
-    var resolved = choice === 'system' ? (systemLight && systemLight.matches ? 'light' : 'dark') : choice;
-    root.dataset.theme = resolved;
-    var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute('content', resolved === 'light' ? '#f6f1e8' : '#191816');
-    themeButtons.forEach(function (item) {
-      item.setAttribute('aria-pressed', String(item.dataset.themeChoice === choice));
-    });
-    if (persist) {
-      try { localStorage.setItem('pasteroll-theme', choice); } catch (error) {}
-    }
-  }
-
-  themeButtons.forEach(function (item) {
-    item.addEventListener('click', function () { applyTheme(item.dataset.themeChoice, true); });
-  });
-  applyTheme(savedChoice(), false);
-  if (systemLight) {
-    var systemChange = function () { if (savedChoice() === 'system') applyTheme('system', false); };
-    if (systemLight.addEventListener) systemLight.addEventListener('change', systemChange);
-    else if (systemLight.addListener) systemLight.addListener(systemChange);
-  }
-
   document.querySelectorAll('.copy').forEach(function (control) {
     control.addEventListener('click', function () {
       var text = control.dataset.copy || '';

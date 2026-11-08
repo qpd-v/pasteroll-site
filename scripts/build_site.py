@@ -115,11 +115,6 @@ def footer(release):
     </div>
     <div class="footer-bottom">
       <p>Pasteroll {html.escape(release["version"])} · MIT or Apache-2.0</p>
-      <div class="theme-control" role="group" aria-label="Colour theme">
-        <button type="button" data-theme-choice="light" aria-pressed="false">Light</button>
-        <button type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
-        <button type="button" data-theme-choice="system" aria-pressed="true">System</button>
-      </div>
     </div>
   </div>
 </footer>'''
@@ -134,7 +129,7 @@ def layout(meta, body, release):
 <title>{html.escape(meta["title"])}</title>
 <meta name="description" content="{html.escape(meta["description"])}">
 {('<meta name="robots" content="noindex">' if meta.get('robots') else '')}
-<meta name="theme-color" content="#191816">
+<meta name="theme-color" content="#1f1713">
 <link rel="canonical" href="{canonical}">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
@@ -147,7 +142,6 @@ def layout(meta, body, release):
 <meta property="og:image" content="https://pasteroll.com/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="/styles.css">
-<script src="/theme-init.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
