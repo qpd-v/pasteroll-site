@@ -46,8 +46,47 @@
 
   <ol class="log">
     <li class="day">
+      <time datetime="2026-11-08">November 8, 2026</time>
+      <div class="day-body">
+        <article class="commit">
+          <div class="commit-head"><h2>Pasteroll 0.1.0-beta.19 (Windows and Linux)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/b13db1f6ec872852d9d5257dd3262e0e2e050a8c" title="View this commit on GitHub">b13db1f</a></div>
+          <ul>
+            <li>Windows adds the local agent brain: a read-only MCP server for Claude Code, Codex and OpenCode.</li>
+            <li>Linux catches up from beta.4 with rolls, favorite tiles, pin-open, dragging, No Bloat, multi-paste and the image editor.</li>
+            <li>The X11 and experimental GNOME 46 Wayland packages use the matched protocol-4 companion.</li>
+            <li>One release now carries the Windows and Linux downloads with a single SHA256SUMS.</li>
+          </ul>
+        </article>
+        <article class="commit">
+          <div class="commit-head"><h2>Add a Linux build gate and catch-up release docs</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/876bd40729778febbe7904f426e6e8c6ceb62145" title="View this commit on GitHub">876bd40</a></div>
+          <p>Add one command that builds the X11 and GNOME archives and Debian packages, runs both packaging suites, scans all four artifacts and writes SHA256SUMS. Add a Linux GitHub workflow for the workspace tests, package builds, isolated X11 suites and headless GNOME suite. Document the catch-up scope, protocol-4 companion requirement and automated-test limitations in the package READMEs and release notes.</p>
+        </article>
+        <article class="commit">
+          <div class="commit-head"><h2>Bring Linux to beta.19 feature parity</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/6f6106b1c8be4a85b954565980a1cb5fc8ab1b42" title="View this commit on GitHub">6f6106b</a></div>
+          <p>Wire the shared beta.19 features into both Linux backends: rolls and their key/tilt bindings, favorite tiles and colors, Ctrl+K pin-open, dragging, No Bloat, multi-paste, the image editor and the MCP agent brain. Add Rolls / appearance pages to the X11 Settings window and the GNOME dialog, with validated in-place preference commands. Keep Ctrl+P as an alias for Favorite. Bump the GNOME bridge to protocol 4 for the new keep, move and raise operations. Extend the isolated X11 and headless GNOME suites to cover the new paths.</p>
+        </article>
+        <article class="commit">
+          <div class="commit-head"><h2>Share the MCP server and agent-brain commands</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/d4091c29c01cdbb4c310dd8c8e6df3343d66a676" title="View this commit on GitHub">d4091c2</a></div>
+          <p>Move the read-only MCP transport and brain CLI out of the Windows binary so Linux compiles the same code against its keystore. Normalize Debian maintainer scripts to LF (a CRLF shebang made dpkg fail) and stamp the Linux README with the package version.</p>
+        </article>
+      </div>
+    </li>
+    <li class="day">
       <time datetime="2026-10-30">October 30, 2026</time>
       <div class="day-body">
+        <article class="commit">
+          <div class="commit-head"><h2>Add the local MCP agent brain (Windows beta.19)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/d6e57cc51f0145e83108641eba351abeb1fe62d7" title="View this commit on GitHub">d6e57cc</a></div>
+          <ul>
+            <li>`pasteroll mcp` is a read-only MCP server over stdio. Claude Code, Codex and OpenCode can all start it; each gets its own process against the same encrypted history.</li>
+            <li>The brain is the rolls named in the new `[brain]` config section. Turn it on with `pasteroll brain on`, share or stop sharing a roll with `pasteroll brain add/remove`, and see the counts with `pasteroll brain status`.</li>
+            <li>Tools: brain_status, brain_read, brain_search and brain_get. No write, copy, paste, delete or change tool exists.</li>
+            <li>Text and file paths are capped, pictures are off unless include_images is enabled, and each call is capped at max_clips.</li>
+            <li>`pasteroll mcp-config` prints the exact Claude Code, Codex and OpenCode entries with the current program path.</li>
+            <li>The server re-reads config and history on every call, so sharing a roll takes effect without restarting a harness.</li>
+            <li>Privacy: Pasteroll sends nothing; a harness that reads a clip may send it to its model provider. The brain is off by default and every roll is opt-in.</li>
+            <li>Windows-only release: version 0.1.0-beta.19, with Linux staying on beta.4.</li>
+          </ul>
+        </article>
         <article class="commit">
           <div class="commit-head"><h2>Rolls, pin-open, drag and favorites (Windows beta.18)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/c67304607a9024a41b9e5176d0d20a2a6ccfd2a6" title="View this commit on GitHub">c673046</a></div>
           <ul>
@@ -343,7 +382,7 @@
 
 <footer class="foot">
   <div class="wrap foot-in">
-    <p>30 commits, latest <a href="https://github.com/qpd-v/pasteroll/commit/c67304607a9024a41b9e5176d0d20a2a6ccfd2a6">c673046</a>.</p>
+    <p>35 commits, latest <a href="https://github.com/qpd-v/pasteroll/commit/b13db1f6ec872852d9d5257dd3262e0e2e050a8c">b13db1f</a>.</p>
     <nav aria-label="Project links">
       <a href="https://github.com/qpd-v/pasteroll">GitHub</a>
       <a href="https://github.com/qpd-v/pasteroll/issues">Report an issue</a>

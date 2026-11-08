@@ -90,8 +90,7 @@ changed on purpose.
 
 ## Current downloads
 
-The site links to the `v0.1.0-beta.3` prerelease: Windows setup/portable, Linux X11
-archive/.deb, two experimental GNOME 46 alternatives, and one SHA256SUMS manifest.
+The site links to the `v0.1.0-beta.19` prerelease: Windows setup/portable, Linux X11 archive/.deb, two experimental GNOME 46 alternatives, and one SHA256SUMS manifest.
 The GNOME archive and .deb retain `-gnome-development` in their asset names.
 Physical GNOME desktop, login/lock and suspend testing has not been performed.
 Mouse activation requires an optional administrator-enabled helper; keyboard mode
