@@ -41,8 +41,7 @@ own 404 response is not the deployed page.
 ## Design
 
 - Six primary pages: Home, Features, Download, Guide, Privacy and Changelog.
-- Warm dark identity with a matching light palette. The footer offers Light, Dark
-  and System; choices persist across pages and the system preference is respected.
+- Fixed Cinnamon coffee palette: deep brown surfaces, warm text and an amber accent.
 - Mobile navigation appears below the header with a Menu / Close control, Escape
   handling and a no-JavaScript fallback.
 - Section content stays readable at narrow widths and the only horizontal scroll
@@ -67,6 +66,7 @@ fails. Output directory remains `/`.
 Every push to `main` redeploys the site. The `_headers` file sets a strict CSP and
 allows local fonts with `font-src 'self'`. Assets are cached for a day.
 
-The site currently links to `v0.1.0-beta.19`: Windows setup and portable ZIP, Linux
-X11 archive and `.deb`, two experimental GNOME 46 packages, and one SHA256SUMS file.
-Physical GNOME helper, login/lock, suspend and mixed-DPI behavior remain unverified.
+The site mirrors the six `v0.1.0-beta.20` installation packages under `downloads/` so
+the download page remains usable when GitHub's release CDN is unavailable. The GitHub
+release remains canonical. Physical GNOME helper, login/lock, suspend and mixed-DPI
+behavior remain unverified.
