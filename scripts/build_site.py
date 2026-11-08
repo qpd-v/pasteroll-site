@@ -212,7 +212,7 @@ def main():
         "path": "/404.html",
         "nav": "",
         "robots": True,
-    }, '''<section class="lost"><img src="/assets/favicon-64.png" width="64" height="64" alt=""><p class="eyebrow">404</p><h1>There is no page at this address.</h1><p class="lede">It may have moved, or a character in the address may be wrong.</p><a class="button primary" href="/">Go to the Pasteroll home page</a></section>''', release), encoding="utf-8", newline="\n")
+    }, '''<section class="lost"><img src="/assets/favicon-64.png" width="64" height="64" alt=""><p class="eyebrow">404</p><h1>There is no page at this address</h1><p class="lede">It may have moved, or a character in the address may be wrong.</p><a class="button primary" href="/">Go to the Pasteroll home page</a></section>''', release), encoding="utf-8", newline="\n")
     (ROOT / "sitemap.xml").write_text(sitemap(), encoding="utf-8", newline="\n")
     print(f"built {len(PAGES) + 1} pages for {release['version']}")
 
