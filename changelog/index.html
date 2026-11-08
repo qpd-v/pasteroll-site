@@ -1,396 +1,82 @@
 <!doctype html>
-<html lang="en" data-theme="cinnamon">
+<html lang="en" class="no-js" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Changelog · Pasteroll</title>
-<meta name="description" content="Every change to Pasteroll, taken from the commits in its GitHub repository.">
-<meta name="theme-color" content="#1f1713">
+<title>Beta builds for Windows and Linux — Pasteroll</title>
+<meta name="description" content="Pasteroll beta release notes for Windows and Linux, newest first, with dates, platforms, downloads and commit history.">
+
+<meta name="theme-color" content="#191816">
 <link rel="canonical" href="https://pasteroll.com/changelog/">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
 <meta property="og:site_name" content="Pasteroll">
-<meta property="og:title" content="Pasteroll changelog">
-<meta property="og:description" content="Every change to Pasteroll, from the commits in its GitHub repository.">
+<meta property="og:title" content="Beta builds for Windows and Linux — Pasteroll">
+<meta property="og:description" content="Pasteroll beta release notes for Windows and Linux, newest first, with dates, platforms, downloads and commit history.">
 <meta property="og:url" content="https://pasteroll.com/changelog/">
 <meta property="og:image" content="https://pasteroll.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="/styles.css">
 <script src="/theme-init.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-
-<header class="top">
-  <div class="wrap bar">
-    <a class="brand" href="/" aria-label="Pasteroll, home">
-      <img src="/assets/favicon-64.png" width="28" height="28" alt="">
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="/" aria-label="Pasteroll home">
+      <img src="/assets/favicon-64.png" width="30" height="30" alt="">
       <span>pasteroll</span>
     </a>
-    <nav aria-label="Sections">
-      <a href="/#how">How it works</a>
-      <a href="/#features">Features</a>
-      <a href="/#privacy">Privacy</a>
-      <a href="/#download">Download</a>
-      <a href="/#faq">FAQ</a>
-      <a class="keep" href="/changelog/" aria-current="page">Changelog</a>
-      <a class="keep nav-gh" href="https://github.com/qpd-v/pasteroll"><svg class="gh" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg> GitHub</a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-menu">
+      <span class="menu-icon" aria-hidden="true"></span><span>Menu</span>
+    </button>
+    <nav class="site-nav" id="site-menu" aria-label="Main navigation">
+      <a href="/features/">Features</a><a href="/guide/">Guide</a><a href="/changelog/" aria-current="page">Changelog</a><a class="nav-download" href="/download/">Download</a>
+      <a class="nav-github" href="https://github.com/qpd-v/pasteroll" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
     </nav>
   </div>
 </header>
-
-<main id="main" class="wrap">
-  <section class="log-head">
-    <h1>Changelog</h1>
-    <p class="lead">Every change to Pasteroll, generated from its <a href="https://github.com/qpd-v/pasteroll/commits/main">commit history on GitHub</a>.</p>
-  </section>
-
-  <ol class="log">
-    <li class="day">
-      <time datetime="2026-11-08">November 8, 2026</time>
-      <div class="day-body">
-        <article class="commit">
-          <div class="commit-head"><h2>Pasteroll 0.1.0-beta.19 (Windows and Linux)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/b13db1f6ec872852d9d5257dd3262e0e2e050a8c" title="View this commit on GitHub">b13db1f</a></div>
-          <ul>
-            <li>Windows adds the local agent brain: a read-only MCP server for Claude Code, Codex and OpenCode.</li>
-            <li>Linux catches up from beta.4 with rolls, favorite tiles, pin-open, dragging, No Bloat, multi-paste and the image editor.</li>
-            <li>The X11 and experimental GNOME 46 Wayland packages use the matched protocol-4 companion.</li>
-            <li>One release now carries the Windows and Linux downloads with a single SHA256SUMS.</li>
-          </ul>
-        </article>
-        <article class="commit">
-          <div class="commit-head"><h2>Add a Linux build gate and catch-up release docs</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/876bd40729778febbe7904f426e6e8c6ceb62145" title="View this commit on GitHub">876bd40</a></div>
-          <p>Add one command that builds the X11 and GNOME archives and Debian packages, runs both packaging suites, scans all four artifacts and writes SHA256SUMS. Add a Linux GitHub workflow for the workspace tests, package builds, isolated X11 suites and headless GNOME suite. Document the catch-up scope, protocol-4 companion requirement and automated-test limitations in the package READMEs and release notes.</p>
-        </article>
-        <article class="commit">
-          <div class="commit-head"><h2>Bring Linux to beta.19 feature parity</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/6f6106b1c8be4a85b954565980a1cb5fc8ab1b42" title="View this commit on GitHub">6f6106b</a></div>
-          <p>Wire the shared beta.19 features into both Linux backends: rolls and their key/tilt bindings, favorite tiles and colors, Ctrl+K pin-open, dragging, No Bloat, multi-paste, the image editor and the MCP agent brain. Add Rolls / appearance pages to the X11 Settings window and the GNOME dialog, with validated in-place preference commands. Keep Ctrl+P as an alias for Favorite. Bump the GNOME bridge to protocol 4 for the new keep, move and raise operations. Extend the isolated X11 and headless GNOME suites to cover the new paths.</p>
-        </article>
-        <article class="commit">
-          <div class="commit-head"><h2>Share the MCP server and agent-brain commands</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/d4091c29c01cdbb4c310dd8c8e6df3343d66a676" title="View this commit on GitHub">d4091c2</a></div>
-          <p>Move the read-only MCP transport and brain CLI out of the Windows binary so Linux compiles the same code against its keystore. Normalize Debian maintainer scripts to LF (a CRLF shebang made dpkg fail) and stamp the Linux README with the package version.</p>
-        </article>
+<main id="main"><section class="page-hero compact"><div class="shell"><h1>Pasteroll beta builds for Windows and Linux</h1><p class="lede">Builds appear newest first. Each entry gives its release date, version and platforms, then links to its GitHub release for downloads and the full commit history. Older versions are in the <a href="https://github.com/qpd-v/pasteroll/commits/main" rel="noopener">repository history</a>.</p></div></section>
+<section class="section"><div class="shell release-list"><article class="release featured">
+  <div class="release-head"><p class="eyebrow">2026-11-08</p><h2>0.1.0-beta.19</h2><div class="tags"><span class="tag">Windows</span><span class="tag">Linux</span></div></div>
+  <ul><li>Linux now includes rolls, favorite tiles, pinning, dragging, No Bloat, multi-paste and the image editor.</li><li>Windows adds the local read-only MCP agent brain for Claude Code, Codex and OpenCode.</li><li>The X11 and experimental GNOME 46 Wayland packages use the matching protocol 4 companion.</li><li>Windows and Linux downloads now ship together with one SHA256SUMS file.</li></ul>
+  <a class="text-link" href="https://github.com/qpd-v/pasteroll/releases/tag/v0.1.0-beta.19" rel="noopener" aria-label="Open the Pasteroll 0.1.0-beta.19 release tag on GitHub">Release tag, downloads and commits on GitHub <span aria-hidden="true">↗</span></a>
+</article><article class="release">
+  <div class="release-head"><p class="eyebrow">2026-10-30</p><h2>0.1.0-beta.18</h2><div class="tags"><span class="tag">Windows</span></div></div>
+  <ul><li>Rolls split history into separate collections, with LEFT and RIGHT beside Main.</li><li>The carousel can stay open and be dragged by an empty margin.</li><li>Pins were renamed Favorites; Ctrl+F makes a favorite from the clip in view.</li><li>Mouse multi-paste and the Paste button work while the carousel is pinned open.</li></ul>
+  <a class="text-link" href="https://github.com/qpd-v/pasteroll/releases/tag/v0.1.0-beta.18" rel="noopener" aria-label="Open the Pasteroll 0.1.0-beta.18 release tag on GitHub">Release tag, downloads and commits on GitHub <span aria-hidden="true">↗</span></a>
+</article><article class="release">
+  <div class="release-head"><p class="eyebrow">2026-10-30</p><h2>0.1.0-beta.17</h2><div class="tags"><span class="tag">Windows</span></div></div>
+  <ul><li>Fixed Download and install refusing to update when an old pasteroll-update folder was present.</li><li>Existing history, key and settings locations did not change.</li></ul>
+  <a class="text-link" href="https://github.com/qpd-v/pasteroll/releases/tag/v0.1.0-beta.17" rel="noopener" aria-label="Open the Pasteroll 0.1.0-beta.17 release tag on GitHub">Release tag, downloads and commits on GitHub <span aria-hidden="true">↗</span></a>
+</article><article class="release">
+  <div class="release-head"><p class="eyebrow">2026-10-28</p><h2>0.1.0-beta.16</h2><div class="tags"><span class="tag">Windows</span></div></div>
+  <ul><li>Favorite clips appear as colored tiles with previews above the list.</li><li>The image editor gained drawing, text and recoloring tools.</li></ul>
+  <a class="text-link" href="https://github.com/qpd-v/pasteroll/releases/tag/v0.1.0-beta.16" rel="noopener" aria-label="Open the Pasteroll 0.1.0-beta.16 release tag on GitHub">Release tag, downloads and commits on GitHub <span aria-hidden="true">↗</span></a>
+</article></div></section></main>
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="/" aria-label="Pasteroll home"><img src="/assets/favicon-64.png" width="28" height="28" alt=""><span>pasteroll</span></a>
+      <p>A clipboard history for Windows and Linux. Open source under MIT or Apache-2.0.</p>
+    </div>
+    <div class="footer-links">
+      <div><h2>Use Pasteroll</h2><a href="/features/">Features</a><a href="/download/">Download</a><a href="/guide/">Guide</a></div>
+      <div><h2>Source</h2><a href="/changelog/">Release notes</a><a href="https://github.com/qpd-v/pasteroll" rel="noopener">GitHub</a><a href="https://github.com/qpd-v/pasteroll/issues" rel="noopener">Report a bug</a></div>
+      <div><h2>Policies</h2><a href="/privacy/">Privacy</a><a href="https://github.com/qpd-v/pasteroll/blob/main/SECURITY.md" rel="noopener">Security</a><a href="https://github.com/qpd-v/pasteroll/blob/main/LICENSE-MIT" rel="noopener">License</a></div>
+    </div>
+    <div class="footer-bottom">
+      <p>Pasteroll 0.1.0-beta.19 · MIT or Apache-2.0</p>
+      <div class="theme-control" role="group" aria-label="Colour theme">
+        <button type="button" data-theme-choice="light" aria-pressed="false">Light</button>
+        <button type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+        <button type="button" data-theme-choice="system" aria-pressed="true">System</button>
       </div>
-    </li>
-    <li class="day">
-      <time datetime="2026-10-30">October 30, 2026</time>
-      <div class="day-body">
-        <article class="commit">
-          <div class="commit-head"><h2>Add the local MCP agent brain (Windows beta.19)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/d6e57cc51f0145e83108641eba351abeb1fe62d7" title="View this commit on GitHub">d6e57cc</a></div>
-          <ul>
-            <li>`pasteroll mcp` is a read-only MCP server over stdio. Claude Code, Codex and OpenCode can all start it; each gets its own process against the same encrypted history.</li>
-            <li>The brain is the rolls named in the new `[brain]` config section. Turn it on with `pasteroll brain on`, share or stop sharing a roll with `pasteroll brain add/remove`, and see the counts with `pasteroll brain status`.</li>
-            <li>Tools: brain_status, brain_read, brain_search and brain_get. No write, copy, paste, delete or change tool exists.</li>
-            <li>Text and file paths are capped, pictures are off unless include_images is enabled, and each call is capped at max_clips.</li>
-            <li>`pasteroll mcp-config` prints the exact Claude Code, Codex and OpenCode entries with the current program path.</li>
-            <li>The server re-reads config and history on every call, so sharing a roll takes effect without restarting a harness.</li>
-            <li>Privacy: Pasteroll sends nothing; a harness that reads a clip may send it to its model provider. The brain is off by default and every roll is opt-in.</li>
-            <li>Windows-only release: version 0.1.0-beta.19, with Linux staying on beta.4.</li>
-          </ul>
-        </article>
-        <article class="commit">
-          <div class="commit-head"><h2>Rolls, pin-open, drag and favorites (Windows beta.18)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/c67304607a9024a41b9e5176d0d20a2a6ccfd2a6" title="View this commit on GitHub">c673046</a></div>
-          <ul>
-            <li>Rolls: separate collections of clips you roll through left and right, with LEFT and RIGHT built in on either side of Main. Make your own rolls, place each on the side of Main you want and order them in Settings; move clips with Move to roll, or name a new roll from the menu.</li>
-            <li>Drag the carousel by its empty margins; it follows the pointer across the screen and stays inside the usable area.</li>
-            <li>Pin the carousel open with the bar&#x27;s button or Ctrl+K; it stays above other windows, pastes into the window in front, and works with Multi-paste and the tilt wheel. Clicking elsewhere no longer closes it.</li>
-            <li>Pins are now Favorites, and Ctrl+F makes a favorite; Ctrl+P no longer does anything. Inside the expanded viewer Ctrl+F still finds text.</li>
-            <li>The footer shows the current roll, centered, and flashes a black arrow only while it rolls.</li>
-            <li>Windows-only release: version 0.1.0-beta.18, with Linux staying on beta.4.</li>
-          </ul>
-        </article>
-        <article class="commit">
-          <div class="commit-head"><h2>Fix Download and install refusing to update (Windows beta.17)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/f219d5d7df4a6231dcb953808ab247851d41c171" title="View this commit on GitHub">f219d5d</a></div>
-          <ul>
-            <li>Fixed: &quot;Download and install&quot; could stop with &quot;pasteroll-update exists and is not Pasteroll&#x27;s update folder&quot; after an earlier update. The leftover folder is now cleared and reused, and the clean-up no longer loses the mark that says the folder is Pasteroll&#x27;s own.</li>
-            <li>A folder with anything else in it is still never touched.</li>
-            <li>Windows-only release: version 0.1.0-beta.17, with Linux staying on beta.4.</li>
-          </ul>
-        </article>
-      </div>
-    </li>
-    <li class="day">
-      <time datetime="2026-10-29">October 29, 2026</time>
-      <div class="day-body">
-        <article class="commit">
-          <div class="commit-head"><h2>Pinned clip tiles, drawing and text on pictures (Windows beta.16)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/d43b3b57b68cc28cf4d180d3b6f6f7d0134ec547" title="View this commit on GitHub">d43b3b5</a></div>
-          <ul>
-            <li>Pinned clips also show as small square tiles above the list: click to paste, rest the pointer for a second to see the whole clip, right-click to paste, unpin or colour the tile.</li>
-            <li>The image editor has a new &quot;Draw and write&quot; section: pen, soft brush, circle and arrow in any colour, with Remove last and Clear all.</li>
-            <li>Text can be written on a picture, with a font picker and a colour you can change for just the part of the text you select.</li>
-            <li>Windows-only release: version 0.1.0-beta.16, with Linux staying on beta.4.</li>
-          </ul>
-        </article>
-      </div>
-    </li>
-    <li class="day">
-      <time datetime="2026-10-28">October 28, 2026</time>
-      <div class="day-body">
-        <article class="commit">
-          <div class="commit-head"><h2>Collapsing list while choosing clips, and small pictures in rows (Windows beta.15)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/0fb97a199fbf4ba2e45efab3025aa1cc5bd2f806" title="View this commit on GitHub">0fb97a1</a></div>
-          <ul>
-            <li>While Multi-paste is on, or any clip is chosen, the tall card of the clip shown shrinks with a short animation into a one-line row, so about a dozen rows fit on screen and are easy to choose from.</li>
-            <li>A picture clip&#x27;s one-line row ends in a small picture of it.</li>
-            <li>Windows-only release: version 0.1.0-beta.15, with Linux staying on beta.4.</li>
-          </ul>
-        </article>
-        <article class="commit">
-          <div class="commit-head"><h2>Collapse the list to rows while choosing clips, and show small pictures in rows</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/518167892cd2cc8001165e8815c3b3a3005fe284" title="View this commit on GitHub">5181678</a></div>
-          <ul>
-            <li>While Multi-paste is on, or any clip is chosen, the tall card of the clip shown shrinks with a short animation into a one-line row, so about a dozen rows are on screen; it opens again when the choice is cleared.</li>
-            <li>A picture clip&#x27;s one-line row ends in a small picture of it, in the normal list too.</li>
-          </ul>
-        </article>
-        <article class="commit">
-          <div class="commit-head"><h2>Multi-paste from the keyboard, join options, Clear history and new dialogs (Windows beta.14)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/b2158e48329452af073aa81007ad908c592f24eb" title="View this commit on GitHub">b2158e4</a></div>
-          <ul>
-            <li>Multi-paste from the keyboard: Ctrl+M turns it on, Shift or Ctrl with the arrows choose clips, Space chooses the one shown, Ctrl+A chooses all.</li>
-            <li>Hold Ctrl while clicking where to paste (or press Ctrl+E) to open options: join the clips with a new line, space, comma, tab or nothing, number or bullet them, and set the order, with a preview.</li>
-            <li>Settings has a Clear history button; About and the update question use the new light and dark window style.</li>
-            <li>Settings and the update window follow a move to a monitor with a different scale.</li>
-            <li>Windows-only release: version 0.1.0-beta.14, with Linux staying on beta.4.</li>
-          </ul>
-        </article>
-        <article class="commit">
-          <div class="commit-head"><h2>An update window with a progress bar, and far fewer notifications (Windows beta.13)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/178bed0dbde0d0fb972ce6ce93091d1052c90c11" title="View this commit on GitHub">178bed0</a></div>
-          <ul>
-            <li>Checking for updates, what is new, the download and installing now happen in one window that follows the Windows light or dark mode, instead of a dialog and a series of notifications.</li>
-            <li>It shows a progress bar with the size while downloading, a Cancel button for the download, and a Try again button if something goes wrong.</li>
-            <li>No notifications while checking or updating; the icon announces a new version once, and clicking it opens the update window.</li>
-            <li>Windows-only release: version 0.1.0-beta.13, with Linux staying on beta.4.</li>
-          </ul>
-        </article>
-        <article class="commit">
-          <div class="commit-head"><h2>A new Settings window and multi-pastes kept in history (Windows beta.12)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/9c66078ed4d318805ecda7bf59e3ab3218eedd7b" title="View this commit on GitHub">9c66078</a></div>
-          <ul>
-            <li>The Settings window is redesigned: compact, in two columns, and it follows the Windows light or dark mode. Save and Cancel are no longer cut off on a small or high-scaling screen.</li>
-            <li>A multi-paste is kept in history as one clip, with a small badge showing how many clips went into it.</li>
-            <li>The Multi-paste button in the carousel is now an icon.</li>
-            <li>Windows-only release: version 0.1.0-beta.12, with Linux staying on beta.4.</li>
-          </ul>
-        </article>
-        <article class="commit">
-          <div class="commit-head"><h2>Multi-paste button, picture folder and choosing several clips (Windows beta.11)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/65938ac40a4fab07fe3ef08469c3dd6f19e4a0ef" title="View this commit on GitHub">65938ac</a></div>
-          <ul>
-            <li>A Multi-paste button beside the filter: press it, click each clip you want (Shift+click for a range), then click where they should go. They are pasted one per line in the order you clicked.</li>
-            <li>Ctrl+click and Ctrl+Shift+click choose clips too; Ctrl+C or right-click Copy puts them on the clipboard without pasting.</li>
-            <li>Settings has a &quot;Save pictures in this folder&quot; choice for Paste Path and the image editor.</li>
-            <li>Windows-only release: version 0.1.0-beta.11, with Linux staying on beta.4.</li>
-          </ul>
-        </article>
-      </div>
-    </li>
-    <li class="day">
-      <time datetime="2026-10-24">October 24, 2026</time>
-      <div class="day-body">
-        <article class="commit">
-          <div class="commit-head"><h2>Do not mention a local-only notes file in the changelog</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/29eaaa9120fed51a28555f31e591efe37804e4aa" title="View this commit on GitHub">29eaaa9</a></div>
-        </article>
-        <article class="commit">
-          <div class="commit-head"><h2>Linux code catches up: picture folder, several clips, Complete and No Bloat</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/64891e42926b8fd13abe49c9a64b7e8db826234d" title="View this commit on GitHub">64891e4</a></div>
-          <ul>
-            <li>Linux Settings has the picture folder row, and Ctrl+click, Ctrl+Shift+click, Ctrl+C and right-click Copy work on X11.</li>
-            <li>Complete and No Bloat can be chosen from the Linux tray menu and with config set mode; the GNOME Wayland window size follows it.</li>
-            <li>The Desktop folder is read from the XDG config folder; a relative or home-folder value is ignored.</li>
-            <li>Adds an isolated X11 test for these (a private screen, run under WSL).</li>
-            <li>Not released: Linux stays on beta.4, and none of this has run on a real desktop or GNOME Wayland yet.</li>
-          </ul>
-        </article>
-        <article class="commit">
-          <div class="commit-head"><h2>Ask again when the chosen clips change, copy what is highlighted, keep new picture folders private</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/33a17d80ba3784cdcd259ee8244a9efb8054529a" title="View this commit on GitHub">33a17d8</a></div>
-          <ul>
-            <li>Choosing or un-choosing a clip, or clearing the choice, now withdraws the &quot;several lines into a terminal&quot; warning, so Enter asks again instead of pasting what was not warned about.</li>
-            <li>Ctrl+C with nothing chosen copies just the highlighted part of the clip when there is one.</li>
-            <li>Clips that cannot be read are counted apart from pictures when several are joined.</li>
-            <li>A picture folder the program creates from Settings is private to the user on Linux.</li>
-          </ul>
-        </article>
-        <article class="commit">
-          <div class="commit-head"><h2>Choose a folder for saved pictures, and paste several clips at once</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/7eafebf9954dca16439ee6283f520d359664cb9b" title="View this commit on GitHub">7eafebf</a></div>
-          <ul>
-            <li>New Settings option for the folder where Paste Path and the image editor save pictures (the Desktop is still the default).</li>
-            <li>In the Complete carousel, Ctrl+click chooses clips and Ctrl+Shift+click chooses a range. Clicking the target window pastes them one per line.</li>
-            <li>Ctrl+C, or right-click then Copy, puts the chosen clips on the clipboard without pasting.</li>
-          </ul>
-        </article>
-      </div>
-    </li>
-    <li class="day">
-      <time datetime="2026-10-22">October 22, 2026</time>
-      <div class="day-body">
-        <article class="commit">
-          <div class="commit-head"><h2>Record a real beta.9 to beta.10 update in the release notes</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/41817e2000d78047980729db6e0d2fee00755e19" title="View this commit on GitHub">41817e2</a></div>
-          <ul>
-            <li>The release notes now say that a real beta.9 copy was updated to beta.10 from GitHub, and that this did not use the signed note.</li>
-          </ul>
-        </article>
-        <article class="commit">
-          <div class="commit-head"><h2>Sign which version is newest, add a Check now button and Skip this version (Windows beta.10)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/be5283ebd2daf7e80e66555af4987c8cbeafefc4" title="View this commit on GitHub">be5283e</a></div>
-          <ul>
-            <li>The update check now learns the newest version from a short note that is signed with the Pasteroll release key, instead of trusting GitHub&#x27;s list of releases. An older genuine note served again is ignored.</li>
-            <li>Settings has a &quot;Check for updates now&quot; button and shows how long ago the last check was.</li>
-            <li>The install window shows what is new in the version and has a &quot;Skip this version&quot; button.</li>
-            <li>If an update&#x27;s installer fails or crashes, the previous Pasteroll is started again and says so; after a successful update Pasteroll says which version you now have.</li>
-            <li>More tests of the downloader (slow, endless, partial, sign-in and compressed answers) and some unused code removed.</li>
-            <li>Windows-only release: version 0.1.0-beta.10, with Linux staying on beta.4.</li>
-          </ul>
-        </article>
-        <article class="commit">
-          <div class="commit-head"><h2>Add Download and install for updates, with signed releases (Windows beta.9)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/725d226dd211a6c4d55b05a3f4a4812264700ebb" title="View this commit on GitHub">725d226</a></div>
-          <ul>
-            <li>When the update check finds a newer version, the tray menu and the notification now offer &quot;Download and install&quot;. Nothing is downloaded until you click it and confirm.</li>
-            <li>The update is downloaded from GitHub and checked against the Pasteroll release key&#x27;s signature and its checksum before anything runs; a file that fails is deleted.</li>
-            <li>Copies installed with Setup update silently and start again; portable copies replace their own program file.</li>
-            <li>Copies installed for all users ask Windows for administrator permission and are updated from a folder only administrators can open.</li>
-            <li>Releases now carry a signed update manifest and a bare program file; SECURITY.md and PRIVACY.md describe exactly what is downloaded, how it is trusted and what is not protected.</li>
-            <li>Settings now says the update check asks GitHub and that you choose whether to install.</li>
-            <li>Windows-only release: version 0.1.0-beta.9, with Linux staying on beta.4.</li>
-          </ul>
-        </article>
-      </div>
-    </li>
-    <li class="day">
-      <time datetime="2026-10-21">October 21, 2026</time>
-      <div class="day-body">
-        <article class="commit">
-          <div class="commit-head"><h2>Fix the Settings window not showing your update-check answer (Windows beta.8)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/6cdd9c4e198b16124aeb00c0bb5962947357312a" title="View this commit on GitHub">6cdd9c4</a></div>
-          <ul>
-            <li>Fix the &quot;Check for updates once a day&quot; box in Settings staying empty after you answered the one-time update question while Settings was open. The open window now follows a choice made elsewhere within a second, so what you see is what was saved.</li>
-            <li>The one-time update question now waits until Settings is closed instead of appearing on top of it.</li>
-            <li>Windows-only release: version 0.1.0-beta.8, with Linux staying on beta.4.</li>
-          </ul>
-        </article>
-        <article class="commit">
-          <div class="commit-head"><h2>Add an optional update check, off until you say yes (Windows beta.7)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/09da79d19fa0c9b03552ebaee1846adbce271e82" title="View this commit on GitHub">09da79d</a></div>
-          <ul>
-            <li>Add an optional update check. The first time you run this version Pasteroll asks once whether it may check for updates; the default button is Never check, and closing the window decides nothing. Settings has a checkbox for it.</li>
-            <li>When it is on, about once a day Pasteroll asks GitHub for the list of releases and tells you if a newer version exists, with a notification and a tray menu entry that open its release page. It never downloads or installs anything.</li>
-            <li>Check by hand from the tray menu (Check for updates now) or with pasteroll update-check. With the check off, Pasteroll makes no network request at all.</li>
-            <li>Describe exactly what is sent and how the reply is handled in PRIVACY.md and SECURITY.md, and stop saying that nothing is ever sent anywhere: your clipboard still never leaves your computer.</li>
-            <li>Uninstalling with delete data now also removes the update check&#x27;s state file.</li>
-            <li>Windows-only release: version 0.1.0-beta.7, with Linux staying on beta.4.</li>
-          </ul>
-        </article>
-        <article class="commit">
-          <div class="commit-head"><h2>Fix Advanced Image Paste in Windows Terminal and PowerShell (Windows beta.6)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/09f5a14022b3f84aa82e6e352fc4ebdf35ceefa6" title="View this commit on GitHub">09f5a14</a></div>
-          <ul>
-            <li>Fix Advanced Image Paste never opening in Windows Terminal, and so in PowerShell, Claude Code and opencode. Windows Terminal reports its whole window as a title bar, so the click was refused as not on a client area. A click is now accepted when it lies inside the window&#x27;s client rectangle; a standard title bar, borders and caption buttons are still refused.</li>
-            <li>A plain click-to-paste into Windows Terminal was refused the same way and works now too.</li>
-            <li>Open the editor even when Ctrl is still held a second after the click. A click that only opens the editor types nothing yet, so it no longer waits for every key to be released.</li>
-            <li>Add real-window self-tests for both cases, including a real Windows Terminal window.</li>
-            <li>Windows-only release: version 0.1.0-beta.6, with Linux staying on beta.4.</li>
-          </ul>
-        </article>
-        <article class="commit">
-          <div class="commit-head"><h2>Add the No Bloat look and image editing in any window (Windows beta.5)</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/6eabdbe6493d29691d167868c18c6732d0d77a4f" title="View this commit on GitHub">6eabdbe</a></div>
-          <ul>
-            <li>Add a No Bloat look for the carousel: only the current clip in a smaller window, with no clip list and no card buttons. Every feature still works from the keyboard and its controls appear when used: the search bar while you type, the filter menu on Tab, a star on pinned clips, Ctrl+E for the expanded viewer.</li>
-            <li>Switch between Complete and No Bloat from the Windows tray menu (no restart) or Settings; saved as [appearance] mode in config.toml.</li>
-            <li>Advanced Image Paste now opens on any window, not only the desktop. A new Paste as choice pastes the edited picture, the saved file&#x27;s path, or its file name; terminals default to the path.</li>
-            <li>Check the destination window, the pasted text and the folder before the editor closes: refuse a window that needs more rights, a window that lost the foreground, relative folders, and path characters a terminal would act on.</li>
-            <li>Windows-only release: version 0.1.0-beta.5, with Linux staying on beta.4.</li>
-          </ul>
-        </article>
-        <article class="commit">
-          <div class="commit-head"><h2>Fix GNOME mixed-scale rendering and prepare beta.4 release</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/0fe94d4132b154ab2c945533347bc3da0d2bb960" title="View this commit on GitHub">0fe94d4</a></div>
-          <ul>
-            <li>Separate display coordinates from UI density and transfer large viewers without resampling.</li>
-            <li>Verify transparent Linux icons and document deferred OCR quality and Linux interface parity.</li>
-            <li>Prepare Windows, X11 and experimental GNOME packages with explicit manual-testing limits.</li>
-          </ul>
-        </article>
-      </div>
-    </li>
-    <li class="day">
-      <time datetime="2026-10-20">October 20, 2026</time>
-      <div class="day-body">
-        <article class="commit">
-          <div class="commit-head"><h2>Prepare beta.4 OCR selection and Windows tray improvements</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/5853a2b5c704015e68735fe13da39eb599e9d9ea" title="View this commit on GitHub">5853a2b</a></div>
-          <p>Add freehand OCR areas, capture copied viewer text, and refresh history when returning from the viewer.</p>
-          <p>Use transparent roll branding, add Windows About information, and distinguish single and double tray clicks.</p>
-          <p>Keep beta.4 as an unpublished development candidate pending Linux parity and physical testing.</p>
-        </article>
-      </div>
-    </li>
-    <li class="day">
-      <time datetime="2026-10-18">October 18, 2026</time>
-      <div class="day-body">
-        <article class="commit">
-          <div class="commit-head"><h2>Release beta.3 with experimental GNOME 46 support</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/67b23a2da0f1fff86c88472f9beae41a47b32585" title="View this commit on GitHub">67b23a2</a></div>
-          <ul>
-            <li>Add the native GNOME companion and optional mouse input helper.</li>
-            <li>Package separate experimental GNOME archive and Debian downloads.</li>
-            <li>Preserve the Windows and X11 backends and add strict six-package verification.</li>
-            <li>Document automated test coverage and unperformed physical desktop tests.</li>
-          </ul>
-        </article>
-      </div>
-    </li>
-    <li class="day">
-      <time datetime="2026-10-17">October 17, 2026</time>
-      <div class="day-body">
-        <article class="commit">
-          <div class="commit-head"><h2>Add GNOME Wayland bridge foundations and native integration tests</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/7d8f115102284c56a05cb1b8e1d3dd42358494fe" title="View this commit on GitHub">7d8f115</a></div>
-        </article>
-        <article class="commit">
-          <div class="commit-head"><h2>Add isolated GNOME Wayland feasibility harness</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/2fa7027043c22fdffc3650a63ac36b8d414fd4be" title="View this commit on GitHub">2fa7027</a></div>
-        </article>
-        <article class="commit">
-          <div class="commit-head"><h2>Link README downloads to the public beta.2 release</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/14af70275fafd4dd73e5f6971a69fb367e624351" title="View this commit on GitHub">14af702</a></div>
-        </article>
-      </div>
-    </li>
-    <li class="day">
-      <time datetime="2026-10-16">October 16, 2026</time>
-      <div class="day-body">
-        <article class="commit">
-          <div class="commit-head"><h2>Prepare beta.2 installers, portable mode, and release tooling</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/ae21138a19e4937ea0d40ac00142e7ba4ce55135" title="View this commit on GitHub">ae21138</a></div>
-        </article>
-        <article class="commit">
-          <div class="commit-head"><h2>Advanced Image Paste</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/6f7c660c19f96ba1e8fa11832c8a56998a734759" title="View this commit on GitHub">6f7c660</a></div>
-          <p>Ctrl+click on the desktop with an image chosen (the key is a setting: Ctrl, Shift or Alt) opens an image editor instead of saving at once; a plain click still saves immediately.</p>
-          <ul>
-            <li>The card animates into a modal editor window with a live preview: outline, resize, crop (handles, numbers, locked shapes), rounded corners, drop shadow, background remove/fill/replace, padding, any-angle rotate and flips, PNG/JPG/WebP/BMP output with quality</li>
-            <li>File name and folder choice, undo/redo, reset all, saved presets</li>
-            <li>The clip is never changed; the preview and the saved file apply the same adjustments to a reduced copy and to the whole picture</li>
-            <li>Windows and Linux: click modifier capture, modal clicks, folder chooser, presets file, settings entry</li>
-          </ul>
-        </article>
-        <article class="commit">
-          <div class="commit-head"><h2>Expanded viewer, recycle bin, and text extraction</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/c85c05d0c0a7bbede89c1c4689fd9488fe27e73a" title="View this commit on GitHub">c85c05d</a></div>
-          <ul>
-            <li>Expanded viewer: animated card-to-overlay with back and fullscreen, text/image viewing, zoom and pan, find, word wrap, info panel, save as, prev/next, and a bottom toolbar with a More menu</li>
-            <li>Recycle bin: delete sends clips to a 30-day bin; restore, undo, and Shift+Delete or Shift+click for permanent deletion with confirmation</li>
-            <li>Extract text from images with the OS text recognition (Windows.Media.Ocr; tesseract on Linux), entirely local</li>
-            <li>Sealed copy time and source app on new clips (store schema v5)</li>
-            <li>Crash notes in pasteroll.log (location only, never clip data)</li>
-            <li>seed --image option for test histories</li>
-          </ul>
-        </article>
-      </div>
-    </li>
-    <li class="day">
-      <time datetime="2026-10-15">October 15, 2026</time>
-      <div class="day-body">
-        <article class="commit">
-          <div class="commit-head"><h2>Pasteroll 0.1.0-beta.1</h2> <a class="hash" href="https://github.com/qpd-v/pasteroll/commit/4bc0cb02d2f4e518956278365f1a8ef49c74942f" title="View this commit on GitHub">4bc0cb0</a></div>
-          <p>Clipboard history carousel for Windows 10/11 and Linux (X11). Dual-licensed MIT OR Apache-2.0.</p>
-        </article>
-      </div>
-    </li>
-  </ol>
-</main>
-
-<footer class="foot">
-  <div class="wrap foot-in">
-    <p>35 commits, latest <a href="https://github.com/qpd-v/pasteroll/commit/b13db1f6ec872852d9d5257dd3262e0e2e050a8c">b13db1f</a>.</p>
-    <nav aria-label="Project links">
-      <a href="https://github.com/qpd-v/pasteroll">GitHub</a>
-      <a href="https://github.com/qpd-v/pasteroll/issues">Report an issue</a>
-      <a href="https://github.com/qpd-v/pasteroll/blob/main/CHANGELOG.md">Release notes</a>
-      <a href="https://github.com/qpd-v/pasteroll/blob/main/PRIVACY.md">Privacy</a>
-      <a href="https://github.com/qpd-v/pasteroll/blob/main/SECURITY.md">Security</a>
-    </nav>
+    </div>
   </div>
 </footer>
+<script src="/script.js" defer></script>
 </body>
 </html>

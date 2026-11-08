@@ -1,100 +1,72 @@
 # pasteroll.com
 
-The one-page site for [Pasteroll](https://github.com/qpd-v/pasteroll). Plain HTML, CSS and a small
-script: no framework, no build step, no external requests (fonts, scripts and analytics included).
+The Pasteroll website: plain generated HTML, CSS and a small script. No framework,
+no runtime dependencies and no external requests.
 
-```
-index.html      the page
-changelog/      the changelog page (generated, see below)
-scripts/        changelog.py, which builds that page from the GitHub commits
-styles.css      layout and the colour themes
-script.js       theme picker, copy buttons, scroll reveal
-theme-init.js   applies the saved theme before first paint
-404.html        the not-found page
-_headers        security headers and caching (Cloudflare Pages reads this file)
-assets/         icon, favicons, the roll cut-out, the social card
-assets/media/   retained original clips, excluded from deployment
-```
+## Source layout
 
-## Preview locally
+| Path | Purpose |
+|---|---|
+| `site/pages/` | Home, Features, Download, Guide and Privacy content |
+| `site/release.json` | Current version, release URLs and the six download asset names |
+| `site/releases.json` | Reviewed release summaries used by the changelog |
+| `scripts/build_site.py` | Shared layout, validation and page generation |
+| `scripts/changelog.py` | Deployment-compatible wrapper that runs the site build |
+| generated root pages | `index.html`, `features/`, `download/`, `guide/`, `privacy/`, `changelog/`, `404.html`, `sitemap.xml` |
+| `assets/shots/` | Product screenshots captured with synthetic clipboard data |
+| `assets/fonts/` | Locally hosted Source Sans 3 and its OFL license |
 
-```sh
-python -m http.server 8080
-```
+`site/` and `scripts/` are development sources. Keep both excluded from deployment
+through `.assetsignore`.
 
-then open http://localhost:8080. (Opening `index.html` straight from the disk works for the look,
-but serving it is recommended for testing.)
-
-## Feature media
-
-Videos and their slots/lightbox have been removed from the page. No placeholders
-or empty media columns remain. Original files are retained locally for future
-revision and assets/media is excluded from deployment. Reintroducing media needs
-an explicit page/design change; files are no longer discovered automatically.
-
-## Colour themes
-
-`:root[data-theme="..."]` blocks in `styles.css` define five themes: `cinnamon` (coffee, the
-default), and the Catppuccin flavours `frappe`, `macchiato`, `mocha` and `latte`. The round button
-at the bottom right (or the **T** key) cycles through them while you choose. When you have picked
-one, set it as the default (`data-theme` on `<html>` in `index.html`, `404.html` and the
-`theme-color` meta tag), then delete the block marked `THEME PICKER` in `index.html` and the theme
-code in `script.js`.
-
-## The changelog page
-
-`changelog/index.html` is generated from the commits of https://github.com/qpd-v/pasteroll by
-`scripts/changelog.py` (Python 3, standard library only). Each commit is a heading, and the
-bullet lines of its message are the list under it, so a commit message written like this reads
-well on the page:
-
-```
-Short title of the change
-
-- First thing it does
-- Second thing it does
-```
+## Build
 
 ```sh
-python scripts/changelog.py                        # read the commits from GitHub
-python scripts/changelog.py --local ../pasteroll   # or from a local clone, offline
+python scripts/build_site.py
 ```
 
-The result is plain static HTML, so visitors' browsers never contact GitHub.
+The build validates the release data and writes the public pages in place at the
+repository root. The site has no package install step.
 
-### Keeping it in sync automatically
+## Preview
 
-1. In Cloudflare Pages, set the **build command** to `python scripts/changelog.py --keep-on-error`
-   (output directory `/`). Every deploy then rebuilds the page from the live repository. If GitHub
-   cannot be reached, the build keeps the page that is committed here and carries on.
-2. In the Pages project, Settings, Builds, **Deploy hooks**: create a hook and copy its URL.
-3. In the app repository on GitHub, Settings, Webhooks, **Add webhook**: paste that URL as the
-   Payload URL, content type `application/json`, and choose *Just the push event*.
+```sh
+python -m http.server 8800
+```
 
-From then on every push to the app repository redeploys the site and the changelog updates itself.
-(No GitHub Actions are involved.) Without steps 2 and 3 the page still updates whenever the site
-itself is deployed.
+Then open `http://127.0.0.1:8800/`. Use the browser tools to check 390px and 1440px
+widths. The 404 page is `http://127.0.0.1:8800/404.html`; a generic local server's
+own 404 response is not the deployed page.
 
-## Deploying (Cloudflare Pages)
+## Design
 
-1. Push this repository to GitHub.
-2. In the Cloudflare dashboard: Workers & Pages, Create, Pages, Connect to Git, choose this
-   repository. Framework preset: none. Build command: `python scripts/changelog.py --keep-on-error`
-   (see the changelog section). Output directory: `/`.
-3. Add the custom domain `pasteroll.com` to the project (and `www.pasteroll.com`, redirected to the
-   bare domain).
+- Six primary pages: Home, Features, Download, Guide, Privacy and Changelog.
+- Warm dark identity with a matching light palette. The footer offers Light, Dark
+  and System; choices persist across pages and the system preference is respected.
+- Mobile navigation appears below the header with a Menu / Close control, Escape
+  handling and a no-JavaScript fallback.
+- Section content stays readable at narrow widths and the only horizontal scroll
+  areas are command blocks and wide reference tables.
+- Product images use synthetic history captured from a private test profile.
 
-Every push to `main` redeploys. The `_headers` file sets a strict Content-Security-Policy, so
-anything new that loads from another site (a font, a script) will be blocked until the policy is
-changed on purpose.
+## Release updates
 
-## Current downloads
+Change `site/release.json` once per release. It supplies the version, release link,
+checksum link and six user-facing asset names to the Download and Guide pages.
 
-The site links to the `v0.1.0-beta.19` prerelease: Windows setup/portable, Linux X11 archive/.deb, two experimental GNOME 46 alternatives, and one SHA256SUMS manifest.
-The GNOME archive and .deb retain `-gnome-development` in their asset names.
-Physical GNOME desktop, login/lock and suspend testing has not been performed.
-Mouse activation requires an optional administrator-enabled helper; keyboard mode
-uses Ctrl+Shift+Space. Keep these limits and the GNOME setup link visible when
-editing the download rows. The two Debian packages are alternatives.
+Add the reviewed release summary to `site/releases.json`. The changelog is no longer
+generated from raw commits, so internal work does not displace user-facing release
+notes.
 
-The three approved feature MP4s are unchanged by this release update.
+## Deploying
+
+The existing Cloudflare build command `python scripts/changelog.py --keep-on-error`
+remains valid: it runs the new site build and keeps the committed pages if the build
+fails. Output directory remains `/`.
+
+Every push to `main` redeploys the site. The `_headers` file sets a strict CSP and
+allows local fonts with `font-src 'self'`. Assets are cached for a day.
+
+The site currently links to `v0.1.0-beta.19`: Windows setup and portable ZIP, Linux
+X11 archive and `.deb`, two experimental GNOME 46 packages, and one SHA256SUMS file.
+Physical GNOME helper, login/lock, suspend and mixed-DPI behavior remain unverified.

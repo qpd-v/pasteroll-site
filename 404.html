@@ -1,21 +1,65 @@
 <!doctype html>
-<html lang="en" data-theme="cinnamon">
+<html lang="en" class="no-js" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Page not found · Pasteroll</title>
+<title>Page not found — Pasteroll</title>
+<meta name="description" content="There is no page at this address.">
 <meta name="robots" content="noindex">
+<meta name="theme-color" content="#191816">
+<link rel="canonical" href="https://pasteroll.com/404.html">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pasteroll">
+<meta property="og:title" content="Page not found — Pasteroll">
+<meta property="og:description" content="There is no page at this address.">
+<meta property="og:url" content="https://pasteroll.com/404.html">
+<meta property="og:image" content="https://pasteroll.com/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="/styles.css">
 <script src="/theme-init.js"></script>
 </head>
 <body>
-<main class="wrap lost">
-  <img src="/assets/favicon-64.png" width="56" height="56" alt="">
-  <p class="eyebrow">404</p>
-  <h1>That page is not here.</h1>
-  <p class="lead">It may have moved, or the address has a typo.</p>
-  <a class="btn btn-primary" href="/">Back to Pasteroll</a>
-</main>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="/" aria-label="Pasteroll home">
+      <img src="/assets/favicon-64.png" width="30" height="30" alt="">
+      <span>pasteroll</span>
+    </a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-menu">
+      <span class="menu-icon" aria-hidden="true"></span><span>Menu</span>
+    </button>
+    <nav class="site-nav" id="site-menu" aria-label="Main navigation">
+      <a href="/features/">Features</a><a href="/guide/">Guide</a><a href="/changelog/">Changelog</a><a class="nav-download" href="/download/">Download</a>
+      <a class="nav-github" href="https://github.com/qpd-v/pasteroll" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+</header>
+<main id="main"><section class="lost"><img src="/assets/favicon-64.png" width="64" height="64" alt=""><p class="eyebrow">404</p><h1>There is no page at this address.</h1><p class="lede">It may have moved, or a character in the address may be wrong.</p><a class="button primary" href="/">Go to the Pasteroll home page</a></section></main>
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="/" aria-label="Pasteroll home"><img src="/assets/favicon-64.png" width="28" height="28" alt=""><span>pasteroll</span></a>
+      <p>A clipboard history for Windows and Linux. Open source under MIT or Apache-2.0.</p>
+    </div>
+    <div class="footer-links">
+      <div><h2>Use Pasteroll</h2><a href="/features/">Features</a><a href="/download/">Download</a><a href="/guide/">Guide</a></div>
+      <div><h2>Source</h2><a href="/changelog/">Release notes</a><a href="https://github.com/qpd-v/pasteroll" rel="noopener">GitHub</a><a href="https://github.com/qpd-v/pasteroll/issues" rel="noopener">Report a bug</a></div>
+      <div><h2>Policies</h2><a href="/privacy/">Privacy</a><a href="https://github.com/qpd-v/pasteroll/blob/main/SECURITY.md" rel="noopener">Security</a><a href="https://github.com/qpd-v/pasteroll/blob/main/LICENSE-MIT" rel="noopener">License</a></div>
+    </div>
+    <div class="footer-bottom">
+      <p>Pasteroll 0.1.0-beta.19 · MIT or Apache-2.0</p>
+      <div class="theme-control" role="group" aria-label="Colour theme">
+        <button type="button" data-theme-choice="light" aria-pressed="false">Light</button>
+        <button type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+        <button type="button" data-theme-choice="system" aria-pressed="true">System</button>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="/script.js" defer></script>
 </body>
 </html>

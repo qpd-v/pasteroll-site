@@ -1,0 +1,46 @@
+[
+  {
+    "version": "0.1.0-beta.19",
+    "date": "2026-11-08",
+    "platforms": "Windows and Linux",
+    "url": "https://github.com/qpd-v/pasteroll/releases/tag/v0.1.0-beta.19",
+    "summary": [
+      "Linux now includes rolls, favorite tiles, pinning, dragging, No Bloat, multi-paste and the image editor.",
+      "Windows adds the local read-only MCP agent brain for Claude Code, Codex and OpenCode.",
+      "The X11 and experimental GNOME 46 Wayland packages use the matching protocol 4 companion.",
+      "Windows and Linux downloads now ship together with one SHA256SUMS file."
+    ]
+  },
+  {
+    "version": "0.1.0-beta.18",
+    "date": "2026-10-30",
+    "platforms": "Windows",
+    "url": "https://github.com/qpd-v/pasteroll/releases/tag/v0.1.0-beta.18",
+    "summary": [
+      "Rolls split history into separate collections, with LEFT and RIGHT beside Main.",
+      "The carousel can stay open and be dragged by an empty margin.",
+      "Pins were renamed Favorites; Ctrl+F makes a favorite from the clip in view.",
+      "Mouse multi-paste and the Paste button work while the carousel is pinned open."
+    ]
+  },
+  {
+    "version": "0.1.0-beta.17",
+    "date": "2026-10-30",
+    "platforms": "Windows",
+    "url": "https://github.com/qpd-v/pasteroll/releases/tag/v0.1.0-beta.17",
+    "summary": [
+      "Fixed Download and install refusing to update when an old pasteroll-update folder was present.",
+      "Existing history, key and settings locations did not change."
+    ]
+  },
+  {
+    "version": "0.1.0-beta.16",
+    "date": "2026-10-28",
+    "platforms": "Windows",
+    "url": "https://github.com/qpd-v/pasteroll/releases/tag/v0.1.0-beta.16",
+    "summary": [
+      "Favorite clips appear as colored tiles with previews above the list.",
+      "The image editor gained drawing, text and recoloring tools."
+    ]
+  }
+]

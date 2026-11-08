@@ -1,0 +1,45 @@
+<section class="page-hero download-hero"><div class="shell">
+  <h1>Pasteroll {{version}}, six packages for Windows and Linux.</h1>
+  <p class="lede">Choose a Windows installer or portable ZIP, a Linux X11 package, or the experimental GNOME 46 Wayland build. All six are in public beta.</p>
+  <div class="hero-links"><a class="text-link" href="{{release_url}}" rel="noopener">Release notes and testing status <span aria-hidden="true">↗</span></a><a class="text-link" href="{{checksums_url}}" rel="noopener">SHA256SUMS <span aria-hidden="true">↗</span></a></div>
+</div></section>
+
+<nav class="page-index shell" aria-label="Download sections"><a href="#windows">Windows</a><a href="#linux">Linux X11</a><a href="#gnome">GNOME 46</a><a href="#verify">SHA-256</a></nav>
+
+<section class="section download-section" id="windows"><div class="shell">
+  <div class="platform-head"><div><p class="eyebrow">Windows 10 / 11 · 64-bit</p><h2>Windows: account install or portable data folder</h2></div><span class="tag stable">Current</span></div>
+  <p class="section-intro">Setup installs Pasteroll for your account by default and needs no administrator rights. The portable ZIP keeps its data in the adjacent <code>data</code> folder.</p>
+  <div class="package-grid">
+    <article class="package"><div><h3>Installer (.exe) for one account or all users</h3><p>Adds a Start menu shortcut, offers a desktop shortcut, and uses the standard Windows uninstaller. Installing for every user requires UAC.</p><p class="file">{{windows_setup_name}}</p></div><a class="button primary" href="{{windows_setup}}">Download installer</a></article>
+    <article class="package"><div><h3>Portable (.zip) keeps history in the data folder</h3><p>Extract the ZIP and run the program. The included <code>portable.txt</code> keeps history and settings beside it.</p><p class="file">{{windows_portable_name}}</p></div><a class="button quiet" href="{{windows_portable}}">Download portable ZIP</a></article>
+  </div>
+  <div class="callout"><strong>Windows SmartScreen</strong><p>This beta is unsigned, so Windows may show a SmartScreen warning. Compare the SHA-256 value first. To continue, choose <b>More info</b>, then <b>Run anyway</b>. Clipboard and keyboard access can also make antivirus tools suspicious.</p></div>
+</div></section>
+
+<section class="section download-section" id="linux"><div class="shell">
+  <div class="platform-head"><div><p class="eyebrow">x86-64 · static archive or Debian package</p><h2>Linux X11 and XWayland</h2></div><span class="tag">X11 package</span></div>
+  <p class="section-intro">These packages need an X11 session or XWayland. The archive is a static build. The Debian package is for Debian, Ubuntu and compatible distributions.</p>
+  <div class="package-grid">
+    <article class="package"><div><h3>Static archive with install.sh for one user or all users</h3><p>Includes <code>install.sh</code> for a per-user or system installation. Runs on other x86-64 distributions with X11.</p><p class="file">{{linux_archive_name}}</p></div><a class="button primary" href="{{linux_archive}}">Download archive</a></article>
+    <article class="package"><div><h3>Debian / Ubuntu (.deb) keeps history after removal</h3><p>Installs through your package manager. History and settings remain when the package is removed.</p><p class="file">{{linux_deb_name}}</p></div><a class="button quiet" href="{{linux_deb}}">Download .deb</a></article>
+  </div>
+  <p class="section-note">If you are not sure which session is running, <code>echo $XDG_SESSION_TYPE</code> prints <code>x11</code> or <code>wayland</code>. <a href="/guide/#linux">Read the Linux install steps</a>.</p>
+</div></section>
+
+<section class="section download-section" id="gnome"><div class="shell">
+  <div class="platform-head"><div><p class="eyebrow">GNOME 46 only · experimental</p><h2>GNOME 46 Wayland, with a companion and optional mouse helper</h2></div><span class="tag warning">Experimental</span></div>
+  <p class="section-intro">The package contains the app, a GNOME Shell companion, and an optional host input helper that an administrator must enable. Mouse activation needs the helper. Keyboard mode uses <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>Space</kbd>.</p>
+  <div class="callout warning"><strong>Both the app and the companion need protocol 4</strong><p>Other GNOME versions and Wayland compositors are not supported. Testing has not covered physical mouse-helper devices, login or lock screens, suspend, or mixed-DPI layouts. The GNOME <code>.deb</code> replaces the X11 package; they are alternatives.</p></div>
+  <div class="package-grid">
+    <article class="package"><div><h3>GNOME development archive for manual installation</h3><p>x86-64 app, companion and helper package for manual installation.</p><p class="file">{{gnome_archive_name}}</p></div><a class="button primary" href="{{gnome_archive}}">Download GNOME archive</a></article>
+    <article class="package"><div><h3>GNOME development .deb starts with the helper disabled</h3><p>amd64. Requires GNOME 46, glibc 2.34+, libevdev2 and systemd. The helper remains disabled after a fresh install.</p><p class="file">{{gnome_deb_name}}</p></div><a class="button quiet" href="{{gnome_deb}}">Download GNOME .deb</a></article>
+  </div>
+  <p class="section-note">The <a href="https://github.com/qpd-v/pasteroll/blob/main/extensions/INPUT_HELPER.md">GNOME setup guide</a> covers extension and helper permissions.</p>
+</div></section>
+
+<section class="section verify-section" id="verify"><div class="shell verify-grid">
+  <div><h2>Check every download against SHA256SUMS.</h2><p><a href="{{checksums_url}}">SHA256SUMS</a> lists all six installation packages, plus the bare Windows program used by portable updates. Compare each line with the hash of the file you downloaded.</p><p><a class="text-link" href="{{release_url}}" rel="noopener">Release notes and testing status <span aria-hidden="true">↗</span></a></p></div>
+  <div class="commands"><div class="code-block"><span class="code-label">PowerShell</span><button class="copy" type="button" data-copy="Get-FileHash .\{{windows_setup_name}} -Algorithm SHA256">Copy</button><pre><code>Get-FileHash .\{{windows_setup_name}} -Algorithm SHA256</code></pre></div><div class="code-block"><span class="code-label">Linux</span><button class="copy" type="button" data-copy="sha256sum -c SHA256SUMS --ignore-missing">Copy</button><pre><code>sha256sum -c SHA256SUMS --ignore-missing</code></pre></div></div>
+</div></section>
+
+<section class="section final-cta"><div class="shell cta-panel"><div><h2>Install steps for the file you downloaded.</h2><p>The Guide covers the Windows installer and portable build, the Linux archive and Debian package, GNOME companion setup, updates and common problems.</p></div><div class="cta-actions"><a class="button primary" href="/guide/">Read the guide</a><a class="button quiet" href="/features/">Browse features</a></div></div></section>

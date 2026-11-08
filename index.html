@@ -1,335 +1,119 @@
 <!doctype html>
-<html lang="en" data-theme="cinnamon" class="no-js">
+<html lang="en" class="no-js" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pasteroll: a clipboard history you scroll with the mouse wheel</title>
-<meta name="description" content="Pasteroll is a clipboard history for Windows and Linux. Press Ctrl+Shift+middle-click, scroll to an earlier clip, click where it goes. Encrypted on your computer. No account, no cloud. Free and open source.">
-<meta name="theme-color" content="#1f1713">
+<title>Pasteroll: an earlier copy at the pointer</title>
+<meta name="description" content="Pasteroll keeps a searchable history of text, files and images for Windows and Linux X11. Press Ctrl, Shift and middle-click to open an earlier copy at the pointer. An experimental GNOME 46 Wayland build is available.">
+
+<meta name="theme-color" content="#191816">
 <link rel="canonical" href="https://pasteroll.com/">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
-<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/assets/favicon-64.png">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pasteroll">
-<meta property="og:title" content="Pasteroll: a clipboard history you scroll with the mouse wheel">
-<meta property="og:description" content="Encrypted on your computer, no account, no cloud. For Windows and Linux.">
+<meta property="og:title" content="Pasteroll: an earlier copy at the pointer">
+<meta property="og:description" content="Pasteroll keeps a searchable history of text, files and images for Windows and Linux X11. Press Ctrl, Shift and middle-click to open an earlier copy at the pointer. An experimental GNOME 46 Wayland build is available.">
 <meta property="og:url" content="https://pasteroll.com/">
 <meta property="og:image" content="https://pasteroll.com/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="styles.css">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "Pasteroll",
-  "url": "https://pasteroll.com/",
-  "description": "A clipboard history for Windows and Linux. Press Ctrl+Shift+middle-click, scroll to an earlier clip, click where it goes. Encrypted on your computer. No account, no cloud.",
-  "applicationCategory": "UtilitiesApplication",
-  "operatingSystem": "Windows, Linux",
-  "isAccessibleForFree": true,
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-  "license": "https://github.com/qpd-v/pasteroll/blob/main/LICENSE-MIT",
-  "downloadUrl": "https://pasteroll.com/#download",
-  "codeRepository": "https://github.com/qpd-v/pasteroll",
-  "sameAs": ["https://github.com/qpd-v/pasteroll"]
-}
-</script>
-<script src="theme-init.js"></script>
+<link rel="stylesheet" href="/styles.css">
+<script src="/theme-init.js"></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-
-<header class="top" id="top">
-  <div class="wrap bar">
-    <a class="brand" href="#top" aria-label="Pasteroll, back to the top">
-      <img src="assets/favicon-64.png" width="28" height="28" alt="">
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="/" aria-label="Pasteroll home">
+      <img src="/assets/favicon-64.png" width="30" height="30" alt="">
       <span>pasteroll</span>
     </a>
-    <nav aria-label="Sections">
-      <a href="#how">How it works</a>
-      <a href="#features">Features</a>
-      <a href="#privacy">Privacy</a>
-      <a href="#download">Download</a>
-      <a href="#faq">FAQ</a>
-      <a class="keep" href="changelog/">Changelog</a>
-      <a class="keep nav-gh" href="https://github.com/qpd-v/pasteroll"><svg class="gh" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg> GitHub</a>
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-menu">
+      <span class="menu-icon" aria-hidden="true"></span><span>Menu</span>
+    </button>
+    <nav class="site-nav" id="site-menu" aria-label="Main navigation">
+      <a href="/features/">Features</a><a href="/guide/">Guide</a><a href="/changelog/">Changelog</a><a class="nav-download" href="/download/">Download</a>
+      <a class="nav-github" href="https://github.com/qpd-v/pasteroll" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
     </nav>
   </div>
 </header>
-
-<main id="main" class="wrap">
-
-<section class="intro">
-  <img class="roll" src="assets/roll.webp" width="640" height="531" alt="">
-  <div class="intro-text">
-    <h1>Pasteroll</h1>
-    <p class="lead">A clipboard history you scroll with the mouse wheel. Press <kbd>Ctrl</kbd> <kbd>Shift</kbd> and middle-click anywhere, scroll to an earlier clip, and click where it should go. It is encrypted on your computer, with no account and no cloud.</p>
-    <p class="cta"><a class="btn btn-primary" href="#download">Download</a> <a class="btn" href="https://github.com/qpd-v/pasteroll">Source on GitHub</a></p>
-    <p class="facts">Windows 10/11 and Linux (X11; experimental GNOME 46 Wayland). Free and open source. Public beta: Windows and Linux 0.1.0-beta.19.</p>
+<main id="main"><section class="hero">
+  <div class="shell hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Public beta · Windows 10/11 and Linux X11</p>
+      <h1>Scroll back through the clipboard at your pointer.</h1>
+      <p class="lede">Pasteroll keeps text, files and images you copy. Press <kbd>Ctrl</kbd><kbd>Shift</kbd> and middle-click to bring the history up.</p>
+      <div class="actions"><a class="button primary" href="/download/">Download Pasteroll</a><a class="button quiet" href="#how">How the pointer gesture works</a></div>
+      <p class="hero-meta">Free and open source · <a href="/download/#gnome">GNOME 46 build is experimental</a></p>
+    </div>
+    <figure class="app-frame hero-app">
+      <img src="/assets/shots/carousel.png" width="576" height="468" alt="Pasteroll carousel showing an image and a list of copied clips">
+      <figcaption>Carousel with sample history. Every clip and image here is synthetic.</figcaption>
+    </figure>
   </div>
 </section>
 
-<section class="how" id="how" aria-labelledby="how-h">
-  <h2 id="how-h">How it works</h2>
-  <p class="sub">One gesture opens it. From there you can do three things.</p>
-
-  <div class="tree" id="tree">
-    <div class="tree-root">
-      <div class="combo" data-seq="0:down:0,550:down:1,1150:tap:2:170,2100:up:0,2100:up:1" role="img" aria-label="Hold Control, then Shift, then middle-click once, then let go">
-        <span class="key">Ctrl</span><span class="op">+</span><span class="key">Shift</span><span class="op">+</span>
-        <span class="key key-mouse"><svg viewBox="0 0 28 40" aria-hidden="true"><rect x="2" y="2" width="24" height="36" rx="12"/><path d="M2 15h24"/><rect class="hot" x="11" y="6" width="6" height="12" rx="3"/></svg><small>Middle<br>click</small></span>
-      </div>
-      <p class="say">Opens the carousel at your pointer, over whatever you are working in.</p>
-    </div>
-
-    <div class="stem" aria-hidden="true"></div>
-
-    <div class="branches">
-      <div class="branch">
-        <div class="node head"><h3>Paste</h3></div>
-        <div class="link" aria-hidden="true"></div>
-        <div class="node body">
-          <div class="combo" data-seq="0:tap:0:800,1300:tap:1:170" role="img" aria-label="Scroll the mouse wheel, then left-click in the target window">
-            <span class="key key-mouse"><svg viewBox="0 0 28 40" aria-hidden="true"><rect x="2" y="2" width="24" height="36" rx="12"/><path d="M2 15h24"/><rect class="hot" x="11" y="6" width="6" height="12" rx="3"/></svg><small>Scroll<br>wheel</small></span>
-            <span class="op"><svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5"/></svg></span>
-            <span class="key key-mouse"><svg viewBox="0 0 28 40" aria-hidden="true"><rect x="2" y="2" width="24" height="36" rx="12"/><path d="M2 15h24M14 2v13"/><path class="hot" d="M2 15V14C2 7.400 7.400 2 14 2v13z"/></svg><small>Left<br>click</small></span>
-          </div>
-          <p class="say">Scroll to the clip you want, then click into the target window or input box to paste.</p>
-        </div>
-      </div>
-
-      <div class="branch">
-        <div class="node head"><h3>Expanded viewer</h3></div>
-        <div class="link" aria-hidden="true"></div>
-        <div class="node body">
-          <div class="combo" data-seq="0:tap:0:500" role="img" aria-label="Click the Expand button on the active card">
-            <span class="key key-wide"><svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path d="M1.5 5.800V1.500h4.300M1.500 1.500l4.700 4.700M14.500 5.800V1.500h-4.300M14.500 1.500l-4.700 4.700M1.500 10.200v4.300h4.300M1.500 14.500l4.700-4.700M14.500 10.200v4.300h-4.300M14.500 14.500l-4.700-4.700"/></svg><small>Expand<br>button</small></span>
-          </div>
-          <p class="say">Expand the active card with <kbd>Ctrl</kbd>+<kbd>E</kbd> to read long text, and use <kbd>Ctrl</kbd>+<kbd>F</kbd> to find the words you need.</p>
-        </div>
-      </div>
-
-      <div class="branch">
-        <div class="node head"><h3>Image editor</h3></div>
-        <div class="link" aria-hidden="true"></div>
-        <div class="node body">
-          <div class="combo" data-seq="0:down:0,550:tap:1:170,1500:up:0" role="img" aria-label="Hold Control and left-click where the picture should go">
-            <span class="key">Ctrl</span><span class="op">+</span>
-            <span class="key key-mouse"><svg viewBox="0 0 28 40" aria-hidden="true"><rect x="2" y="2" width="24" height="36" rx="12"/><path d="M2 15h24M14 2v13"/><path class="hot" d="M2 15V14C2 7.400 7.400 2 14 2v13z"/></svg><small>Click where<br>it goes</small></span>
-          </div>
-          <p class="say">With an image chosen, hold <kbd>Ctrl</kbd> while you click the desktop or a window to round the corners and add a shadow before it is saved or pasted.</p>
-        </div>
-      </div>
-    </div>
+<section class="section workflow" id="how">
+  <div class="shell">
+    <div class="section-head"><h2>Three steps from opening the carousel to pasting a clip.</h2><p>The newest copy is first in the list.</p></div>
+    <ol class="steps">
+      <li><span class="step-num">01</span><h3>Ctrl+Shift+middle-click brings the history up.</h3><p>The carousel appears over the window you are using. On GNOME 46 Wayland, use the companion shortcut instead.</p></li>
+      <li><span class="step-num">02</span><h3>Wheel or arrows move through clips; typing searches them.</h3><p>Choose a media type from the filter when the list gets long.</p></li>
+      <li><span class="step-num">03</span><h3>Clicking a destination pastes the clip.</h3><p>To paste only part of a text clip, select that part in the preview first.</p></li>
+    </ol>
+    <p class="note">GNOME 46 Wayland uses the companion shortcut or the optional host helper. <a href="/guide/#gnome">Read the GNOME setup steps</a>.</p>
   </div>
 </section>
 
-<section class="features" id="features" aria-labelledby="feat-h">
-  <h2 id="feat-h">Features</h2>
-
-  <article class="feature">
-    <div class="feature-copy">
-      <h3>Carousel</h3>
-      <p>Scroll your clipboard history without leaving what you are doing. One notch moves one clip; click into the note where it should land.</p>
-      <ul>
-        <li>Every clip stays one gesture away, with no window switching.</li>
-        <li>The carousel closes as soon as you choose where the clip goes, unless it is pinned open.</li>
-      </ul>
+<section class="section benefits" id="features">
+  <div class="shell">
+    <div class="section-head"><h2>What the carousel can do with a clip you found.</h2></div>
+    <div class="benefit-grid">
+      <article class="benefit"><h3>Clip text and file names are searchable.</h3><p>Filter by media type, or open a long clip in the viewer. Paste the whole clip or drag across the part you need.</p><a class="text-link" href="/features/#find">How searching works <span aria-hidden="true">→</span></a></article>
+      <article class="benefit"><h3>Favorites stay above the history limit.</h3><p>Rolls keep one project apart from another while Main holds the full history.</p><a class="text-link" href="/features/#keep">Favorites and rolls <span aria-hidden="true">→</span></a></article>
+      <article class="benefit"><h3>Several text clips can become one paste.</h3><p>Join them with new lines, spaces, commas, tabs or a list. Images open in the editor for crop, background and drawing changes.</p><a class="text-link" href="/features/#compose">Multi-paste and image editing <span aria-hidden="true">→</span></a></article>
     </div>
-  </article>
-
-  <article class="feature">
-    <div class="feature-copy">
-      <h3>Rolls</h3>
-      <p>Keep separate collections of clips and roll between them left and right, the way you roll through clips. Main is your history, and new copies always land there. LEFT and RIGHT are built in on either side of Main, and you can make your own rolls.</p>
-      <ul>
-        <li>Move a clip, or several chosen ones, with right-click &rarr; Move to roll, or name a new one on either side of Main.</li>
-        <li>Settings places each roll on the side of Main you want and orders them, and can add Most used and Images rolls.</li>
-        <li>Roll with Ctrl+Left / Ctrl+Right, the footer, or a tilt wheel; the footer names the roll and flashes a black arrow while it rolls.</li>
-      </ul>
-    </div>
-  </article>
-
-  <article class="feature">
-    <div class="feature-copy">
-      <h3>Pin it open, drag it anywhere</h3>
-      <p>Press an empty part of the carousel (its margins or the gaps between things) and drag it across the screen; it stays inside the usable area. Click the pin in the search bar, or press Ctrl+K, and it stays above other windows while you work in them.</p>
-      <ul>
-        <li>While it is pinned open, the wheel over the carousel turns it, and the bar's Paste button pastes into the window in front.</li>
-        <li>Multi-paste works with the mouse alone while pinned: choose clips, then Paste.</li>
-        <li>A pinned carousel does not take the keyboard, so there is no typing into search, and no expanded viewer or image editor, until it is unpinned. Clicking elsewhere no longer closes it; the pin button does.</li>
-      </ul>
-    </div>
-  </article>
-
-  <article class="feature">
-    <div class="feature-copy">
-      <h3>Expanded viewer</h3>
-      <p>Expand any clip into a large reader. Long text scrolls smoothly, and the find bar jumps straight to the words you need.</p>
-      <ul>
-        <li>Ctrl+F finds a word; F3 moves to the next match without losing your place.</li>
-        <li>The match count stays visible while you read.</li>
-        <li>Circle image areas for local OCR; copied text appears in your history.</li>
-      </ul>
-    </div>
-  </article>
-
-  <article class="feature">
-    <div class="feature-copy">
-      <h3>Advanced Image Paste</h3>
-      <p>Ctrl+click the desktop or a window with an image chosen and it opens in the editor with a live preview. Round the corners, tune the radius, add a shadow, then save a fresh PNG or paste it right there.</p>
-      <ul>
-        <li>Rounded corners with a live radius control.</li>
-        <li>Draw on the picture (pen, soft brush, circle, arrow) and write text on it, in a font and colour you choose (new in beta.16).</li>
-        <li>Drop shadow and transparent corners, saved as a fresh PNG on the Desktop, or in the folder you choose in Settings.</li>
-        <li>In a window, paste the picture itself, the saved file's path, or just its file name. In a terminal such as Windows Terminal, PowerShell or Claude Code it pastes the path by default.</li>
-      </ul>
-    </div>
-  </article>
-
-  <h3 class="also-h">Also</h3>
-  <dl class="also">
-    <div><dt>Encrypted per clip</dt><dd>Every clip is sealed before it is written, including when it was copied and from which program.</dd></div>
-    <div><dt>Two looks</dt><dd>Complete shows everything. No Bloat shows only the current clip, and the search bar and tools appear when you use them. Switch from the tray menu or Settings.</dd></div>
-    <div><dt>Paste several clips at once</dt><dd>Complete look. Press the Multi-paste button and click each clip you want (Shift+click for a range), or hold Ctrl and click. Then click where they should go: they are pasted one per line, in the order you chose. Ctrl+C or right-click Copy copies them without pasting. Pictures are left out. The result is also kept in history, with a small badge showing how many clips it joins. From the keyboard, Ctrl+M turns Multi-paste on, Shift+Down (or Up) chooses the clip shown and each one you walk to, Ctrl+arrows add each clip you land on, Space chooses the clip shown and Ctrl+A chooses them all. Hold Ctrl while you click where they should go (or press Ctrl+E) for options: join with a new line, space, comma or tab, number or bullet them, and set the order, with a preview. While Multi-paste is on, or any clip is chosen, the tall card of the clip shown collapses into a one-line row so the whole list is easy to choose from (new in beta.15). While the carousel is pinned open (new in beta.18), the mouse is enough: choose clips, then press Paste.</dd></div>
-    <div><dt>Settings in one place</dt><dd>The Settings window is compact enough for small or high-scaling screens and keeps everything in one place. On Windows it also follows light or dark mode.</dd></div>
-    <div><dt>Clear history</dt><dd>Settings has a Clear history button: it deletes every clip except favorite ones, asks first, and cannot be undone.</dd></div>
-    <div><dt>Recycle bin</dt><dd>Deleted clips come back with Ctrl+Z, or from the bin, for 30 days. Shift+Delete removes for good.</dd></div>
-    <div><dt>Terminal safe</dt><dd>Pasting several lines into a terminal asks for a second Enter first.</dd></div>
-    <div><dt>Optional update check</dt><dd>Off until you say yes (Windows). Once a day it reads a short note from GitHub, signed with the Pasteroll release key, that names the newest version, and tells you if yours is older (Settings also has a Check for updates now button). It announces a new version once, and everything after that happens in one update window with a progress bar and a Cancel button: you can choose Download and install, or Skip this version. The update is checked against the same key first, and nothing is downloaded until you click Download and install.</dd></div>
-    <div><dt>Skips password managers</dt><dd>Copies marked sensitive are never recorded, and you can exclude any program by name.</dd></div>
-    <div><dt>Images and files</dt><dd>Pictures and file lists are kept alongside text, with fast cached previews. A picture's row in the list ends in a small picture of it (new in beta.15).</dd></div>
-    <div><dt>Favorite clips as tiles</dt><dd>Complete look. Favorite clips also show as small square tiles between the search bar and the list: a picture's tile is the picture cropped to a square, and text, files, video and audio get a symbol. Click a tile to paste the clip. Rest the pointer on it for a second and a popup shows the whole clip, following the pointer while it stays on the tile. Right-click a tile to paste, remove the favorite, or colour its edge and symbol (new in beta.16; called pinned clips before beta.18).</dd></div>
-    <div><dt>Draw and write on pictures</dt><dd>The image editor has a Draw and write section: a pen, a soft brush, an empty circle and an arrow in any colour, and text with a font picker. Select part of a text and pick a colour to recolour just that part. The marks follow the picture through crop, rotate and resize, and Undo covers them (new in beta.16).</dd></div>
-    <div><dt>Size and key</dt><dd>Make the carousel 50 to 200 percent, and choose which key opens the image editor.</dd></div>
-  </dl>
-</section>
-
-<section class="privacy" id="privacy" aria-labelledby="priv-h">
-  <h2 id="priv-h">Privacy</h2>
-  <p>A clipboard holds some of the most sensitive things on a computer, so Pasteroll keeps it there. There is no account, no sync and no analytics, and your clipboard is never sent anywhere. History lives in a database on your own disk. The only things that can use the internet are an optional update check on Windows, off until you say yes (once a day it fetches a short note from GitHub that names the newest version, and GitHub sees your IP address and the Pasteroll version, nothing else), and downloading an update, only when you click Download and install and confirm.</p>
-  <dl class="specs">
-    <div><dt>At rest</dt><dd>Each clip encrypted with XChaCha20-Poly1305</dd></div>
-    <div><dt>Network</dt><dd>None, except an optional update check (off until you say yes) and installing an update when you ask</dd></div>
-    <div><dt>Accounts</dt><dd>None</dd></div>
-    <div><dt>Source</dt><dd>Open, MIT or Apache-2.0</dd></div>
-  </dl>
-  <p class="links"><a href="https://github.com/qpd-v/pasteroll/blob/main/PRIVACY.md">Privacy notes</a> <a href="https://github.com/qpd-v/pasteroll/blob/main/SECURITY.md">Security design and its limits</a></p>
-</section>
-
-<section class="download" id="download" aria-labelledby="dl-h">
-  <h2 id="dl-h">Download</h2>
-  <p class="sub">Public beta: Windows and Linux <b>0.1.0-beta.19</b>. Choose an installer or a portable download. It is still young; please report rough edges.</p>
-
-  <div class="dl-list">
-    <div class="dl-row">
-      <div><h3>Windows 10 / 11 — setup</h3><p>64-bit. Only for me is the default, with no administrator rights. For all users needs UAC.</p><p class="fine">pasteroll-0.1.0-beta.19-windows-x64-setup.exe</p></div>
-      <a class="btn btn-primary" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.19/pasteroll-0.1.0-beta.19-windows-x64-setup.exe">Download setup</a>
-    </div>
-    <div class="dl-row">
-      <div><h3>Windows — portable</h3><p>Extract and run. The included portable.txt keeps history and settings in the adjacent data folder. The history key stays bound to your Windows account.</p><p class="fine">pasteroll-0.1.0-beta.19-windows-x64-portable.zip</p></div>
-      <a class="btn" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.19/pasteroll-0.1.0-beta.19-windows-x64-portable.zip">Download portable ZIP</a>
-    </div>
-    <div class="dl-row">
-      <div><h3>Linux (X11) — archive</h3><p>Static x86-64 build with install.sh for your account or the whole system. Needs an X11 session.</p><p class="fine">pasteroll-0.1.0-beta.19-linux-x86_64.tar.gz</p></div>
-      <a class="btn btn-primary" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.19/pasteroll-0.1.0-beta.19-linux-x86_64.tar.gz">Download Linux archive</a>
-    </div>
-    <div class="dl-row">
-      <div><h3>Debian / Ubuntu (X11)</h3><p>amd64 package. Installs through your package manager and keeps history when removed.</p><p class="fine">pasteroll_0.1.0-beta.19_amd64.deb</p></div>
-      <a class="btn" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.19/pasteroll_0.1.0-beta.19_amd64.deb">Download .deb</a>
-    </div>
-    <div class="dl-row">
-      <div><h3>GNOME 46 Wayland — experimental archive</h3><p>x86-64 app, Shell companion and optional administrator-enabled mouse helper. Mixed-scale display, viewer and editor checks passed on one Pop!_OS setup. Physical mouse-helper, login/lock and suspend checks, and mixed-DPI layouts remain unverified.</p><p class="fine">pasteroll-0.1.0-beta.19-linux-x86_64-gnome-development.tar.gz</p></div>
-      <a class="btn" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.19/pasteroll-0.1.0-beta.19-linux-x86_64-gnome-development.tar.gz">Download GNOME archive</a>
-    </div>
-    <div class="dl-row">
-      <div><h3>GNOME 46 Wayland — experimental .deb</h3><p>amd64; GNOME 46, glibc 2.34+, libevdev2 and systemd required. Helper is disabled after fresh install. An alternative to the X11 .deb, not a second package to install beside it.</p><p class="fine">pasteroll_0.1.0-beta.19_amd64-gnome-development.deb</p></div>
-      <a class="btn" href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.19/pasteroll_0.1.0-beta.19_amd64-gnome-development.deb">Download GNOME .deb</a>
-    </div>
-  </div>
-
-  <p class="fine">GNOME 46 only: Ctrl+Shift+middle-click requires the optional host helper; keyboard mode uses Ctrl+Shift+Space. Follow the <a href="https://github.com/qpd-v/pasteroll/blob/v0.1.0-beta.19/extensions/INPUT_HELPER.md">GNOME setup guide</a>. Other Wayland desktops and GNOME versions are not supported.</p>
-  <p class="fine">Linux OCR quality can be inconsistent. GNOME 46 Wayland remains experimental: physical mouse-helper devices, login/lock and suspend, and mixed-DPI or multi-monitor layouts are unverified. The optional update check and in-app updater are Windows-only. Other Wayland desktops and GNOME versions are not supported.</p>
-  <p class="links"><a href="https://github.com/qpd-v/pasteroll/releases/tag/v0.1.0-beta.19">Release notes and testing status</a> <a href="https://github.com/qpd-v/pasteroll/releases/download/v0.1.0-beta.19/SHA256SUMS">SHA256SUMS for all six packages</a></p>
-
-  <div class="notes">
-    <div class="note">
-      <h3>"Windows protected your PC"</h3>
-      <p>The beta is not code-signed yet, so SmartScreen warns about new programs. Check the checksum below, then choose <b>More info</b>, <b>Run anyway</b>. Some antivirus programs are also wary of anything that watches the clipboard, which a clipboard manager must. The source is there to read and build yourself.</p>
-    </div>
-    <div class="note">
-      <h3>Updating Pasteroll</h3>
-      <p>From 0.1.0-beta.9 on, Windows can update itself when you ask: turn on <b>Check for updates</b> (Settings, or the one-time question), and when a newer version is found the tray menu offers <b>Download and install</b>. It downloads the update from GitHub, checks it is signed with the Pasteroll release key (not a Windows code-signing certificate) and matches its checksum, installs it and starts it again, keeping your history, key and settings. Nothing happens until you click and confirm. A copy installed for all users shows Windows' administrator prompt, and a portable copy replaces its own program file. Earlier versions, and anyone who prefers, can update by hand: quit Pasteroll from its tray icon, then run the new Setup (it also asks a running copy to quit); for the portable ZIP, quit it and extract the new one over the old folder, leaving the <code>data</code> folder alone. Beta.7 and beta.8 cannot download updates, so install beta.14 by hand once. From beta.10 the update check reads a short note, signed with the same key, instead of GitHub's unsigned list of releases; from beta.13 everything happens in one update window that follows Windows' light or dark mode (what is new, a progress bar with the size while it downloads, a Cancel button, and a Try again button if something goes wrong) instead of a series of notifications, and it has a <b>Skip this version</b> button; Settings has <b>Check for updates now</b>, and if an installer fails the previous Pasteroll is started again and says so. A real beta.9 to beta.10 update through GitHub worked on the maintainer's computer with the older check, and the maintainer reports that updating from beta.10 to beta.11 the same way, using the signed note, worked too: see the <a href="https://github.com/qpd-v/pasteroll/releases/tag/v0.1.0-beta.19">release notes</a> for what was and was not tested.</p>
-    </div>
-    <div class="note">
-      <h3>Verify your download</h3>
-      <p>Every release has a <code>SHA256SUMS</code> file. The value must match exactly.</p>
-      <div class="code"><button class="copy" type="button" data-copy="Get-FileHash .\pasteroll-0.1.0-beta.19-windows-x64-setup.exe -Algorithm SHA256" aria-label="Copy the Windows command">Copy</button><pre><code><span class="c"># Windows</span>
-Get-FileHash .\pasteroll-0.1.0-beta.19-windows-x64-setup.exe -Algorithm SHA256</code></pre></div>
-      <div class="code"><button class="copy" type="button" data-copy="sha256sum -c SHA256SUMS --ignore-missing" aria-label="Copy the Linux command">Copy</button><pre><code><span class="c"># Linux</span>
-sha256sum -c SHA256SUMS --ignore-missing</code></pre></div>
-    </div>
-    <div class="note">
-      <h3>Install on Linux (X11)</h3>
-      <div class="code"><button class="copy" type="button" data-copy="tar xzf pasteroll-0.1.0-beta.19-linux-x86_64.tar.gz&#10;cd pasteroll-0.1.0-beta.19-linux-x86_64&#10;./install.sh&#10;pasteroll run" aria-label="Copy the install commands">Copy</button><pre><code>tar xzf pasteroll-0.1.0-beta.19-linux-x86_64.tar.gz
-cd pasteroll-0.1.0-beta.19-linux-x86_64
-./install.sh
-pasteroll run</code></pre></div>
-      <p>For all users: <code>sudo ./install.sh --system</code>. On Debian/Ubuntu: <code>sudo dpkg -i pasteroll_0.1.0-beta.19_amd64.deb</code>. Autostart stays off unless you enable it.</p>
-      <p class="fine">Optional: <code>tesseract-ocr</code> for Extract text, <code>zenity</code> or <code>kdialog</code> for Save as.</p>
-    </div>
+    <figure class="app-frame wide-shot"><img src="/assets/shots/multi-paste.png" width="576" height="468" alt="Pasteroll with three clips chosen for multi-paste"><figcaption>Three clips chosen for one paste. The sample history is synthetic.</figcaption></figure>
   </div>
 </section>
 
-<section class="faq" id="faq" aria-labelledby="faq-h">
-  <h2 id="faq-h">FAQ</h2>
-  <div class="faq-list">
-    <details><summary>Is it free?</summary><p>Yes. Pasteroll is open source under the MIT or Apache-2.0 licence, your choice.</p></details>
-    <details><summary>Does it send my clipboard anywhere?</summary><p>No. Your clipboard and history never leave your computer: no account, no sync, no telemetry. Text recognition (Extract text) runs on your computer too. The only things that can use the internet are two optional steps on Windows. The update check is off until you say yes: once a day it fetches a short signed note from GitHub that names the newest version; GitHub sees your IP address and the Pasteroll version, nothing else, and nothing is downloaded. Downloading an update happens only when you click Download and install and confirm.</p></details>
-    <details><summary>Is installing an update safe?</summary><p>It is built so that GitHub, the network and anyone who can edit a release page cannot make Pasteroll run something the maintainer did not sign: each release has a signature made with a key kept offline, and Pasteroll checks it, the version and the file's checksum before running anything. There is no paid code-signing certificate, so Windows SmartScreen does not vouch for it,, and whoever holds the signing key could publish an update. The key fingerprints, and what this does and does not protect against, are listed in <a href="https://github.com/qpd-v/pasteroll/blob/main/SECURITY.md">SECURITY.md</a>.</p></details>
-    <details><summary>How do I update it?</summary><p>On Windows from 0.1.0-beta.9, when the update check is on and a newer version exists, the tray menu offers <b>Download and install</b> (Settings has <b>Check for updates now</b>); a single update window shows what is new, and when you click <b>Download and install</b> in it, Pasteroll downloads it with a progress bar (you can cancel), checks its signature and checksum, installs it and starts again, keeping your history and settings. Nothing is downloaded or installed without that click. You can also update by hand: quit Pasteroll from the tray icon and run the new Setup, or extract the new portable ZIP over the old folder. Older beta.7 and beta.8 copies, and Linux, update by hand. If Download and install says that the <code>pasteroll-update</code> folder "is not Pasteroll's update folder" (a leftover from an earlier update, fixed in 0.1.0-beta.17), delete that folder inside your Pasteroll data folder once (it holds only an old installer) or install by hand.</p></details>
-    <details><summary>Can I paste several clips at once?</summary><p>Yes, in the Complete look (from 0.1.0-beta.11). Press the <b>Multi-paste</b> button beside the filter and click each clip you want, or hold Ctrl and click (Ctrl+Shift+click chooses a range). Then click where they should go, or press Enter: the text clips are pasted one per line, in the order you chose them. To choose from the keyboard, press Ctrl+M, then hold Shift and press Down or Up (or Ctrl with the arrows, Space, or Ctrl+A for all). Hold Ctrl while you click where they should go (or press Ctrl+E) to open options first: what joins them (new line, space, comma, tab or nothing), a list style (plain, numbered, bulleted) and the order, with a preview. Ctrl+C, or right-click and Copy, puts them on the clipboard without pasting. Pictures cannot be joined into text and are left out. The pasted result is also kept in history as one clip with a small badge (not while recording is paused). While Multi-paste is on, or any clip is chosen, the tall card of the clip shown shrinks into a one-line row, so about a dozen rows are on screen; clear the choice and it opens again. While the carousel is pinned open (from beta.18), the mouse is enough: choose clips, then press Paste.</p></details>
-    <details><summary>Can I keep some clips at hand?</summary><p>Yes: make a clip a favorite (Ctrl+F in the carousel, or the star) and it is kept until you remove it. In the expanded viewer Ctrl+F still finds text, so use the star there. From 0.1.0-beta.16 (Complete look) favorite clips also show as small square tiles above the list. Click one to paste it, rest the pointer on it for a second to see the whole clip, or right-click it to paste, remove the favorite or give it a colour. The colours are kept in a small file in your data folder that holds only a clip's number and a colour code. Pins were renamed Favorites in beta.18; existing favorites are kept.</p></details>
-    <details><summary>What are rolls?</summary><p>Rolls are separate collections of clips you roll through left and right, with a slide between them (new in beta.18). Main is your history and new copies always land there; LEFT and RIGHT are built in on either side, and Settings can hide them. Make your own rolls, place each one on the left or right of Main and order them in Settings, and move clips into one with right-click &rarr; Move to roll, or name a new roll from the same menu. Settings can also add a Most used roll and an Images roll. Roll with Ctrl+Left / Ctrl+Right, the footer, or the sideways clicks of a tilt wheel; clips in a custom roll are not removed by the limits, and deleting a roll returns its clips to Main.</p></details>
-    <details><summary>Can I move the carousel or keep it open?</summary><p>Yes (new in beta.18). Press an empty part of the carousel and drag it; it stays inside the usable area and follows the pointer across monitors. Click the pin in the search bar, or press Ctrl+K, to keep it above other windows while you use them. While it is pinned open, the keyboard and wheel belong to the other window, the wheel over the carousel turns it, and its Paste button pastes into the window in front. The pin button closes it.</p></details>
-    <details><summary>Where is my history stored?</summary><p>In a database on your disk, in <code>%LOCALAPPDATA%\Pasteroll</code> on Windows and <code>~/.local/share/pasteroll</code> on Linux. A <code>portable.txt</code> beside the executable keeps data in an adjacent <code>data</code> folder instead. Every clip is encrypted before it is written.</p></details>
-    <details><summary>Does it record passwords?</summary><p>Copies that password managers mark as sensitive are skipped, and you can exclude any program by name in Settings. Even so, a clipboard history is a risk worth knowing about, which is why Pasteroll encrypts it and lets you set how much is kept and for how long.</p></details>
-    <details><summary>Does it work on Wayland? On macOS?</summary><p>Beta.19 offers experimental native Wayland support on GNOME 46 with a Pasteroll Shell companion (protocol 4). Mouse activation needs an optional administrator-enabled host helper; keyboard mode uses Ctrl+Shift+Space. Physical mouse-helper devices, login/lock and suspend, and mixed-DPI layouts remain unverified. Other GNOME versions and Wayland desktops are not supported; use an X11 session for the standard Linux packages. There is no macOS version.</p></details>
-    <details><summary>How do I uninstall it?</summary><p>For Windows Setup installs, use Settings &gt; Apps &gt; Pasteroll. History is kept unless you choose to delete it. For a Linux archive install, use <code>./install.sh --uninstall</code>, or <code>sudo ./install.sh --system --uninstall</code> for a system install. Remove the Debian package with <code>sudo dpkg -r pasteroll</code>; its history and settings stay on disk. Quit a portable copy before removing its extracted folder.</p></details>
+<section class="section trust-summary" id="privacy">
+  <div class="shell trust-grid">
+    <div><h2>Clips and their encryption key stay in your user data folder.</h2><p>Each clip is encrypted before it reaches disk. Pasteroll has no account, sync or analytics. The Windows update check is off until you enable it, and an update downloads only after you confirm. The MCP agent brain is also opt-in and shares only selected rolls; a harness reading them may send that content to its model provider.</p><a class="text-link" href="/privacy/">Read about storage and network access <span aria-hidden="true">→</span></a></div>
+    <dl class="fact-list"><div><dt>Encryption</dt><dd>XChaCha20-Poly1305 at rest</dd></div><div><dt>Accounts</dt><dd>None</dd></div><div><dt>Network</dt><dd>Optional update check and confirmed updates; selected-roll MCP sharing</dd></div><div><dt>Source</dt><dd>MIT or Apache-2.0</dd></div></dl>
   </div>
 </section>
 
+<section class="section final-cta" id="download">
+  <div class="shell cta-panel">
+    <div><h2>Install Pasteroll, then copy as usual.</h2><p>Pasteroll runs on Windows 10/11, Linux X11 or XWayland, and an experimental GNOME 46 Wayland build.</p></div>
+    <div class="cta-actions"><a class="button primary" href="/download/">Go to downloads</a><a class="button quiet" href="/guide/">Read setup steps</a></div>
+    <p class="fine" id="faq">The <a href="/guide/#getting-started">quick start</a> goes from the installer to your first paste.</p>
+  </div>
+</section>
 </main>
-
-<footer class="foot">
-  <div class="wrap foot-in">
-    <p>Pasteroll is free and open source, MIT or Apache-2.0.</p>
-    <nav aria-label="Project links">
-      <a href="https://github.com/qpd-v/pasteroll">GitHub</a>
-      <a href="https://github.com/qpd-v/pasteroll/issues">Report an issue</a>
-      <a href="https://github.com/qpd-v/pasteroll/blob/main/CHANGELOG.md">Changelog</a>
-      <a href="https://github.com/qpd-v/pasteroll/blob/main/PRIVACY.md">Privacy</a>
-      <a href="https://github.com/qpd-v/pasteroll/blob/main/SECURITY.md">Security</a>
-    </nav>
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="/" aria-label="Pasteroll home"><img src="/assets/favicon-64.png" width="28" height="28" alt=""><span>pasteroll</span></a>
+      <p>A clipboard history for Windows and Linux. Open source under MIT or Apache-2.0.</p>
+    </div>
+    <div class="footer-links">
+      <div><h2>Use Pasteroll</h2><a href="/features/">Features</a><a href="/download/">Download</a><a href="/guide/">Guide</a></div>
+      <div><h2>Source</h2><a href="/changelog/">Release notes</a><a href="https://github.com/qpd-v/pasteroll" rel="noopener">GitHub</a><a href="https://github.com/qpd-v/pasteroll/issues" rel="noopener">Report a bug</a></div>
+      <div><h2>Policies</h2><a href="/privacy/">Privacy</a><a href="https://github.com/qpd-v/pasteroll/blob/main/SECURITY.md" rel="noopener">Security</a><a href="https://github.com/qpd-v/pasteroll/blob/main/LICENSE-MIT" rel="noopener">License</a></div>
+    </div>
+    <div class="footer-bottom">
+      <p>Pasteroll 0.1.0-beta.19 · MIT or Apache-2.0</p>
+      <div class="theme-control" role="group" aria-label="Colour theme">
+        <button type="button" data-theme-choice="light" aria-pressed="false">Light</button>
+        <button type="button" data-theme-choice="dark" aria-pressed="false">Dark</button>
+        <button type="button" data-theme-choice="system" aria-pressed="true">System</button>
+      </div>
+    </div>
   </div>
 </footer>
-
-<!-- THEME PICKER: for choosing a look. Delete this block (and the matching code in script.js) once a theme is chosen. -->
-<div class="picker" id="picker">
-  <button class="picker-toggle" type="button" aria-expanded="false" aria-controls="picker-list" aria-label="Choose a colour theme">
-    <i class="sw sw-now"></i><span class="picker-name">Cinnamon</span>
-  </button>
-  <div class="picker-list" id="picker-list" role="group" aria-label="Colour themes" hidden>
-    <button type="button" data-set="cinnamon"><i class="sw" data-sw="cinnamon"></i>Cinnamon <small>coffee</small></button>
-    <button type="button" data-set="frappe"><i class="sw" data-sw="frappe"></i>Frapp&eacute;</button>
-    <button type="button" data-set="macchiato"><i class="sw" data-sw="macchiato"></i>Macchiato</button>
-    <button type="button" data-set="mocha"><i class="sw" data-sw="mocha"></i>Mocha</button>
-    <button type="button" data-set="latte"><i class="sw" data-sw="latte"></i>Latte <small>light</small></button>
-    <p class="picker-hint">Press <kbd>T</kbd> to cycle</p>
-  </div>
-</div>
-
-<script src="script.js" defer></script>
+<script src="/script.js" defer></script>
 </body>
 </html>

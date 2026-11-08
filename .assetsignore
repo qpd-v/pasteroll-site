@@ -7,6 +7,7 @@ wrangler.jsonc
 README.md
 EXPANDED_VIEWER_VIDEO_PLAN.md
 scripts
+site
 node_modules
 .wrangler
 .DS_Store
