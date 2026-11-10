@@ -1,16 +1,16 @@
 {
-  "version": "0.1.0-beta.20",
-  "published": "2026-11-08",
-  "release_url": "https://github.com/qpd-v/pasteroll/releases/tag/v0.1.0-beta.20",
+  "version": "0.1.0-beta.21",
+  "published": "2026-11-09",
+  "release_url": "https://github.com/qpd-v/pasteroll/releases/tag/v0.1.0-beta.21",
   "checksums_url": "https://pasteroll.com/assets/SHA256SUMS",
   "download_base": "https://pasteroll.com/downloads/",
   "assets": {
-    "windows_setup": "pasteroll-0.1.0-beta.20-windows-x64-setup.exe",
-    "windows_portable": "pasteroll-0.1.0-beta.20-windows-x64-portable.zip",
-    "linux_archive": "pasteroll-0.1.0-beta.20-linux-x86_64.tar.gz",
-    "linux_deb": "pasteroll_0.1.0-beta.20_amd64.deb",
-    "gnome_archive": "pasteroll-0.1.0-beta.20-linux-x86_64-gnome-development.tar.gz",
-    "gnome_deb": "pasteroll_0.1.0-beta.20_amd64-gnome-development.deb"
+    "windows_setup": "pasteroll-0.1.0-beta.21-windows-x64-setup.exe",
+    "windows_portable": "pasteroll-0.1.0-beta.21-windows-x64-portable.zip",
+    "linux_archive": "pasteroll-0.1.0-beta.21-linux-x86_64.tar.gz",
+    "linux_deb": "pasteroll_0.1.0-beta.21_amd64.deb",
+    "gnome_archive": "pasteroll-0.1.0-beta.21-linux-x86_64-gnome-development.tar.gz",
+    "gnome_deb": "pasteroll_0.1.0-beta.21_amd64-gnome-development.deb"
   },
   "platforms": {
     "windows": "Windows 10 / 11",

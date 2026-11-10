@@ -1,0 +1,4 @@
+pasteroll-update-manifest 1
+version 0.1.0-beta.21
+setup pasteroll-0.1.0-beta.21-windows-x64-setup.exe 4866164 ebc382c19c16ff8dde59c83f4d3339ee13d0536554dc40a6b33366f2a342fe8f
+exe pasteroll-0.1.0-beta.21-windows-x64.exe 6749184 c1c69a48f868fad111569cc649c28163efe0276a4fdb00611f932ba33151ffea
