@@ -1,5 +1,17 @@
 [
   {
+    "version": "0.1.0-beta.23",
+    "date": "2026-11-13",
+    "platforms": "Windows and Linux",
+    "url": "https://github.com/qpd-v/pasteroll/releases/tag/v0.1.0-beta.23",
+    "summary": [
+      "The image editor has a centered zoom icon toolbar and a separate read-only percentage display.",
+      "Ctrl+click an inactive clip to start Multi-paste with both it and the active clip selected.",
+      "The Multi-paste button starts empty. Unselected clips have no active border or tint.",
+      "No automated or interactive test suites were run; functional acceptance is deferred to manual testing."
+    ]
+  },
+  {
     "version": "0.1.0-beta.22",
     "date": "2026-11-13",
     "platforms": "Windows and Linux",

@@ -1,4 +1,4 @@
 pasteroll-update-manifest 1
-version 0.1.0-beta.22
-setup pasteroll-0.1.0-beta.22-windows-x64-setup.exe 4884909 770bd66844944db0ee221040da63a9a7c2799e857748231b948866806d167fe6
-exe pasteroll-0.1.0-beta.22-windows-x64.exe 6797824 1f5bced14a52bf87e9851abf257e218086f6bfcfbc282e7c01605f5ea5aba2fa
+version 0.1.0-beta.23
+setup pasteroll-0.1.0-beta.23-windows-x64-setup.exe 4884509 e3a36c2c64ba4c7dbb60ef4d1ed24313714db5e68d1f89d48122337ccedda0f9
+exe pasteroll-0.1.0-beta.23-windows-x64.exe 6800384 36b2586e3c94ca31a762649e1a819916ea68a7b7895988800f03e3185927a444
