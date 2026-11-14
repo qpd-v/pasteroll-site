@@ -1,5 +1,18 @@
 [
   {
+    "version": "0.1.0-beta.22",
+    "date": "2026-11-13",
+    "platforms": "Windows and Linux",
+    "url": "https://github.com/qpd-v/pasteroll/releases/tag/v0.1.0-beta.22",
+    "summary": [
+      "Multi-paste image clips as separate attachments or inline images; Ctrl+E opens format and order options.",
+      "Advanced Image Paste adds zoom controls, Ctrl+wheel zoom and panning.",
+      "Double-click a clip header or blank space beneath its content to paste. Double-click and drag text to select words.",
+      "Ctrl+S saves the shown clip; change or disable the shortcut in Settings.",
+      "Windows, X11 and experimental GNOME 46 packages ship together. Live ChatGPT and document-editor compatibility remains for manual testing."
+    ]
+  },
+  {
     "version": "0.1.0-beta.21",
     "date": "2026-11-09",
     "platforms": "Windows and Linux",

@@ -37,12 +37,13 @@
     </nav>
   </div>
 </header>
-<main id="main"><section class="page-hero"><div class="shell"><h1>Clips stay encrypted on disk. A coding harness reads only shared rolls</h1><p class="lede">Pasteroll has no account and no analytics; nothing syncs the history. The optional Windows update check and the agent brain stay off until you enable them.</p></div></section>
+<main id="main"><section class="page-hero"><div class="shell"><h1>Stored history is encrypted. Transfers follow your paste choices</h1><p class="lede">Pasteroll has no account and no analytics; nothing syncs the history. The optional Windows update check and the agent brain stay off until you enable them.</p></div></section>
 
 <section class="section"><div class="shell privacy-grid">
   <div class="privacy-copy">
     <h2>Clips, settings and the encryption key share one folder</h2><p>A recorded clip holds text, a file list or a picture, plus limited metadata such as the copy time and source program. The same folder also holds settings, favorite colors and image-editor presets.</p>
     <h2>How Windows and Linux protect the encryption key</h2><p>Each clip is encrypted with XChaCha20-Poly1305 before it is written. The database and key sit in a private per-user data folder.</p><div class="callout"><strong>Who can still read the history</strong><p>On Linux, file permissions are the only protection around the key file, so use full-disk encryption. Windows protects the key with the account-bound key store. Either way, code already running as your user can reach the same data you can. Encryption at rest does not stop malware in an active session.</p></div>
+    <h2 id="image-transfers">Image attachments use ordinary temporary PNG files</h2><p>Multi-paste image batches create PNG files in the private <code>paste-cache</code> folder beside the history database. Receiving apps can read them after the carousel closes, or when you paste manually later. These transfer files are not encrypted database records. Batches older than seven days are removed when another image batch is prepared.</p><p>Inline clipboard content embeds image data. The receiving app controls what happens after paste, including uploading attachments in a web composer.</p>
     <h2>What GitHub sees during an update check</h2><p>With the check enabled, Pasteroll contacts GitHub. GitHub can see your IP address and Pasteroll version. Pasteroll does not send clipboard history. An update downloads only after you choose Download and install and confirm it. Linux packages have no automatic updater.</p>
     <h2 id="agents">A coding harness may send a shared roll to its model provider</h2><p>The agent brain is off by default. When enabled, a coding harness starts a local MCP server and can read only the rolls you explicitly share. Pasteroll opens no port and sends nothing itself.</p><p>That transfer belongs to the harness, just as it would if you pasted the clip into the chat. Share only rolls you are comfortable giving to that provider. Images are off by default.</p><p>Treat clipboard text as untrusted data. The MCP server labels it that way, and an agent should not follow instructions found inside a clip.</p>
     <h2>Stopping capture or deleting a stored clip</h2><p>Pause recording from the tray or panel menu. Exclude programs by executable name. Copies that password managers mark as sensitive are skipped. You can set history limits, clear the history while keeping favorites, and delete individual clips permanently.</p>
@@ -63,7 +64,7 @@
       <div><h2>Policies</h2><a href="/privacy/">Privacy</a><a href="https://github.com/qpd-v/pasteroll/blob/main/SECURITY.md" rel="noopener">Security</a><a href="https://github.com/qpd-v/pasteroll/blob/main/LICENSE-MIT" rel="noopener">License</a></div>
     </div>
     <div class="footer-bottom">
-      <p>Pasteroll 0.1.0-beta.21 · MIT or Apache-2.0</p>
+      <p>Pasteroll 0.1.0-beta.22 · MIT or Apache-2.0</p>
     </div>
   </div>
 </footer>
