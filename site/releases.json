@@ -1,5 +1,17 @@
 [
   {
+    "version": "0.1.0-beta.24",
+    "date": "2026-11-13",
+    "platforms": "Windows and Linux",
+    "url": "https://github.com/qpd-v/pasteroll/releases/tag/v0.1.0-beta.24",
+    "summary": [
+      "Mouse wheel up/down zooms the image preview in Advanced Image Paste.",
+      "Multiple selected images open in tabs; each tab keeps its own edits and Paste Paths saves all of them.",
+      "Images, text and file clips can be pasted together through one ordered clipboard payload.",
+      "No automated or interactive tests were run; functional acceptance is deferred to manual testing."
+    ]
+  },
+  {
     "version": "0.1.0-beta.23",
     "date": "2026-11-13",
     "platforms": "Windows and Linux",

@@ -66,7 +66,7 @@ fails. Output directory remains `/`.
 Every push to `main` redeploys the site. The `_headers` file sets a strict CSP and
 allows local fonts with `font-src 'self'`. Assets are cached for a day.
 
-The site mirrors the six `v0.1.0-beta.23` installation packages under `downloads/` so
+The site mirrors the six `v0.1.0-beta.24` installation packages under `downloads/` so
 the download page remains usable when GitHub's release CDN is unavailable. The GitHub
 release remains canonical. Physical GNOME helper, login/lock, suspend and mixed-DPI
 behavior remain unverified.
